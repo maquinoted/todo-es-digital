@@ -3,8 +3,8 @@
 ---
 <header class="header">
   <div class="container">
-    <a href="/" class="logo">
-      <img src="/todo-es-digital-oficinas-virtuales.png" alt="Todo es Digital | Oficinas Virtuales Guatemala" class="logo-img" />
+    <a href="/" class="logo-link">
+      <img src="/logo-ted.png" alt="Todo es Digital Guatemala" class="logo-img" />
     </a>
 
     <button class="menu-toggle" aria-label="Abrir menú">
@@ -27,7 +27,7 @@
   .header {
     background-color: #424243;
     color: white;
-    padding: 0.8rem 0; /* Ajustado para que el logo luzca mejor */
+    padding: 1.5rem 0; /* Padding más amplio y profesional */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -41,10 +41,11 @@
     padding: 0 24px;
   }
   .logo-img {
-    height: 50px; /* Ajusta esta altura según cómo quieras que se vea */
+    height: 55px;
     width: auto;
     display: block;
   }
+
   .nav-menu ul {
     display: flex;
     gap: 30px;
@@ -57,26 +58,38 @@
     text-decoration: none;
     font-weight: 400;
     font-size: 0.95rem;
+    transition: color 0.3s;
   }
+  .nav-menu a:hover { color: #ccc; }
 
-  /* Responsive */
   .menu-toggle { display: none; flex-direction: column; gap: 5px; background: transparent; border: none; cursor: pointer; }
   .bar { width: 25px; height: 2px; background-color: white; }
 
   @media (max-width: 768px) {
-    .menu-toggle { display: flex; }
+    .container {
+      flex-direction: column; /* Apila elementos para centrar */
+      gap: 1.5rem;
+    }
+    .logo-link {
+      order: 1; /* El logo primero */
+    }
+    .menu-toggle {
+      display: flex;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
     .nav-menu { 
       display: none; 
-      position: absolute; 
-      top: 100%; 
-      left: 0; 
       width: 100%; 
       background: #424243; 
-      padding: 1.5rem 0; 
-      border-top: 1px solid #555; 
+      padding: 1rem 0; 
+      border-top: 1px solid #555;
+      order: 3;
     }
     .nav-menu.is-active { display: block; }
-    .nav-menu ul { flex-direction: column; align-items: center; gap: 20px; }
+    .nav-menu ul { flex-direction: column; align-items: center; gap: 15px; }
   }
 </style>
 

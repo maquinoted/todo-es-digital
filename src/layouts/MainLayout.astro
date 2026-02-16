@@ -1,27 +1,14 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro'; // Importa el footer
 const { title = "Todo es Digital" } = Astro.props;
 ---
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title} | Todo es Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  </head>
+  <head>...</head>
   <body>
     <Header />
     <main>
       <slot />
     </main>
-  </body>
+    <Footer /> </body>
 </html>
-
-<style is:global>
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-</style>
