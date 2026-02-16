@@ -11,7 +11,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       </p>
     </div>
     <div class="hero-image">
-      <img src="/recepcionista-oficina.jpg" alt="Recepcionista profesional en Todo es Digital" />
+      <img src="/recepcionista-oficina-virtual-guatemala.webp" alt="Recepcionista oficinas virtuales en Guatemala" />
     </div>
   </section>
 
@@ -59,11 +59,12 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .hero-image flex: 1;
-  .hero-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
+.hero-image img {
+  width: 100%;       /* Ocupa el ancho de su columna */
+  height: auto;      /* Mantiene la proporción original */
+  object-fit: cover; /* Evita que se estire feo */
+  border-radius: 10px;
+}
 
   .services-grid {
     display: grid;
