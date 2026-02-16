@@ -15,168 +15,61 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <section class="info-section">
+  <section class="location-section">
   <div class="container">
-    <div class="info-grid">
-      <div class="services-info">
-        <h2>¿Qué es una oficina virtual?</h2>
-        <p class="subtitle">Es un espacio de oficina que incluye todos los servicios administrativos a bajo costo:</p>
-        
-        <div class="icons-grid">
-          <div class="icon-item">
-            <span class="icon">📞</span>
-            <p>PBX</p>
-          </div>
-          <div class="icon-item">
-            <span class="icon">🪑</span>
-            <p>Uso de salas de reuniones equipadas</p>
-          </div>
-          <div class="icon-item">
-            <span class="icon">✉️</span>
-            <p>Manejo de correspondencia</p>
-          </div>
-          <div class="icon-item">
-            <span class="icon">☕</span>
-            <p>Agua y café para reuniones</p>
-          </div>
-          <div class="icon-item">
-            <span class="icon">📶</span>
-            <p>Wifi de alta velocidad</p>
-          </div>
-          <div class="icon-item">
-            <span class="icon">🏢</span>
-            <p>Dirección fiscal y comercial</p>
-          </div>
+    <div class="location-grid">
+      <div class="location-gallery">
+        <div class="main-img-wrapper">
+          <img src="/lobby-zona-pradera.webp" alt="Lobby Empresarial Zona Pradera" class="main-location-img" />
+        </div>
+        <div class="side-imgs">
+          <img src="/pasillo-oficinas.webp" alt="Instalaciones profesionales" />
+          <img src="/entrada-seguridad.webp" alt="Seguridad y accesos" />
         </div>
       </div>
 
-      <div class="stats-info">
-        <div class="stat-card main-stat">
-          <h3>Reducirá hasta el <strong>90%</strong></h3>
-          <p>de costos administrativos vs. una oficina convencional.</p>
-        </div>
+      <div class="location-content">
+        <div class="section-badge">Ubicación Premium</div>
+        <h2>¿Por qué elegir Zona Pradera?</h2>
+        <p class="location-desc">
+          Establezca su empresa en el centro empresarial más importante y estratégico de la ciudad de Guatemala. 
+          Posiciónese junto a las empresas más reconocidas, prestigiosas y estables del país.
+        </p>
 
-        <div class="stats-subgrid">
-          <div class="stat-mini">
-            <h4>75%</h4>
-            <p>Mejora en conciliación laboral y personal.</p>
+        <div class="amenities-grid">
+          <div class="amenity-item">
+            <span class="amenity-icon">📍</span>
+            <div>
+              <strong>Ubicación estratégica</strong>
+              <p>Fácil acceso desde cualquier punto de la ciudad.</p>
+            </div>
           </div>
-          <div class="stat-mini">
-            <h4>57%</h4>
-            <p>Reducción en la rotación de personal.</p>
+          <div class="amenity-item">
+            <span class="amenity-icon">🛡️</span>
+            <div>
+              <strong>Máxima Seguridad</strong>
+              <p>Sistemas de control de acceso y vigilancia 24/7.</p>
+            </div>
           </div>
-          <div class="stat-mini">
-            <h4>19%</h4>
-            <p>Aumento en la productividad del equipo.</p>
+          <div class="amenity-item">
+            <span class="amenity-icon">🚗</span>
+            <div>
+              <strong>Amplio Parqueo</strong>
+              <p>Comodidad garantizada para usted y sus clientes.</p>
+            </div>
           </div>
-          <div class="stat-mini">
-            <h4>85%</h4>
-            <p>Empresas reportan mayor eficiencia por flexibilidad.</p>
+          <div class="amenity-item">
+            <span class="amenity-icon">✨</span>
+            <div>
+              <strong>Prestigio Corporativo</strong>
+              <p>La mejor carta de presentación para sus aliados de negocio.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-<style>
-  .info-section {
-    padding: 80px 20px;
-    background-color: #fff;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-    color: #424243;
-    margin-bottom: 10px;
-  }
-  .subtitle {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-  }
-
-  /* Grid de Iconos */
-  .icons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-  }
-  .icon-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .icon {
-    font-size: 1.5rem;
-    background: #f4f4f4;
-    padding: 10px;
-    border-radius: 8px;
-    min-width: 45px;
-    text-align: center;
-  }
-  .icon-item p {
-    font-size: 0.95rem;
-    color: #424243;
-    margin: 0;
-  }
-
-  /* Estadísticas */
-  .stats-info {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .main-stat {
-    background: #424243;
-    color: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-  }
-  .main-stat h3 { font-size: 1.8rem; margin-bottom: 10px; }
-  .main-stat strong { color: #00d1b2; font-size: 2.5rem; }
-
-  .stats-subgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  .stat-mini {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border-top: 3px solid #424243;
-  }
-  .stat-mini h4 {
-    font-size: 1.5rem;
-    color: #424243;
-    margin-bottom: 5px;
-  }
-  .stat-mini p {
-    font-size: 0.85rem;
-    color: #666;
-    margin: 0;
-    line-height: 1.4;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .info-grid { grid-template-columns: 1fr; gap: 40px; }
-    h2 { font-size: 2rem; }
-    .icons-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  </section>
 
   <section class="services-grid">
     <div class="column">
@@ -259,5 +152,110 @@ import MainLayout from '../layouts/MainLayout.astro';
   @media (max-width: 768px) {
     .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
     .services-grid { grid-template-columns: 1fr; }
+  }
+  .location-section {
+    padding: 100px 20px;
+    background-color: #fcfcfc;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  /* Galería de Imágenes */
+  .location-gallery {
+    display: flex;
+    gap: 15px;
+  }
+  .main-img-wrapper { flex: 2; }
+  .main-location-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .side-imgs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .side-imgs img {
+    width: 100%;
+    height: 217px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* Contenido */
+  .section-badge {
+    display: inline-block;
+    background: #424243;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 2.5rem;
+    color: #424243;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  .location-desc {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  /* Grid de Beneficios */
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .amenity-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .amenity-icon {
+    font-size: 1.4rem;
+    background: white;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  .amenity-item strong {
+    display: block;
+    color: #424243;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+  .amenity-item p {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .location-grid { grid-template-columns: 1fr; }
+    .location-gallery { order: 2; }
+    .location-content { order: 1; }
+  }
+  @media (max-width: 600px) {
+    .location-gallery { flex-direction: column; }
+    .main-location-img, .side-imgs img { height: 250px; }
   }
 </style>
