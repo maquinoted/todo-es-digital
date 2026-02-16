@@ -1,65 +1,17 @@
 ---
-// src/components/Header.astro
+import Header from '../components/Header.astro';
+const { title } = Astro.props;
 ---
-<header class="main-header">
-  <div class="container">
-    <div class="logo">
-      <a href="/">
-        <strong>TODO ES</strong> DIGITAL
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/servicios">Servicios</a></li>
-        <li><a href="/contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<style>
-  .main-header {
-    background: #ffffff;
-    padding: 1rem 0;
-    border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  .logo a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #333;
-    letter-spacing: -1px;
-  }
-  .logo strong {
-    color: #424243; /* Cambia este azul por el tuyo */
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-  }
-  nav a {
-    text-decoration: none;
-    color: #666;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #424243;
-  }
-</style>
-
-<nav style="background: #0055ff; color: white; padding: 1rem;">
-  <h2>TODO ES DIGITAL</h2>
-</nav>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title} | Todo es Digital</title>
+  </head>
+  <body>
+    <Header />
+    <main style="padding: 2rem; max-width: 1000px; margin: 0 auto;">
+      <slot />
+    </main>
+  </body>
+</html>
