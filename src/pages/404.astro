@@ -1,0 +1,62 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Página no encontrada">
+  <div class="error-container">
+    <h1>404</h1>
+    <h2>Lo sentimos, esta página no existe.</h2>
+    <p>Es posible que la dirección esté mal escrita o que la página se haya movido.</p>
+    <a href="/" class="btn-back">Regresar al inicio</a>
+  </div>
+</MainLayout>
+
+<style>
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 50vh;
+  }
+
+  h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: #424243;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #888;
+    margin-bottom: 2rem;
+    max-width: 400px;
+  }
+
+  .btn-back {
+    background-color: #424243;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+  }
+
+  .btn-back:hover {
+    background-color: #000;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 4rem; }
+    h2 { font-size: 1.2rem; }
+  }
+</style>
