@@ -22,21 +22,138 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <section class="services-grid">
-    <div class="column">
-      <h2>Oficinas Virtuales</h2>
-      <p>
-        Proyecta una imagen corporativa de alto nivel sin los costos de una oficina física tradicional. Incluye dirección comercial de prestigio en Zona Pradera, manejo de correspondencia y atención telefónica personalizada.
-      </p>
+  <section class="business-growth">
+  <div class="container">
+    <div class="section-intro">
+      <span class="badge">Crezca con nosotros</span>
+      <h2>Servicios diseñados para llevar su negocio al siguiente nivel</h2>
+      <p>Infraestructura corporativa de élite con el respaldo del centro empresarial más estratégico de Guatemala.</p>
     </div>
 
-    <div class="column">
-      <h2>Alquiler de Salas de Reuniones</h2>
-      <p>
-        Espacios profesionales y equipados en el corazón de la zona 10. Ideales para cerrar negocios, realizar entrevistas o capacitaciones, con toda la infraestructura tecnológica que tu empresa necesita.
-      </p>
+    <div class="services-grid">
+      <div class="column featured-card">
+        <div class="price-badge">Desde <strong>Q150</strong> mensuales</div>
+        <h2>Oficinas Virtuales</h2>
+        <p>
+          Formalice su empresa con el servicio de <strong>oficina virtual</strong> más completo de Guatemala. Proyecte la seriedad que sus clientes buscan con una <strong>dirección fiscal</strong> y comercial de prestigio en Zona Pradera, ideal para trámites de SAT. 
+          Su plan incluye un sistema de <strong>PBX Cloud</strong> de última generación, <strong>recepcionista</strong> profesional para su atención telefónica y <strong>manejo de correspondencia</strong>. 
+          Además, obtenga acceso a <strong>salas de reuniones</strong> equipadas y beneficios exclusivos como <strong>descuento en parqueo</strong>.
+        </p>
+        <a href="/oficinas-virtuales" class="btn-internal">Ver planes y detalles →</a>
+      </div>
+
+      <div class="column">
+        <div class="price-badge">Espacios Premium</div>
+        <h2>Salas de Reuniones</h2>
+        <p>
+          Contamos con espacios modernos y equipados en el corazón de la zona 10 para sus juntas, presentaciones o entrevistas. 
+          Nuestras salas ofrecen un ambiente privado, profesional, con <strong>Wifi de alta velocidad</strong> y servicio de <strong>agua y café</strong> incluido para garantizar el éxito de sus reuniones de negocios.
+        </p>
+        <a href="/salas-reuniones" class="btn-internal secondary">Reservar espacio →</a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  .business-growth {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-intro {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .section-intro h2 {
+    font-size: 2.5rem;
+    color: #424243;
+    max-width: 800px;
+    margin: 15px auto;
+  }
+  .badge {
+    background: #e0e0e0;
+    color: #424243;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .column {
+    background: #fff;
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+  }
+
+  .featured-card {
+    border-top: 6px solid #424243;
+  }
+
+  .price-badge {
+    background: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+  .price-badge strong { font-size: 1.2rem; color: #424243; }
+
+  .column h2 {
+    color: #424243;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .column p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex-grow: 1;
+  }
+
+  .btn-internal {
+    text-decoration: none;
+    color: white;
+    background-color: #424243;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    transition: background 0.3s;
+  }
+  
+  .btn-internal.secondary {
+    background-color: transparent;
+    color: #424243;
+    border: 2px solid #424243;
+  }
+
+  .btn-internal:hover {
+    filter: brightness(1.2);
+  }
+
+  @media (max-width: 768px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .section-intro h2 { font-size: 1.8rem; }
+  }
+</style>
 
   <section class="location-section">
     <div class="container">
