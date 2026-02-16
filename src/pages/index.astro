@@ -189,6 +189,149 @@ import MainLayout from '../layouts/MainLayout.astro';
             />
           </div>
         </div>
+        <section class="comparison-section">
+  <div class="container">
+    <div class="comparison-header">
+      <h2>¿Por qué elegir modalidad de trabajo por consumo vs. oficina convencional?</h2>
+      <p class="comparison-intro">
+        El empresario moderno necesita adaptabilidad y eficiencia. Mientras que una oficina convencional lo ata a contratos rígidos y altos costos fijos, nuestra modalidad por consumo le permite pagar solo por lo que utiliza, garantizando competitividad sin descuidar la imagen de su empresa ni la calidad de sus servicios. Al contratar con nosotros, obtendrá mejor reputación y prestigio, destacándose de su competencia a un bajo costo.
+      </p>
+    </div>
+
+    <div class="stats-comparison-grid">
+      <div class="stats-text">
+        <div class="benefit-item">
+          <h3>Eficiencia de Costos</h3>
+          <p>Reduzca hasta el <strong>90% de sus costos administrativos</strong> en comparación con el mantenimiento de una oficina física tradicional.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Flexibilidad Laboral</h3>
+          <p>El <strong>85% de las empresas</strong> reportan que la productividad ha aumentado como resultado directo de una mayor flexibilidad operativa.</p>
+        </div>
+      </div>
+
+      <div class="stats-table-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Indicador de Impacto</th>
+              <th>Resultado con Nuestra Modalidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Conciliación Laboral</strong>
+                <span class="table-sub">Mejora en el equilibrio vida-trabajo de teletrabajadores.</span>
+              </td>
+              <td class="stat-highlight">75%</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Retención de Talento</strong>
+                <span class="table-sub">Reducción en la rotación de personal según empleadores.</span>
+              </td>
+              <td class="stat-highlight">57%</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Aumento de Productividad</strong>
+                <span class="table-sub">Incremento respecto al trabajo de tiempo completo convencional.</span>
+              </td>
+              <td class="stat-highlight">+19%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .comparison-section {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .comparison-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .comparison-header h2 {
+    font-size: 2.2rem;
+    color: #424243;
+    margin-bottom: 20px;
+  }
+  .comparison-intro {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stats-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .benefit-item {
+    margin-bottom: 30px;
+  }
+  .benefit-item h3 {
+    color: #424243;
+    margin-bottom: 10px;
+  }
+  .benefit-item strong {
+    font-size: 1.4rem;
+    color: #424243;
+  }
+
+  /* Tabla Profesional */
+  .stats-table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  .comparison-table th {
+    padding: 15px;
+    background: #424243;
+    color: white;
+    font-weight: 700;
+  }
+  .comparison-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .table-sub {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 5px;
+  }
+  .stat-highlight {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #424243;
+    text-align: right;
+  }
+
+  @media (max-width: 992px) {
+    .stats-comparison-grid { grid-template-columns: 1fr; }
+    .stat-highlight { text-align: left; }
+  }
+</style>
 
         <div class="location-content">
           <div class="section-badge">Ubicación Premium</div>
