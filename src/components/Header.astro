@@ -4,7 +4,7 @@
 <header class="header">
   <div class="container">
     <a href="/" class="logo">
-      <strong>TODO ES</strong> DIGITAL
+      <img src="/todo-es-digital-oficinas-virtuales.png" alt="Todo es Digital | Oficinas Virtuales Guatemala" class="logo-img" />
     </a>
 
     <button class="menu-toggle" aria-label="Abrir menú">
@@ -25,9 +25,9 @@
 
 <style>
   .header {
-    background-color: #424243; /* Tu color oficial */
+    background-color: #424243;
     color: white;
-    padding: 1.2rem 0; /* Padding aceptable y profesional */
+    padding: 0.8rem 0; /* Ajustado para que el logo luzca mejor */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -40,11 +40,10 @@
     align-items: center;
     padding: 0 24px;
   }
-  .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.4rem;
-    letter-spacing: 0.5px;
+  .logo-img {
+    height: 50px; /* Ajusta esta altura según cómo quieras que se vea */
+    width: auto;
+    display: block;
   }
   .nav-menu ul {
     display: flex;
@@ -58,19 +57,24 @@
     text-decoration: none;
     font-weight: 400;
     font-size: 0.95rem;
-    transition: opacity 0.3s;
-  }
-  .nav-menu a:hover {
-    opacity: 0.8;
   }
 
   /* Responsive */
-  .menu-toggle { display: none; flex-direction: column; gap: 5px; background: transparent; border: none; }
+  .menu-toggle { display: none; flex-direction: column; gap: 5px; background: transparent; border: none; cursor: pointer; }
   .bar { width: 25px; height: 2px; background-color: white; }
 
   @media (max-width: 768px) {
     .menu-toggle { display: flex; }
-    .nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #424243; padding: 1rem 0; border-top: 1px solid #555; }
+    .nav-menu { 
+      display: none; 
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      width: 100%; 
+      background: #424243; 
+      padding: 1.5rem 0; 
+      border-top: 1px solid #555; 
+    }
     .nav-menu.is-active { display: block; }
     .nav-menu ul { flex-direction: column; align-items: center; gap: 20px; }
   }
