@@ -3,6 +3,97 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Inicio">
-  <h1>Bienvenido a Todo es Digital</h1>
-  <p>Estamos migrando nuestra infraestructura para ofrecerte la máxima velocidad en soluciones digitales desde Guatemala.</p>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Todo es digital | oficinas virtuales en Guatemala</h1>
+      <p>
+        En <strong>Todo es Digital</strong>, impulsamos el crecimiento de las empresas guatemaltecas eliminando las barreras físicas. Nuestro centro de negocios ofrece soluciones estratégicas de infraestructura que permiten a emprendedores y corporaciones operar con profesionalismo, reduciendo costos operativos y maximizando su presencia en el mercado local.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="/recepcionista-oficina.jpg" alt="Recepcionista profesional en Todo es Digital" />
+    </div>
+  </section>
+
+  <section class="services-grid">
+    <div class="column">
+      <h2>Oficinas Virtuales</h2>
+      <p>
+        Proyecta una imagen corporativa de alto nivel sin los costos de una oficina física tradicional. Incluye dirección comercial de prestigio en Zona Pradera, manejo de correspondencia y atención telefónica personalizada.
+      </p>
+    </div>
+
+    <div class="column">
+      <h2>Alquiler de Salas de Reuniones</h2>
+      <p>
+        Espacios profesionales y equipados en el corazón de la zona 10. Ideales para cerrar negocios, realizar entrevistas o capacitaciones, con toda la infraestructura tecnológica que tu empresa necesita.
+      </p>
+    </div>
+  </section>
 </MainLayout>
+
+<style>
+  /* Estilos basados en tus preferencias de color y fuente */
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-content { flex: 1; }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    color: #424243;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    color: #666; /* El gris que te gustó de la 404 */
+    line-height: 1.6;
+  }
+
+  .hero-image flex: 1;
+  .hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .column {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid #424243;
+  }
+
+  .column h2 {
+    color: #424243;
+    margin-bottom: 15px;
+  }
+
+  .column p {
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Responsivo para móvil */
+  @media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
