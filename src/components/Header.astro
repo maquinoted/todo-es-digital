@@ -4,7 +4,7 @@
 <header class="header">
   <div class="container">
     <a href="/" class="logo">
-      <strong>TODO ES DIGITAL</strong>
+      <strong>TODO ES</strong> DIGITAL
     </a>
 
     <button class="menu-toggle" aria-label="Abrir menú">
@@ -25,29 +25,30 @@
 
 <style>
   .header {
-    background: #424243;
+    background-color: #424243; /* Tu color oficial */
     color: white;
-    padding: 1rem 0;
+    padding: 1.2rem 0; /* Padding aceptable y profesional */
     position: sticky;
     top: 0;
     z-index: 100;
   }
   .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 24px;
   }
   .logo {
     color: white;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
   }
   .nav-menu ul {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -55,55 +56,29 @@
   .nav-menu a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+  }
+  .nav-menu a:hover {
+    opacity: 0.8;
   }
 
-  /* Estilos para el botón hamburguesa */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: 0.3s;
-  }
+  /* Responsive */
+  .menu-toggle { display: none; flex-direction: column; gap: 5px; background: transparent; border: none; }
+  .bar { width: 25px; height: 2px; background-color: white; }
 
-  /* Media Query para Móviles */
   @media (max-width: 768px) {
-    .menu-toggle {
-      display: flex;
-    }
-    .nav-menu {
-      display: none; /* Se oculta por defecto en móvil */
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: #424243;
-      padding: 1rem 0;
-    }
-    .nav-menu.is-active {
-      display: block; /* Se muestra al hacer clic */
-    }
-    .nav-menu ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
+    .menu-toggle { display: flex; }
+    .nav-menu { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #424243; padding: 1rem 0; border-top: 1px solid #555; }
+    .nav-menu.is-active { display: block; }
+    .nav-menu ul { flex-direction: column; align-items: center; gap: 20px; }
   }
 </style>
 
 <script>
-  // Script para manejar el menú en móviles
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
-
   menuToggle?.addEventListener('click', () => {
     navMenu?.classList.toggle('is-active');
   });
