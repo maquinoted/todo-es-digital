@@ -1,4 +1,5 @@
 ---
+// src/layouts/MainLayout.astro
 import Header from '../components/Header.astro';
 const { title } = Astro.props;
 ---
@@ -9,9 +10,7 @@ const { title } = Astro.props;
     <title>{title} | Todo es Digital</title>
   </head>
   <body>
-    <h1>hola</h1>
     <Header /> <main>
-      <slot />
-    </main>
+      <slot /> </main>
   </body>
 </html>
