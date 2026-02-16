@@ -55,141 +55,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   </div>
 </section>
 
-<style>
-  .business-growth {
-    padding: 100px 20px;
-    background-color: #f9f9f9;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .section-intro {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .section-intro h2 {
-    font-size: 2.5rem;
-    color: #424243;
-    max-width: 800px;
-    margin: 15px auto;
-  }
-  .badge {
-    background: #e0e0e0;
-    color: #424243;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .column {
-    background: #fff;
-    padding: 45px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #eee;
-    transition: transform 0.3s ease;
-  }
-
-  .featured-card {
-    border-top: 6px solid #424243;
-  }
-
-  .price-badge {
-    background: #f0f0f0;
-    padding: 8px 15px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    align-self: flex-start;
-  }
-  .price-badge strong { font-size: 1.2rem; color: #424243; }
-
-  .column h2 {
-    color: #424243;
-    margin-bottom: 20px;
-    font-size: 2rem;
-  }
-
-  .column p {
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 30px;
-    flex-grow: 1;
-  }
-
-  .btn-internal {
-    text-decoration: none;
-    color: white;
-    background-color: #424243;
-    padding: 15px 25px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: 700;
-    transition: background 0.3s;
-  }
-  
-  .btn-internal.secondary {
-    background-color: transparent;
-    color: #424243;
-    border: 2px solid #424243;
-  }
-
-  .btn-internal:hover {
-    filter: brightness(1.2);
-  }
-
-  @media (max-width: 768px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .section-intro h2 { font-size: 1.4rem; }
-  }
-</style>
-
-  <section class="location-section">
-    <div class="container">
-      <div class="location-grid">
-        <div class="location-gallery">
-          <div class="main-img-wrapper">
-            <img 
-              src="/oficinas-guatemala.webp" 
-              alt="Lobby Empresarial Zona Pradera" 
-              width="1200" 
-              height="800"
-              loading="lazy"
-              decoding="async"
-              class="main-location-img" 
-            />
-          </div>
-          <div class="side-imgs">
-            <img 
-              src="/domicilio-fiscal-zona10-guatemala.webp" 
-              alt="domicilio fiscal en guatemala zona 10" 
-              width="600" 
-              height="400"
-              loading="lazy"
-              decoding="async"
-            />
-            <img 
-              src="/direccion-fiscal-zona-10-guatemala.webp" 
-              alt="Direccion fiscal y comercial oficina virtual Guatemala" 
-              width="600" 
-              height="400"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-        <section class="comparison-section">
+<section class="comparison-section">
   <div class="container">
     <div class="comparison-header">
       <h2>¿Por qué elegir modalidad de trabajo por consumo vs. oficina convencional?</h2>
@@ -332,6 +198,142 @@ import MainLayout from '../layouts/MainLayout.astro';
     .stat-highlight { text-align: left; }
   }
 </style>
+
+<style>
+  .business-growth {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .section-intro {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .section-intro h2 {
+    font-size: 2.5rem;
+    color: #424243;
+    max-width: 800px;
+    margin: 15px auto;
+  }
+  .badge {
+    background: #e0e0e0;
+    color: #424243;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .column {
+    background: #fff;
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+  }
+
+  .featured-card {
+    border-top: 6px solid #424243;
+  }
+
+  .price-badge {
+    background: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+  .price-badge strong { font-size: 1.2rem; color: #424243; }
+
+  .column h2 {
+    color: #424243;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .column p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex-grow: 1;
+  }
+
+  .btn-internal {
+    text-decoration: none;
+    color: white;
+    background-color: #424243;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    transition: background 0.3s;
+  }
+  
+  .btn-internal.secondary {
+    background-color: transparent;
+    color: #424243;
+    border: 2px solid #424243;
+  }
+
+  .btn-internal:hover {
+    filter: brightness(1.2);
+  }
+
+  @media (max-width: 768px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .section-intro h2 { font-size: 1.4rem; }
+  }
+</style>
+
+  <section class="location-section">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-gallery">
+          <div class="main-img-wrapper">
+            <img 
+              src="/oficinas-guatemala.webp" 
+              alt="Lobby Empresarial Zona Pradera" 
+              width="1200" 
+              height="800"
+              loading="lazy"
+              decoding="async"
+              class="main-location-img" 
+            />
+          </div>
+          <div class="side-imgs">
+            <img 
+              src="/domicilio-fiscal-zona10-guatemala.webp" 
+              alt="domicilio fiscal en guatemala zona 10" 
+              width="600" 
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+            <img 
+              src="/direccion-fiscal-zona-10-guatemala.webp" 
+              alt="Direccion fiscal y comercial oficina virtual Guatemala" 
+              width="600" 
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
 
         <div class="location-content">
           <div class="section-badge">Ubicación Premium</div>
