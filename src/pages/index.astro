@@ -15,6 +15,169 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
+  <section class="info-section">
+  <div class="container">
+    <div class="info-grid">
+      <div class="services-info">
+        <h2>¿Qué es una oficina virtual?</h2>
+        <p class="subtitle">Es un espacio de oficina que incluye todos los servicios administrativos a bajo costo:</p>
+        
+        <div class="icons-grid">
+          <div class="icon-item">
+            <span class="icon">📞</span>
+            <p>PBX</p>
+          </div>
+          <div class="icon-item">
+            <span class="icon">🪑</span>
+            <p>Uso de salas de reuniones equipadas</p>
+          </div>
+          <div class="icon-item">
+            <span class="icon">✉️</span>
+            <p>Manejo de correspondencia</p>
+          </div>
+          <div class="icon-item">
+            <span class="icon">☕</span>
+            <p>Agua y café para reuniones</p>
+          </div>
+          <div class="icon-item">
+            <span class="icon">📶</span>
+            <p>Wifi de alta velocidad</p>
+          </div>
+          <div class="icon-item">
+            <span class="icon">🏢</span>
+            <p>Dirección fiscal y comercial</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-info">
+        <div class="stat-card main-stat">
+          <h3>Reducirá hasta el <strong>90%</strong></h3>
+          <p>de costos administrativos vs. una oficina convencional.</p>
+        </div>
+
+        <div class="stats-subgrid">
+          <div class="stat-mini">
+            <h4>75%</h4>
+            <p>Mejora en conciliación laboral y personal.</p>
+          </div>
+          <div class="stat-mini">
+            <h4>57%</h4>
+            <p>Reducción en la rotación de personal.</p>
+          </div>
+          <div class="stat-mini">
+            <h4>19%</h4>
+            <p>Aumento en la productividad del equipo.</p>
+          </div>
+          <div class="stat-mini">
+            <h4>85%</h4>
+            <p>Empresas reportan mayor eficiencia por flexibilidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .info-section {
+    padding: 80px 20px;
+    background-color: #fff;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    color: #424243;
+    margin-bottom: 10px;
+  }
+  .subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+
+  /* Grid de Iconos */
+  .icons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  .icon-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .icon {
+    font-size: 1.5rem;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 45px;
+    text-align: center;
+  }
+  .icon-item p {
+    font-size: 0.95rem;
+    color: #424243;
+    margin: 0;
+  }
+
+  /* Estadísticas */
+  .stats-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .main-stat {
+    background: #424243;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .main-stat h3 { font-size: 1.8rem; margin-bottom: 10px; }
+  .main-stat strong { color: #00d1b2; font-size: 2.5rem; }
+
+  .stats-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .stat-mini {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 3px solid #424243;
+  }
+  .stat-mini h4 {
+    font-size: 1.5rem;
+    color: #424243;
+    margin-bottom: 5px;
+  }
+  .stat-mini p {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .info-grid { grid-template-columns: 1fr; gap: 40px; }
+    h2 { font-size: 2rem; }
+    .icons-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
   <section class="services-grid">
     <div class="column">
       <h2>Oficinas Virtuales</h2>
