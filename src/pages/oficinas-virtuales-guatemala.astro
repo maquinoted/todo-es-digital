@@ -183,6 +183,72 @@ const currentCanonicalURL = "https://todo-es-digital.vercel.app/oficinas-virtual
   </div>
 </section>
 
+<section class="gallery-section">
+  <div class="container">
+    <h2 class="text-center">Nuestras Instalaciones: Prestigio y Comodidad</h2>
+    <p class="text-center">
+      Explore los espacios diseñados para potenciar su imagen y productividad en Zona Pradera.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img
+          src="/oficinas-guatemala.webp"
+          alt="Oficina privada moderna en Zona Pradera"
+          loading="lazy"
+          width="800"
+          height="533"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/sala-reuniones-zona-10.webp"
+          alt="Sala de reuniones equipada en Guatemala"
+          loading="lazy"
+          width="800"
+          height="533"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/sala-reuniones-zona-10.webp"
+          alt="Recepción profesional de oficina virtual"
+          loading="lazy"
+          width="800"
+          height="533"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/sala-reuniones-zona-10.webp"
+          alt="Área de coworking moderna y flexible"
+          loading="lazy"
+          width="800"
+          height="533"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/sala-reuniones-zona-10.webp"
+          alt="Espacio de trabajo privado con vista"
+          loading="lazy"
+          width="800"
+          height="533"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="/sala-reuniones-zona-10.webp"
+          alt="Lounge de espera empresarial y networking"
+          loading="lazy"
+          width="800"
+          height="533"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -310,5 +376,78 @@ const currentCanonicalURL = "https://todo-es-digital.vercel.app/oficinas-virtual
     font-size: 1.1rem;
     color: #1a1a1a;
   }
+
+  /* Estilos para la sección de Galería */
+.gallery-section {
+  padding: 80px 0;
+  background-color: #f8f8f8; /* Un fondo gris muy claro para diferenciar */
+}
+
+.gallery-section h2 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.gallery-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columnas en desktop */
+  gap: 25px; /* Espacio entre las imágenes */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden; /* Asegura que la imagen no se salga */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px) scale(1.02); /* Efecto de levitar y crecer */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Recorta la imagen para que cubra el área sin distorsionarse */
+  display: block; /* Elimina espacios extra que puedan aparecer con img */
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05); /* Zoom sutil al pasar el mouse */
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2 columnas en tablets */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 15px;
+  }
+  .gallery-item img {
+    height: 200px; /* Ajuste de altura para móviles */
+  }
+  .gallery-section h2 {
+    font-size: 1.8rem;
+  }
+  .gallery-section p {
+    font-size: 1rem;
+  }
+}
 
 </style>
