@@ -10,24 +10,24 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <section class="intro-with-image"> {/* Nuevo contenedor para imagen y texto */}
+  <section class="intro-with-image">
     <div class="container intro-grid">
       <div class="intro-content">
         <h2>Formalice su negocio hoy con infraestructura de élite</h2>
         <p>
           Obtenga una <strong>dirección fiscal y comercial de prestigio en Zona Pradera</strong> para todos sus trámites ante la SAT. 
           Nuestra modalidad de trabajo por consumo le permite pagar solo por lo que utiliza, garantizando competitividad y una mejor reputación frente a su competencia a un bajo costo.
-          Este modelo de negocio le permite disfrutar de una <strong>oficina profesional sin la carga de gastos fijos</strong>, ideal para emprendedores y empresas en expansión que buscan eficiencia y flexibilidad.
+          Este modelo le permite disfrutar de una <strong>oficina profesional sin la carga de gastos fijos</strong>, ideal para emprendedores y empresas en expansión que buscan eficiencia y flexibilidad.
         </p>
       </div>
       <div class="intro-image-wrapper">
         <img 
-          src="/vertical-oficina-virtual.webp" /* Asegúrate de tener esta imagen en /public */
-          alt="Oficina virtual moderna en Guatemala"
-          width="400"
-          height="600"
+          src="/oficina-cuadrada.webp" 
+          alt="Oficina virtual en Zona Pradera Guatemala"
+          width="500"
+          height="500"
+          class="img-square"
           loading="lazy"
-          decoding="async"
         />
       </div>
     </div>
@@ -36,57 +36,65 @@ import MainLayout from '../layouts/MainLayout.astro';
   <section class="pricing-section">
     <div class="container">
       <h2>Planes de Oficina Virtual que impulsan su crecimiento</h2>
-      <div class="pricing-grid">
-        
+      
+      <div class="services-grid-top">
         <div class="price-card">
           <h3>Plan Emprendedor</h3>
           <div class="price">Q375<span>/mes</span></div>
-          <p class="plan-desc">Ideal para profesionales que necesitan formalidad legal inmediata.</p>
           <ul>
             <li>Dirección Fiscal y Comercial en Zona Pradera.</li>
             <li>Gestión de correspondencia y notificaciones.</li>
             <li>Trámites de SAT y facturación profesional.</li>
           </ul>
-          <a href="https://wa.me/50223022200?text=Hola,%20solicito%20información%20del%20Plan%20Emprendedor" class="btn-price">Solicitar vía WhatsApp</a>
+          <a href="https://wa.me/50223022200?text=Info%20Plan%20Emprendedor" class="btn-price">Solicitar vía WhatsApp</a>
         </div>
 
         <div class="price-card featured">
           <div class="popular">Más Popular</div>
           <h3>Plan Business</h3>
           <div class="price">Q550<span>/mes</span></div>
-          <p class="plan-desc">Movilidad total con nuestro exclusivo sistema PBX Cloud.</p>
           <ul>
             <li>Número de PBX exclusivo y recepcionista.</li>
             <li>Atención telefónica personalizada y transferencias.</li>
             <li>Uso de Salas de Reuniones premium incluidas.</li>
           </ul>
-          <a href="https://wa.me/50223022200?text=Hola,%20solicito%20información%20del%20Plan%20Business" class="btn-price">Cotizar por WhatsApp</a>
+          <a href="https://wa.me/50223022200?text=Info%20Plan%20Business" class="btn-price">Cotizar por WhatsApp</a>
         </div>
 
         <div class="price-card">
           <h3>Plan Pro</h3>
           <div class="price">Q750<span>/mes</span></div>
-          <p class="plan-desc">Para profesionales y equipos que requieren mayor infraestructura.</p>
           <ul>
             <li>Todo lo del Plan Business.</li>
             <li>8 horas mensuales de Salas de Reuniones.</li>
-            <li>Servicio de impresión y escaneo.</li>
+            <li>Servicio de impresión y escaneo corporativo.</li>
           </ul>
-          <a href="https://wa.me/50223022200?text=Hola,%20solicito%20información%20del%20Plan%20Pro" class="btn-price">Consultar Plan Pro</a>
+          <a href="https://wa.me/50223022200?text=Info%20Plan%20Pro" class="btn-price">Consultar Plan Pro</a>
         </div>
+      </div>
 
+      <div class="services-grid-bottom">
         <div class="price-card">
           <h3>Plan Corporativo</h3>
-          <div class="price">Personalizado</div>
-          <p class="plan-desc">Para organizaciones que buscan la máxima eficiencia operativa.</p>
+          <div class="price">Consultar</div>
           <ul>
             <li>Horas de sala de reuniones extendidas.</li>
             <li>Wifi de alta velocidad y servicios completos.</li>
             <li>Descuentos exclusivos en parqueo Zona Pradera.</li>
           </ul>
-          <a href="https://wa.me/50223022200?text=Hola,%20solicito%20información%20del%20Plan%20Corporativo" class="btn-price">Contactar Asesor</a>
+          <a href="https://wa.me/50223022200?text=Info%20Plan%20Corporativo" class="btn-price">Contactar Asesor</a>
         </div>
 
+        <div class="price-card">
+          <h3>Plan a Medida</h3>
+          <div class="price">Custom</div>
+          <ul>
+            <li>Configuración flexible de servicios digitales.</li>
+            <li>Integración con sistema CRM y Coworking.</li>
+            <li>Soporte técnico administrativo dedicado.</li>
+          </ul>
+          <a href="https://wa.me/50223022200?text=Info%20Plan%20Medida" class="btn-price">Personalizar mi Plan</a>
+        </div>
       </div>
     </div>
   </section>
@@ -97,7 +105,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       <div class="stats-mini-grid">
         <div class="stat-item">
           <h4>Eficiencia de Costos</h4>
-          <p>Reduzca hasta el <strong>90% de sus costos administrativos</strong> vs. oficina física tradicional.</p>
+          <p>Reduzca hasta el <strong>90% de sus costos administrativos</strong> vs. oficina física.</p>
         </div>
         <div class="stat-item">
           <h4>Aumento de Productividad</h4>
@@ -105,7 +113,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
         <div class="stat-item">
           <h4>Flexibilidad Operativa</h4>
-          <p>El <strong>85% de las empresas</strong> reportan mayor éxito gracias a la flexibilidad de este modelo.</p>
+          <p>El <strong>85% de las empresas</strong> reportan mayor éxito gracias a la flexibilidad.</p>
         </div>
       </div>
     </div>
@@ -115,108 +123,101 @@ import MainLayout from '../layouts/MainLayout.astro';
 <style>
   .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
   
-  .page-hero { padding: 60px 0; background: white; color: #424243; text-align: center; } /* H1 sin color de fondo */
-  .page-hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-  .subtitle { font-size: 1.1rem; opacity: 0.9; }
+  /* Hero & Intro */
+  .page-hero { padding: 40px 0; background: white; color: #424243; text-align: center; }
+  .page-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
   
-  .intro-with-image { padding: 50px 0; background: white; }
+  .intro-with-image { padding: 40px 0; background: white; }
   .intro-grid {
     display: grid;
-    grid-template-columns: 1fr 350px; /* Columna de texto y columna para imagen */
-    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     align-items: center;
   }
-  .intro-content h2 { color: #424243; margin-bottom: 20px; font-size: 1.8rem; }
-  .intro-content p { line-height: 1.6; color: #666; font-size: 1.05rem; }
-  
-  .intro-image-wrapper { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
-  .intro-image-wrapper img {
-    max-width: 100%;
-    height: auto; /* Mantiene proporción de 400x600 */
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  .img-square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   }
 
+  /* Grid de 5 servicios */
   .pricing-section { padding: 60px 0; background: #f9f9f9; }
   .pricing-section h2 { text-align: center; margin-bottom: 40px; color: #424243; }
 
-  .pricing-grid {
+  .services-grid-top {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Más planes = columnas más estrechas */
-    gap: 25px; /* Menos espacio entre planes */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .services-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 740px; /* Ajuste para centrar los 2 de abajo */
+    margin: 0 auto;
   }
 
   .price-card {
     background: white;
-    padding: 30px 20px; /* Reducido un poco para 4 planes */
+    padding: 25px;
     border-radius: 12px;
     text-align: center;
     border: 1px solid #eee;
-    position: relative;
-    transition: transform 0.3s;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s;
   }
   .price-card:hover { transform: translateY(-5px); }
-  .price-card.featured { border: 2px solid #424243; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+  .price-card.featured { border: 2px solid #424243; position: relative; }
   
   .popular {
     position: absolute;
-    top: -14px;
+    top: -12px;
     left: 50%;
     transform: translateX(-50%);
     background: #424243;
     color: white;
-    padding: 4px 14px;
+    padding: 3px 12px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: bold;
   }
 
-  .price { font-size: 2rem; font-weight: 800; color: #424243; margin: 15px 0; } /* Ligeramente más pequeño */
-  .price span { font-size: 0.85rem; color: #888; font-weight: 400; }
+  .price { font-size: 1.8rem; font-weight: 800; color: #424243; margin: 15px 0; }
+  .price span { font-size: 0.8rem; color: #888; }
   
-  .price-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #424243; }
-  .plan-desc { font-size: 0.8rem; color: #777; margin-bottom: 15px; min-height: 40px; } /* Ajustado para 4 planes */
-
+  .price-card h3 { font-size: 1.2rem; color: #424243; }
   .price-card ul { list-style: none; padding: 0; margin-bottom: 20px; text-align: left; flex-grow: 1; }
-  .price-card li { margin-bottom: 8px; font-size: 0.85rem; color: #555; display: flex; align-items: flex-start; }
+  .price-card li { margin-bottom: 8px; font-size: 0.85rem; color: #555; display: flex; }
   .price-card li::before { content: "✓"; color: #25d366; margin-right: 8px; font-weight: bold; }
 
   .btn-price {
     background: #424243;
     color: white;
-    padding: 10px; /* Botones un poco más compactos */
+    padding: 10px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
-    font-size: 0.85rem; /* Fuente más pequeña en botones */
+    font-size: 0.85rem;
   }
-  .btn-price:hover { background: #000; }
 
-  .benefits-stats { padding: 60px 0; background: white; text-align: center; }
+  /* Estadísticas */
+  .benefits-stats { padding: 60px 0; text-align: center; }
   .stats-mini-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 30px;
   }
-  .stat-item h4 { color: #424243; font-size: 1.1rem; margin-bottom: 8px; }
-  .stat-item p { font-size: 0.9rem; color: #666; line-height: 1.4; }
 
   /* Responsive */
   @media (max-width: 992px) {
-    .intro-grid { grid-template-columns: 1fr; gap: 30px; } /* Apila texto e imagen en móvil */
-    .intro-image-wrapper { order: -1; margin-bottom: 30px; } /* Imagen arriba del texto en móvil */
-  }
-  @media (max-width: 768px) {
-    .page-hero h1 { font-size: 1.8rem; }
-    .pricing-grid { grid-template-columns: 1fr; } /* Un solo plan por fila en móvil */
-    .intro-content h2 { font-size: 1.6rem; }
+    .intro-grid { grid-template-columns: 1fr; }
+    .services-grid-top, .services-grid-bottom { grid-template-columns: 1fr; max-width: 100%; }
+    .stats-mini-grid { grid-template-columns: 1fr; }
   }
 </style>
