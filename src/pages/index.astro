@@ -13,7 +13,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     <div class="hero-image">
       <img 
         src="/recepcionista-oficina-virtual-guatemala.webp" 
-        alt="Recepcionista oficinas virtuales en Guatemala" 
+        alt="Recepcionista profesional de oficina virtual en Guatemala" 
         width="600" 
         height="400"
         loading="eager"
@@ -369,17 +369,17 @@ import MainLayout from '../layouts/MainLayout.astro';
 </MainLayout>
 
 <style>
-  /* Estilos basados en tus preferencias de color y fuente */
+  /* Estilos base y variables de color */
   .hero {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 60px 0;
+    padding: 60px 24px;
     max-width: 1200px;
     margin: 0 auto;
   }
 
-  .hero-content { flex: 1; }
+  .hero-content { flex: 1.2; }
   
   .hero-content h1 {
     font-size: 2.5rem;
@@ -390,17 +390,25 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   .hero-content p {
     font-size: 1.1rem;
-    color: #666; /* El gris que te gustó de la 404 */
+    color: #666;
     line-height: 1.6;
   }
 
-  .hero-image flex: 1;
-.hero-image img {
-  width: 100%;       /* Ocupa el ancho de su columna */
-  height: auto;      /* Mantiene la proporción original */
-  object-fit: cover; /* Evita que se estire feo */
-  border-radius: 10px;
-}
+  /* Corregido: Agregadas llaves de apertura y cierre */
+  .hero-image { 
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 600px; /* Tamaño real de tu imagen */
+    height: auto;     /* Mantiene la proporción 600x400 */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
 
   .services-grid {
     display: grid;
@@ -416,6 +424,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     padding: 30px;
     border-radius: 8px;
     border-left: 5px solid #424243;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
 
   .column h2 {
@@ -428,19 +437,16 @@ import MainLayout from '../layouts/MainLayout.astro';
     line-height: 1.5;
   }
 
-  /* Responsivo para móvil */
-  @media (max-width: 768px) {
-    .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
-    .services-grid { grid-template-columns: 1fr; }
-  }
   .location-section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-color: #fcfcfc;
   }
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
+
   .location-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -473,7 +479,6 @@ import MainLayout from '../layouts/MainLayout.astro';
     border-radius: 12px;
   }
 
-  /* Contenido */
   .section-badge {
     display: inline-block;
     background: #424243;
@@ -485,30 +490,19 @@ import MainLayout from '../layouts/MainLayout.astro';
     letter-spacing: 1px;
     margin-bottom: 20px;
   }
-  h2 {
-    font-size: 2.5rem;
-    color: #424243;
-    margin-bottom: 20px;
-    line-height: 1.2;
-  }
-  .location-desc {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 40px;
-    line-height: 1.6;
-  }
 
-  /* Grid de Beneficios */
   .amenities-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 25px;
   }
+
   .amenity-item {
     display: flex;
     gap: 20px;
     align-items: flex-start;
   }
+
   .amenity-icon {
     font-size: 1.4rem;
     background: white;
@@ -516,24 +510,27 @@ import MainLayout from '../layouts/MainLayout.astro';
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
-  .amenity-item strong {
-    display: block;
-    color: #424243;
-    font-size: 1.05rem;
-    margin-bottom: 4px;
-  }
-  .amenity-item p {
-    font-size: 0.9rem;
-    color: #888;
-    margin: 0;
-  }
 
-  /* Responsive */
+  /* --- RESPONSIVE OPTIMIZADO --- */
+
   @media (max-width: 992px) {
     .location-grid { grid-template-columns: 1fr; }
     .location-gallery { order: 2; }
     .location-content { order: 1; }
   }
+
+  @media (max-width: 768px) {
+    .hero { 
+      flex-direction: column; 
+      text-align: center; 
+      padding: 40px 20px; 
+      gap: 30px;
+    }
+    .hero-content h1 { font-size: 2rem; }
+    .hero-image { width: 100%; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 600px) {
     .location-gallery { flex-direction: column; }
     .main-location-img, .side-imgs img { height: 250px; }
