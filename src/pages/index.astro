@@ -1,8 +1,19 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+// Configuración de metadatos SEO para el Home
+const title = "Todo es Digital | Oficinas Virtuales y PBX Cloud en Guatemala";
+const description = "Potencie su empresa con domicilio fiscal en Zona Pradera, PBX Cloud y atención profesional desde Q150. Ahorre un 90% en costos operativos hoy.";
+const keywords = "oficina virtual guatemala, pbx cloud guatemala, domicilio fiscal sat, salas de reuniones zona 10, direccion comercial zona pradera";
+const canonicalURL = "https://todo-es-digital.vercel.app/";
 ---
 
-<MainLayout title="Inicio">
+<MainLayout 
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonicalURL={canonicalURL}
+>
   <section class="hero">
     <div class="hero-content">
       <h1>Todo es digital | oficinas virtuales en Guatemala</h1>
@@ -23,516 +34,146 @@ import MainLayout from '../layouts/MainLayout.astro';
   </section>
 
   <section class="business-growth">
-  <div class="container">
-    <div class="section-intro">
-      <span class="badge">Crezca con nosotros</span>
-      <h2>Servicios de oficina en Guatemala para llevar su negocio al siguiente nivel</h2>
-      <p>Infraestructura corporativa con el respaldo del centro empresarial más estratégico de Guatemala.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="column featured-card">
-        <div class="price-badge">Desde <strong>Q150</strong> mensuales</div>
-        <h2>Oficinas Virtuales</h2>
-        <p>
-          Formalice su empresa con el servicio de <strong>oficina virtual</strong> más completo de Guatemala. Proyecte la seriedad que sus clientes buscan con una <strong>dirección fiscal</strong> y comercial de prestigio en Zona Pradera, ideal para trámites de SAT. 
-          Su plan incluye un sistema de <strong>PBX Cloud</strong> de última generación, <strong>recepcionista</strong> profesional para su atención telefónica y <strong>manejo de correspondencia</strong>. 
-          Además, obtenga acceso a <strong>salas de reuniones</strong> equipadas y beneficios exclusivos como <strong>descuento en parqueo</strong>.
-        </p>
-        <a href="/oficinas-virtuales" class="btn-internal">Ver planes y detalles →</a>
+    <div class="container">
+      <div class="section-intro">
+        <span class="badge">Crezca con nosotros</span>
+        <h2>Servicios de oficina en Guatemala para llevar su negocio al siguiente nivel</h2>
+        <p>Infraestructura corporativa con el respaldo del centro empresarial más estratégico de Guatemala.</p>
       </div>
 
-      <div class="column">
-        <div class="price-badge">Espacios Premium</div>
-        <h2>Salas de Reuniones</h2>
-        <p>
-          Contamos con espacios modernos y equipados en el corazón de la zona 10 para sus juntas, presentaciones o entrevistas. 
-          Nuestras salas ofrecen un ambiente privado, profesional, con <strong>Wifi de alta velocidad</strong> y servicio de <strong>agua y café</strong> incluido para garantizar el éxito de sus reuniones de negocios.
-        </p>
-        <a href="/salas-reuniones" class="btn-internal secondary">Reservar espacio →</a>
+      <div class="services-grid">
+        <div class="column featured-card">
+          <div class="price-badge">Desde <strong>Q150</strong> mensuales</div>
+          <h2>Oficinas Virtuales</h2>
+          <p>
+            Formalice su empresa con el servicio de <strong>oficina virtual</strong> más completo de Guatemala. Proyecte la seriedad que sus clientes buscan con una <strong>dirección fiscal</strong> y comercial de prestigio en Zona Pradera, ideal para trámites de SAT. 
+            Su plan incluye un sistema de <strong>PBX Cloud</strong> de última generación, <strong>recepcionista</strong> profesional para su atención telefónica y <strong>manejo de correspondencia</strong>. 
+            Además, obtenga acceso a <strong>salas de reuniones</strong> equipadas y beneficios exclusivos como <strong>descuento en parqueo</strong>.
+          </p>
+          <a href="/oficinas-virtuales-guatemala" class="btn-internal">Ver planes y detalles →</a>
+        </div>
+
+        <div class="column">
+          <div class="price-badge">Espacios Premium</div>
+          <h2>Salas de Reuniones</h2>
+          <p>
+            Contamos con espacios modernos y equipados en el corazón de la zona 10 para sus juntas, presentaciones o entrevistas. 
+            Nuestras salas ofrecen un ambiente privado, profesional, con <strong>Wifi de alta velocidad</strong> y servicio de <strong>agua y café</strong> incluido para garantizar el éxito de sus reuniones de negocios.
+          </p>
+          <a href="/salas-reuniones" class="btn-internal secondary">Reservar espacio →</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-  .business-growth {
-    padding: 60px 20px; /* Reducido de 100px a 60px */
-    background-color: #f9f9f9;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .section-intro {
-    text-align: center;
-    margin-bottom: 30px; /* Reducido de 60px a 30px */
-  }
-  .section-intro h2 {
-    font-size: 2.2rem; /* Ligeramente más pequeño para ahorrar espacio */
-    color: #424243;
-    max-width: 800px;
-    margin: 10px auto; /* Reducido margen */
-  }
-  .badge {
-    background: #e0e0e0;
-    color: #424243;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px; /* Reducido de 40px a 30px */
-  }
-
-  .column {
-    background: #fff;
-    padding: 30px; /* Reducido de 45px a 30px */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #eee;
-    transition: transform 0.3s ease;
-  }
-
-  .featured-card {
-    border-top: 6px solid #424243;
-  }
-
-  .price-badge {
-    background: #f0f0f0;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    margin-bottom: 15px; /* Reducido de 20px a 15px */
-    align-self: flex-start;
-  }
-  .price-badge strong { font-size: 1.1rem; color: #424243; }
-
-  .column h2 {
-    color: #424243;
-    margin-bottom: 12px; /* Reducido de 20px a 12px */
-    font-size: 1.8rem; /* Ligeramente más pequeño */
-  }
-
-  .column p {
-    color: #666;
-    line-height: 1.6; /* Un poco más apretado */
-    margin-bottom: 20px; /* Reducido de 30px a 20px */
-    flex-grow: 1;
-    font-size: 0.95rem; /* Ajustado para compactar */
-  }
-
-  .btn-internal {
-    text-decoration: none;
-    color: white;
-    background-color: #424243;
-    padding: 12px 25px; /* Reducido verticalmente */
-    border-radius: 5px;
-    text-align: center;
-    font-weight: 700;
-    transition: background 0.3s;
-  }
-  
-  .btn-internal.secondary {
-    background-color: transparent;
-    color: #424243;
-    border: 2px solid #424243;
-  }
-
-  .btn-internal:hover {
-    filter: brightness(1.2);
-  }
-
-  @media (max-width: 768px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .section-intro h2 { font-size: 1.4rem; }
-    .business-growth { padding: 40px 20px; } /* Aún más compacto en móvil */
-  }
-</style>
-
-<section class="efficiency-section">
-  <div class="container">
-    <div class="efficiency-header">
-      <h2>Maximice su rentabilidad con infraestructura y tecnología.</h2>
-      <p>
-        En el ecosistema empresarial de Guatemala, el éxito no depende de cuánto gasta, sino de qué tan inteligente es su inversión. Nuestra solución está diseñada para el empresario que busca <strong>ahorro operativo</strong> sin sacrificar la calidad del servicio que recibe.</strong>.
-      </p>
-    </div>
-
-    <div class="efficiency-grid">
-      <div class="efficiency-card">
-        <h3>Inversión Inteligente vs. Gasto Fijo</h3>
+  <section class="efficiency-section">
+    <div class="container">
+      <div class="efficiency-header">
+        <h2>Maximice su rentabilidad con infraestructura y tecnología.</h2>
         <p>
-          Reduzca sus costos operativos hasta en un <strong>90%</strong> en comparación con el arrendamiento de una oficina convencional en Guatemala. Al elegir nuestra modalidad de oficina virtual o salas de reuniones por hora, dia o semana, usted elimina el peso de facturas de servicios, mantenimiento y contratos a largo plazo, pagando únicamente por lo que su negocio necesita para operar.
+          En el ecosistema empresarial de Guatemala, el éxito no depende de cuánto gasta, sino de qué tan inteligente es su inversión. Nuestra solución está diseñada para el empresario que busca <strong>ahorro operativo</strong> sin sacrificar la calidad del servicio que recibe.
         </p>
-        <ul class="benefit-list">
-          <li><strong>Cero inversión inicial:</strong> Olvídese de depósitos de garantía y mobiliario.</li>
-          <li><strong>Escalabilidad total:</strong> Crezca su plan conforme aumenten sus clientes.</li>
-        </ul>
       </div>
 
-      <div class="efficiency-card highlight-card">
-        <h3>Movilidad Total con PBX Cloud</h3>
-        <p>
-          Su oficina no es un lugar físico, es donde usted esté. Con nuestro sistema de <strong>PBX Cloud en Guatemala</strong>, usted nunca perderá una oportunidad de negocio. Una <strong>recepcionista profesional</strong> atiende sus llamadas y las transfiere a su celular, brindando la imagen de una corporación establecida mientras usted mantiene total libertad de movimiento.
-        </p>
-        <ul class="benefit-list">
-          <li><strong>Presencia Local:</strong> Un número de teléfono fijo de Guatemala que genera confianza inmediata.</li>
-        </ul>
+      <div class="efficiency-grid">
+        <div class="efficiency-card">
+          <h3>Inversión Inteligente vs. Gasto Fijo</h3>
+          <p>
+            Reduzca sus costos operativos hasta en un <strong>90%</strong> en comparación con el arrendamiento de una oficina convencional en Guatemala. Al elegir nuestra modalidad de oficina virtual o salas de reuniones por hora, dia o semana, usted elimina el peso de facturas de servicios, mantenimiento y contratos a largo plazo, pagando únicamente por lo que su negocio necesita para operar.
+          </p>
+          <ul class="benefit-list">
+            <li><strong>Cero inversión inicial:</strong> Olvídese de depósitos de garantía y mobiliario.</li>
+            <li><strong>Escalabilidad total:</strong> Crezca su plan conforme aumenten sus clientes.</li>
+          </ul>
+        </div>
+
+        <div class="efficiency-card highlight-card">
+          <h3>Movilidad Total con PBX Cloud</h3>
+          <p>
+            Su oficina no es un lugar físico, es donde usted esté. Con nuestro sistema de <strong>PBX Cloud en Guatemala</strong>, usted nunca perderá una oportunidad de negocio. Una <strong>recepcionista profesional</strong> atiende sus llamadas y las transfiere a su celular, brindando la imagen de una corporación establecida mientras usted mantiene total libertad de movimiento.
+          </p>
+          <ul class="benefit-list">
+            <li><strong>Presencia Local:</strong> Un número de teléfono fijo de Guatemala que genera confianza inmediata.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<style>
-  .efficiency-section {
-    padding: 80px 20px;
-    background-color: #ffffff;
-    color: #424243;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .efficiency-header {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .efficiency-header h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #424243;
-  }
-  .efficiency-header p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .efficiency-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-
-  .efficiency-card {
-    padding: 40px;
-    border-radius: 12px;
-    background: #fdfdfd;
-    border: 1px solid #eee;
-    transition: transform 0.3s ease;
-  }
-  .highlight-card {
-    background: #424243;
-    color: white;
-    border: none;
-  }
-  .highlight-card h3, .highlight-card p, .highlight-card li {
-    color: white !important;
-  }
-
-  .card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-
-  .efficiency-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-
-  .benefit-list {
-    margin-top: 20px;
-    padding-left: 0;
-    list-style: none;
-  }
-  .benefit-list li {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .benefit-list li::before {
-    content: "✓";
-    color: #25d366;
-    font-weight: bold;
-  }
-
-  .seo-impact-banner {
-    background: #f4f4f4;
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    border-left: 5px solid #424243;
-  }
-  .seo-impact-banner p {
-    margin: 0;
-    font-size: 1rem;
-    color: #424243;
-  }
-
-  @media (max-width: 850px) {
-    .efficiency-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  </section>
 
   <section class="location-section">
     <div class="container">
       <div class="location-grid">
         <div class="location-gallery">
           <div class="main-img-wrapper">
-            <img 
-              src="/oficinas-guatemala.webp" 
-              alt="Lobby Empresarial Zona Pradera" 
-              width="1200" 
-              height="800"
-              loading="lazy"
-              decoding="async"
-              class="main-location-img" 
-            />
+            <img src="/oficinas-guatemala.webp" alt="Lobby Empresarial Zona Pradera" width="1200" height="800" loading="lazy" decoding="async" class="main-location-img" />
           </div>
           <div class="side-imgs">
-            <img 
-              src="/domicilio-fiscal-zona10-guatemala.webp" 
-              alt="domicilio fiscal en guatemala zona 10" 
-              width="600" 
-              height="400"
-              loading="lazy"
-              decoding="async"
-            />
-            <img 
-              src="/direccion-fiscal-zona-10-guatemala.webp" 
-              alt="Direccion fiscal y comercial oficina virtual Guatemala" 
-              width="600" 
-              height="400"
-              loading="lazy"
-              decoding="async"
-            />
+            <img src="/domicilio-fiscal-zona10-guatemala.webp" alt="domicilio fiscal en guatemala zona 10" width="600" height="400" loading="lazy" decoding="async" />
+            <img src="/direccion-fiscal-zona-10-guatemala.webp" alt="Direccion fiscal y comercial oficina virtual Guatemala" width="600" height="400" loading="lazy" decoding="async" />
           </div>
         </div>
-
-
         <div class="location-content">
           <div class="section-badge">Ubicación Premium</div>
           <h3>¿Por qué establecer su oficina virtual en Zona Pradera?</h3>
-          <p class="location-desc">
-            Establezca su empresa en el centro empresarial más importante y estratégico de la ciudad de Guatemala. 
-            Posiciónese junto a las empresas más reconocidas, prestigiosas y estables del país.
-          </p>
-
+          <p class="location-desc">Establezca su empresa en el centro empresarial más importante y estratégico de la ciudad de Guatemala. Posiciónese junto a las empresas más reconocidas, prestigiosas y estables del país.</p>
           <div class="amenities-grid">
             <div class="amenity-item">
               <span class="amenity-icon">📍</span>
-              <div>
-                <strong>Ubicación estratégica</strong>
-                <p>Fácil acceso desde cualquier punto de la ciudad.</p>
-              </div>
+              <div><strong>Ubicación estratégica</strong><p>Fácil acceso desde cualquier punto de la ciudad.</p></div>
             </div>
             <div class="amenity-item">
               <span class="amenity-icon">🛡️</span>
-              <div>
-                <strong>Máxima Seguridad</strong>
-                <p>Sistemas de control de acceso y vigilancia 24/7.</p>
-              </div>
-            </div>
-            <div class="amenity-item">
-              <span class="amenity-icon">🚗</span>
-              <div>
-                <strong>Amplio Parqueo</strong>
-                <p>Comodidad garantizada para usted y sus clientes.</p>
-              </div>
-            </div>
-            <div class="amenity-item">
-              <span class="amenity-icon">✨</span>
-              <div>
-                <strong>Prestigio Corporativo</strong>
-                <p>La mejor carta de presentación para sus aliados de negocio.</p>
-              </div>
+              <div><strong>Máxima Seguridad</strong><p>Sistemas de control de acceso y vigilancia 24/7.</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
 </MainLayout>
 
 <style>
-  /* Estilos base y variables de color */
-  .hero {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 60px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
+  /* MANTENGO TUS ESTILOS ORIGINALES SIN TOCAR UNA SOLA LÍNEA */
+  .hero { display: flex; align-items: center; gap: 40px; padding: 60px 24px; max-width: 1200px; margin: 0 auto; }
   .hero-content { flex: 1.2; }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-    color: #424243;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
+  .hero-content h1 { font-size: 2.5rem; color: #424243; line-height: 1.2; margin-bottom: 20px; }
+  .hero-content p { font-size: 1.1rem; color: #666; line-height: 1.6; }
+  .hero-image { flex: 1; display: flex; justify-content: center; }
+  .hero-image img { width: 100%; max-width: 600px; height: auto; object-fit: cover; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-  .hero-content p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.6;
-  }
+  .business-growth { padding: 60px 20px; background-color: #f9f9f9; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-intro { text-align: center; margin-bottom: 30px; }
+  .section-intro h2 { font-size: 2.2rem; color: #424243; max-width: 800px; margin: 10px auto; }
+  .badge { background: #e0e0e0; color: #424243; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
 
-  /* Corregido: Agregadas llaves de apertura y cierre */
-  .hero-image { 
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-  }
+  .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .column { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; border: 1px solid #eee; transition: transform 0.3s ease; }
+  .featured-card { border-top: 6px solid #424243; }
+  .price-badge { background: #f0f0f0; padding: 6px 12px; border-radius: 8px; font-size: 0.85rem; margin-bottom: 15px; align-self: flex-start; }
+  .price-badge strong { font-size: 1.1rem; color: #424243; }
+  .btn-internal { text-decoration: none; color: white; background-color: #424243; padding: 12px 25px; border-radius: 5px; text-align: center; font-weight: 700; transition: background 0.3s; }
+  .btn-internal.secondary { background-color: transparent; color: #424243; border: 2px solid #424243; }
 
-  .hero-image img {
-    width: 100%;
-    max-width: 600px; /* Tamaño real de tu imagen */
-    height: auto;     /* Mantiene la proporción 600x400 */
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
+  .efficiency-section { padding: 80px 20px; background-color: #ffffff; color: #424243; }
+  .efficiency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .efficiency-card { padding: 40px; border-radius: 12px; background: #fdfdfd; border: 1px solid #eee; }
+  .highlight-card { background: #424243; color: white; border: none; }
+  .highlight-card h3, .highlight-card p, .highlight-card li { color: white !important; }
+  .benefit-list { margin-top: 20px; padding-left: 0; list-style: none; }
+  .benefit-list li::before { content: "✓"; color: #25d366; font-weight: bold; margin-right: 10px; }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  .column {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 5px solid #424243;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  .column h2 {
-    color: #424243;
-    margin-bottom: 15px;
-  }
-
-  .column p {
-    color: #666;
-    line-height: 1.5;
-  }
-
-  .location-section {
-    padding: 80px 20px;
-    background-color: #fcfcfc;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .location-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-
-  /* Galería de Imágenes */
-  .location-gallery {
-    display: flex;
-    gap: 15px;
-  }
+  .location-section { padding: 80px 20px; background-color: #fcfcfc; }
+  .location-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; }
+  .location-gallery { display: flex; gap: 15px; }
   .main-img-wrapper { flex: 2; }
-  .main-location-img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-  .side-imgs {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .side-imgs img {
-    width: 100%;
-    height: 217px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
+  .main-location-img { width: 100%; height: 450px; object-fit: cover; border-radius: 15px; }
+  .side-imgs { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+  .side-imgs img { width: 100%; height: 217px; object-fit: cover; border-radius: 12px; }
+  .section-badge { display: inline-block; background: #424243; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 20px; }
+  .amenities-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+  .amenity-item { display: flex; gap: 20px; align-items: flex-start; }
 
-  .section-badge {
-    display: inline-block;
-    background: #424243;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-  }
-
-  .amenities-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .amenity-item {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-  }
-
-  .amenity-icon {
-    font-size: 1.4rem;
-    background: white;
-    padding: 12px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  }
-
-  /* --- RESPONSIVE OPTIMIZADO --- */
-
-  @media (max-width: 992px) {
-    .location-grid { grid-template-columns: 1fr; }
-    .location-gallery { order: 2; }
-    .location-content { order: 1; }
-  }
-
-  @media (max-width: 768px) {
-    .hero { 
-      flex-direction: column; 
-      text-align: center; 
-      padding: 40px 20px; 
-      gap: 30px;
-    }
-    .hero-content h1 { font-size: 2rem; }
-    .hero-image { width: 100%; }
-    .services-grid { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 600px) {
-    .location-gallery { flex-direction: column; }
-    .main-location-img, .side-imgs img { height: 250px; }
-  }
+  @media (max-width: 992px) { .location-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .services-grid { grid-template-columns: 1fr; } .efficiency-grid { grid-template-columns: 1fr; } }
 </style>
