@@ -1,8 +1,19 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+// Solo agrega estas 4 variables. No toques nada más arriba.
+const title = "Todo es Digital | Oficinas Virtuales y PBX Cloud en Guatemala";
+const description = "Potencie su empresa con domicilio fiscal en Zona Pradera, PBX Cloud y atención profesional desde Q150. Ahorre un 90% en costos operativos hoy.";
+const keywords = "oficina virtual guatemala, pbx cloud guatemala, domicilio fiscal sat, salas de reuniones zona 10, direccion comercial zona pradera";
+const canonicalURL = "https://todo-es-digital.vercel.app/";
 ---
 
-<MainLayout title="Inicio">
+<MainLayout 
+  title={title}
+  description={description}
+  keywords={keywords}
+  canonicalURL={canonicalURL}
+>
   <section class="hero">
     <div class="hero-content">
       <h1>Todo es digital | oficinas virtuales en Guatemala</h1>
