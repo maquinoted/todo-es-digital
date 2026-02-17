@@ -1,8 +1,13 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+const currentCanonicalURL = "https://todo-es-digital.vercel.app/oficinas-virtuales-guatemala";
 ---
 
-<MainLayout title="Oficinas Virtuales en Guatemala | Domicilio Fiscal Zona Pradera">
+<MainLayout 
+  title="Oficinas Virtuales en Guatemala | Domicilio Fiscal Zona Pradera"
+  description="Formalice su negocio con domicilio fiscal y comercial en Zona Pradera. Planes desde Q375."
+  canonicalURL={currentCanonicalURL}
+>
   <section class="hero-clean">
     <div class="container">
       <h1>Oficinas Virtuales en Guatemala: Prestigio en Zona Pradera</h1>
@@ -15,12 +20,12 @@ import MainLayout from '../layouts/MainLayout.astro';
       <div class="text-block">
         <h2>¿Por qué su negocio necesita una oficina virtual?</h2>
         <p>
-          Muchos profesionales, como abogados o consultores, pierden oportunidades porque su imagen actual no genera confianza. 
+          Muchos profesionales pierden oportunidades porque su imagen actual no genera confianza. 
           Trabajar desde casa es cómodo, pero para cerrar grandes contratos se requiere el respaldo de una ubicación corporativa de élite.
         </p>
         <div class="case-study">
           <strong>El efecto "Zona Pradera":</strong>
-          <p>Cambie una dirección residencial por el centro empresarial más prestigioso de la ciudad y note la diferencia en la percepción de sus aliados de negocio.</p>
+          <p>Cambie una dirección residencial por el centro empresarial más prestigioso de la ciudad y note la diferencia en la percepción de sus aliados.</p>
         </div>
       </div>
       <div class="image-showcase">
@@ -42,13 +47,11 @@ import MainLayout from '../layouts/MainLayout.astro';
             <li>Dirección Fiscal en Zona Pradera.</li>
             <li>Manejo de correspondencia.</li>
             <li>PBX con mensaje de bienvenida o IVR.</li>
-            <li>WhastApp Business.</li>
+            <li>WhatsApp Business.</li>
             <li>Recepcionista.</li>
-            <li>8 horas mensuales de uso de sala de reuniones.</li>
-            <li>Historial de llamadas.</li>
-            <li>Grabación de llamadas entrantes para control de calidad.</li>
-            <li>50 minutos de llamadas salientes / mes</li>
-            <li>Tarifa de parqueo preferencial</li>
+            <li>8 horas mensuales de sala de reuniones.</li>
+            <li>Grabación de llamadas para control de calidad.</li>
+            <li>Tarifa de parqueo preferencial.</li>
           </ul>
           <a href="https://wa.me/50223022200?text=Info%20Plan%20Basico" class="btn">Cotizar por WhatsApp</a>
         </div>
@@ -62,34 +65,30 @@ import MainLayout from '../layouts/MainLayout.astro';
             <li>Dirección Fiscal en Zona Pradera.</li>
             <li>Manejo de correspondencia.</li>
             <li>PBX con mensaje de bienvenida o IVR.</li>
-            <li>WhastApp Business.</li>
+            <li>WhatsApp Business.</li>
             <li>Recepcionista.</li>
-            <li>25 horas mensuales de uso de sala de reuniones.</li>
-            <li>Historial de llamadas.</li>
-            <li>Grabación de llamadas entrantes para control de calidad.</li>
-            <li>150 minutos de llamadas salientes / mes</li>
-            <li>Tarifa de parqueo preferencial</li>
+            <li>25 horas mensuales de sala de reuniones.</li>
+            <li>150 minutos de llamadas salientes / mes.</li>
+            <li>Tarifa de parqueo preferencial.</li>
           </ul>
           <a href="https://wa.me/50223022200?text=Info%20Plan%20EOffice" class="btn">Cotizar por WhatsApp</a>
         </div>
 
         <div class="card">
-          <h3>Plan Premiun</h3>
+          <h3>Plan Premium</h3>
           <div class="price">Q750<span>/mes</span></div>
           <p>Para equipos que requieren mayor infraestructura física.</p>
           <ul>
             <li>Dirección Fiscal en Zona Pradera.</li>
             <li>Manejo de correspondencia.</li>
             <li>PBX con mensaje de bienvenida o IVR.</li>
-            <li>WhastApp Business.</li>
+            <li>WhatsApp Business.</li>
             <li>Recepcionista.</li>
-            <li>40 horas mensuales de uso de sala de reuniones.</li>
-            <li>Historial de llamadas.</li>
-            <li>Grabación de llamadas entrantes para control de calidad.</li>
-            <li>250 minutos de llamadas salientes / mes</li>
-            <li>Tarifa de parqueo preferencial</li>
+            <li>40 horas mensuales de sala de reuniones.</li>
+            <li>250 minutos de llamadas salientes / mes.</li>
+            <li>Tarifa de parqueo preferencial.</li>
           </ul>
-          <a href="https://wa.me/50223022200?text=Info%20Plan%20Premiun" class="btn">Cotizar por WhatsApp</a>
+          <a href="https://wa.me/50223022200?text=Info%20Plan%20Premium" class="btn">Cotizar por WhatsApp</a>
         </div>
       </div>
 
@@ -97,10 +96,10 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="card">
           <h3>Plan Dirección Fiscal</h3>
           <div class="price">Q150<span>/mes</span></div>
-          <p>Únicamente pago anual</p>
+          <p>Únicamente pago anual.</p>
           <ul>
-            <li>Dirección fiscal y comercial para inscripción en SAT y Registro Mercantil.</li>
-            <li>Recepción de correspondencia</li>
+            <li>Dirección fiscal y comercial para SAT y Registro Mercantil.</li>
+            <li>Recepción de correspondencia.</li>
           </ul>
           <a href="https://wa.me/50223022200?text=Info%20Plan%20DireccionFiscal" class="btn">Cotizar por WhatsApp</a>
         </div>
@@ -110,75 +109,48 @@ import MainLayout from '../layouts/MainLayout.astro';
           <div class="price">Q150<span>/mes</span></div>
           <p>Llame desde su oficina, sin estar en la oficina.</p>
           <ul>
-            <li>150 minutos de llamadas salientes / mes</li>
+            <li>150 minutos de llamadas salientes / mes.</li>
             <li>WhatsApp Business.</li>
-            <li>Respondemos con el nombre su negocio.</li>
+            <li>Respondemos con el nombre de su negocio.</li>
             <li>Audio de bienvenida o IVR.</li>
-            <li>Hasta 4 usuarios</li>
+            <li>Hasta 4 usuarios.</li>
           </ul>
-          <a href="https://wa.me/50223022200?text=Info%20Plan%20PBXCloud" class="btn">Cotizar por WhastApp</a>
+          <a href="https://wa.me/50223022200?text=Info%20Plan%20PBXCloud" class="btn">Cotizar por WhatsApp</a>
         </div>
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Puedo registrar mi empresa en la SAT con su dirección fiscal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, nuestros planes incluyen el derecho de uso de dirección fiscal en Zona Pradera, requisito indispensable para la formalización de empresas y trámites de facturación ante la SAT en Guatemala."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué beneficios ofrece el servicio de PBX Cloud para mi negocio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El sistema PBX Cloud le otorga un número fijo exclusivo de Guatemala atendido por una recepcionista profesional, permitiéndole transferir llamadas a su móvil."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo ayuda una oficina virtual a reducir mis costos operativos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Una oficina virtual permite reducir hasta un 90% los costos operativos al eliminar gastos de alquiler físico y mantenimiento."
+        }
+      }
+    ]
+  }
+  </script>
 </MainLayout>
-
-<style>
-  /* CSS REFACTORIZADO PARA ALTURA REDUCIDA Y DISEÑO 3+2 */
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-  .text-center { text-align: center; }
-  
-  .hero-clean { padding: 40px 0; text-align: center; }
-  .hero-clean h1 { font-size: 2.2rem; color: #424243; margin-bottom: 10px; }
-  .lead { font-size: 1.1rem; color: #666; max-width: 800px; margin: 0 auto; }
-
-  .story-comparison { padding: 40px 0; background: white; }
-  .grid-2 { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
-  .img-square { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-
-  .pricing-expert { padding: 50px 0; background: #fcfcfc; }
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 25px; }
-  
-  /* Layout 2 centrados abajo */
-  .grid-2-centered { 
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; 
-    max-width: 720px; 
-    margin: 0 auto; 
-  }
-
-  .card { 
-    background: white; 
-    padding: 25px; 
-    border-radius: 12px; 
-    border: 1px solid #eee; 
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-  }
-  .card:hover { transform: translateY(-5px); border-color: #424243; }
-  .card.featured { border: 2px solid #424243; position: relative; }
-  
-  .badge { 
-    position: absolute; top: -12px; left: 50%; transform: translateX(-50%); 
-    background: #424243; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; 
-  }
-
-  .price { font-size: 1.8rem; font-weight: 800; color: #424243; margin: 15px 0; }
-  .price span { font-size: 0.9rem; color: #888; }
-  
-  ul { list-style: none; padding: 0; margin-bottom: 20px; text-align: left; flex-grow: 1; }
-  li { font-size: 0.85rem; color: #555; margin-bottom: 8px; display: flex; align-items: center; }
-  li::before { content: "✓"; color: #25d366; font-weight: bold; margin-right: 8px; }
-
-  .btn { 
-    background: #424243; color: white; padding: 10px; border-radius: 6px; 
-    text-decoration: none; font-weight: bold; font-size: 0.85rem; 
-  }
-
-  @media (max-width: 900px) {
-    .grid-2, .grid-3, .grid-2-centered { grid-template-columns: 1fr; max-width: 100%; }
-  }
-</style>

@@ -1,18 +1,17 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title = "Todo es Digital" } = Astro.props;
+const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
 ---
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Todo es Digital | Oficinas Virtuales y PBX Cloud en Guatemala</title>
-    
-    <meta name="description" content="Oficinas virtuales en Guatemala con domicilio fiscal en Zona Pradera, PBX Cloud y atención profesional desde Q150. Ahorre un 90% en costos operativos hoy." />
-    <meta name="keywords" content="oficina virtual guatemala, pbx cloud guatemala, domicilio fiscal sat, salas de reuniones zona 10, direccion comercial zona pradera" />
-    <link rel="canonical" href="https://todo-es-digital.vercel.app/" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonicalURL && <link rel="canonical" href={canonicalURL} />}  
 
+  
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://todo-es-digital.vercel.app/" />
     <meta property="og:title" content="Todo es Digital | Oficinas Virtuales en Guatemala" />
