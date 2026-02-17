@@ -55,11 +55,9 @@ import MainLayout from '../layouts/MainLayout.astro';
   </div>
 </section>
 
-
-
 <style>
   .business-growth {
-    padding: 100px 20px;
+    padding: 60px 20px; /* Reducido de 100px a 60px */
     background-color: #f9f9f9;
   }
   .container {
@@ -68,20 +66,20 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
   .section-intro {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px; /* Reducido de 60px a 30px */
   }
   .section-intro h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Ligeramente más pequeño para ahorrar espacio */
     color: #424243;
     max-width: 800px;
-    margin: 15px auto;
+    margin: 10px auto; /* Reducido margen */
   }
   .badge {
     background: #e0e0e0;
     color: #424243;
-    padding: 5px 15px;
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -89,12 +87,12 @@ import MainLayout from '../layouts/MainLayout.astro';
   .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 30px; /* Reducido de 40px a 30px */
   }
 
   .column {
     background: #fff;
-    padding: 45px;
+    padding: 30px; /* Reducido de 45px a 30px */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     display: flex;
@@ -109,32 +107,33 @@ import MainLayout from '../layouts/MainLayout.astro';
 
   .price-badge {
     background: #f0f0f0;
-    padding: 8px 15px;
+    padding: 6px 12px;
     border-radius: 8px;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 15px; /* Reducido de 20px a 15px */
     align-self: flex-start;
   }
-  .price-badge strong { font-size: 1.2rem; color: #424243; }
+  .price-badge strong { font-size: 1.1rem; color: #424243; }
 
   .column h2 {
     color: #424243;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-bottom: 12px; /* Reducido de 20px a 12px */
+    font-size: 1.8rem; /* Ligeramente más pequeño */
   }
 
   .column p {
     color: #666;
-    line-height: 1.7;
-    margin-bottom: 30px;
+    line-height: 1.6; /* Un poco más apretado */
+    margin-bottom: 20px; /* Reducido de 30px a 20px */
     flex-grow: 1;
+    font-size: 0.95rem; /* Ajustado para compactar */
   }
 
   .btn-internal {
     text-decoration: none;
     color: white;
     background-color: #424243;
-    padding: 15px 25px;
+    padding: 12px 25px; /* Reducido verticalmente */
     border-radius: 5px;
     text-align: center;
     font-weight: 700;
@@ -154,6 +153,7 @@ import MainLayout from '../layouts/MainLayout.astro';
   @media (max-width: 768px) {
     .services-grid { grid-template-columns: 1fr; }
     .section-intro h2 { font-size: 1.4rem; }
+    .business-growth { padding: 40px 20px; } /* Aún más compacto en móvil */
   }
 </style>
 
