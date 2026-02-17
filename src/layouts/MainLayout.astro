@@ -66,6 +66,43 @@ const { title = "Todo es Digital" } = Astro.props;
       "priceRange": "Q150 - Q750"
     }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "#primary-menu",
+            "name": "Inicio",
+            "url": "https://todo-es-digital.vercel.app/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "#primary-menu",
+            "name": "Oficinas Virtuales",
+            "url": "https://todo-es-digital.vercel.app/oficinas-virtuales-guatemala"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "#primary-menu",
+            "name": "Salas de Reuniones",
+            "url": "https://todo-es-digital.vercel.app/salas-reuniones"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "#primary-menu",
+            "name": "Sistema CRM",
+            "url": "https://todo-es-digital.vercel.app/sistema-crm"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "#primary-menu",
+            "name": "Coworking",
+            "url": "https://todo-es-digital.vercel.app/coworking"
+          }
+        ]
+      }
+    </script>
     
     </head>
   
