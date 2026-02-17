@@ -10,13 +10,26 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 
-  <section class="intro-text">
-    <div class="container">
-      <h2>Formalice su negocio hoy con infraestructura de élite</h2>
-      <p>
-        Obtenga una <strong>dirección fiscal y comercial de prestigio en Zona Pradera</strong> para todos sus trámites ante la SAT. 
-        Nuestra modalidad de trabajo por consumo le permite pagar solo por lo que utiliza, garantizando competitividad y una mejor reputación frente a su competencia a un bajo costo.
-      </p>
+  <section class="intro-with-image"> {/* Nuevo contenedor para imagen y texto */}
+    <div class="container intro-grid">
+      <div class="intro-content">
+        <h2>Formalice su negocio hoy con infraestructura de élite</h2>
+        <p>
+          Obtenga una <strong>dirección fiscal y comercial de prestigio en Zona Pradera</strong> para todos sus trámites ante la SAT. 
+          Nuestra modalidad de trabajo por consumo le permite pagar solo por lo que utiliza, garantizando competitividad y una mejor reputación frente a su competencia a un bajo costo.
+          Este modelo de negocio le permite disfrutar de una <strong>oficina profesional sin la carga de gastos fijos</strong>, ideal para emprendedores y empresas en expansión que buscan eficiencia y flexibilidad.
+        </p>
+      </div>
+      <div class="intro-image-wrapper">
+        <img 
+          src="/vertical-oficina-virtual.webp" /* Asegúrate de tener esta imagen en /public */
+          alt="Oficina virtual moderna en Guatemala"
+          width="400"
+          height="600"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
     </div>
   </section>
 
@@ -51,8 +64,20 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
 
         <div class="price-card">
+          <h3>Plan Pro</h3>
+          <div class="price">Q750<span>/mes</span></div>
+          <p class="plan-desc">Para profesionales y equipos que requieren mayor infraestructura.</p>
+          <ul>
+            <li>Todo lo del Plan Business.</li>
+            <li>8 horas mensuales de Salas de Reuniones.</li>
+            <li>Servicio de impresión y escaneo.</li>
+          </ul>
+          <a href="https://wa.me/50223022200?text=Hola,%20solicito%20información%20del%20Plan%20Pro" class="btn-price">Consultar Plan Pro</a>
+        </div>
+
+        <div class="price-card">
           <h3>Plan Corporativo</h3>
-          <div class="price">Consultar</div>
+          <div class="price">Personalizado</div>
           <p class="plan-desc">Para organizaciones que buscan la máxima eficiencia operativa.</p>
           <ul>
             <li>Horas de sala de reuniones extendidas.</li>
@@ -71,15 +96,15 @@ import MainLayout from '../layouts/MainLayout.astro';
       <h2>¿Por qué elegir la Modalidad de Trabajo por Consumo?</h2>
       <div class="stats-mini-grid">
         <div class="stat-item">
-          <h4>[H4] Eficiencia de Costos</h4>
+          <h4>Eficiencia de Costos</h4>
           <p>Reduzca hasta el <strong>90% de sus costos administrativos</strong> vs. oficina física tradicional.</p>
         </div>
         <div class="stat-item">
-          <h4>[H4] Aumento de Productividad</h4>
+          <h4>Aumento de Productividad</h4>
           <p>Incremente un <strong>19% la productividad</strong> de su equipo respecto al modelo convencional.</p>
         </div>
         <div class="stat-item">
-          <h4>[H4] Flexibilidad Operativa</h4>
+          <h4>Flexibilidad Operativa</h4>
           <p>El <strong>85% de las empresas</strong> reportan mayor éxito gracias a la flexibilidad de este modelo.</p>
         </div>
       </div>
@@ -90,26 +115,44 @@ import MainLayout from '../layouts/MainLayout.astro';
 <style>
   .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
   
-  .page-hero { padding: 60px 0; background: #424243; color: white; text-align: center; }
-  .page-hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+  .page-hero { padding: 60px 0; background: white; color: #424243; text-align: center; } /* H1 sin color de fondo */
+  .page-hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
   .subtitle { font-size: 1.1rem; opacity: 0.9; }
   
-  .intro-text { padding: 50px 0; text-align: center; background: white; }
-  .intro-text h2 { color: #424243; margin-bottom: 20px; font-size: 1.8rem; }
-  .intro-text p { max-width: 850px; margin: 0 auto; line-height: 1.6; color: #666; font-size: 1.05rem; }
+  .intro-with-image { padding: 50px 0; background: white; }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px; /* Columna de texto y columna para imagen */
+    gap: 50px;
+    align-items: center;
+  }
+  .intro-content h2 { color: #424243; margin-bottom: 20px; font-size: 1.8rem; }
+  .intro-content p { line-height: 1.6; color: #666; font-size: 1.05rem; }
+  
+  .intro-image-wrapper { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  .intro-image-wrapper img {
+    max-width: 100%;
+    height: auto; /* Mantiene proporción de 400x600 */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
 
   .pricing-section { padding: 60px 0; background: #f9f9f9; }
   .pricing-section h2 { text-align: center; margin-bottom: 40px; color: #424243; }
 
   .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Más planes = columnas más estrechas */
+    gap: 25px; /* Menos espacio entre planes */
   }
 
   .price-card {
     background: white;
-    padding: 35px 25px;
+    padding: 30px 20px; /* Reducido un poco para 4 planes */
     border-radius: 12px;
     text-align: center;
     border: 1px solid #eee;
@@ -134,25 +177,25 @@ import MainLayout from '../layouts/MainLayout.astro';
     font-weight: bold;
   }
 
-  .price { font-size: 2.2rem; font-weight: 800; color: #424243; margin: 15px 0; }
-  .price span { font-size: 0.9rem; color: #888; font-weight: 400; }
+  .price { font-size: 2rem; font-weight: 800; color: #424243; margin: 15px 0; } /* Ligeramente más pequeño */
+  .price span { font-size: 0.85rem; color: #888; font-weight: 400; }
   
-  .price-card h3 { font-size: 1.4rem; margin-bottom: 10px; color: #424243; }
-  .plan-desc { font-size: 0.85rem; color: #777; margin-bottom: 20px; min-height: 40px; }
+  .price-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #424243; }
+  .plan-desc { font-size: 0.8rem; color: #777; margin-bottom: 15px; min-height: 40px; } /* Ajustado para 4 planes */
 
-  .price-card ul { list-style: none; padding: 0; margin-bottom: 25px; text-align: left; flex-grow: 1; }
-  .price-card li { margin-bottom: 10px; font-size: 0.9rem; color: #555; display: flex; align-items: flex-start; }
-  .price-card li::before { content: "✓"; color: #25d366; margin-right: 10px; font-weight: bold; }
+  .price-card ul { list-style: none; padding: 0; margin-bottom: 20px; text-align: left; flex-grow: 1; }
+  .price-card li { margin-bottom: 8px; font-size: 0.85rem; color: #555; display: flex; align-items: flex-start; }
+  .price-card li::before { content: "✓"; color: #25d366; margin-right: 8px; font-weight: bold; }
 
   .btn-price {
     background: #424243;
     color: white;
-    padding: 12px;
+    padding: 10px; /* Botones un poco más compactos */
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Fuente más pequeña en botones */
   }
   .btn-price:hover { background: #000; }
 
@@ -166,8 +209,14 @@ import MainLayout from '../layouts/MainLayout.astro';
   .stat-item h4 { color: #424243; font-size: 1.1rem; margin-bottom: 8px; }
   .stat-item p { font-size: 0.9rem; color: #666; line-height: 1.4; }
 
+  /* Responsive */
+  @media (max-width: 992px) {
+    .intro-grid { grid-template-columns: 1fr; gap: 30px; } /* Apila texto e imagen en móvil */
+    .intro-image-wrapper { order: -1; margin-bottom: 30px; } /* Imagen arriba del texto en móvil */
+  }
   @media (max-width: 768px) {
-    .page-hero h1 { font-size: 1.7rem; }
-    .pricing-grid { grid-template-columns: 1fr; }
+    .page-hero h1 { font-size: 1.8rem; }
+    .pricing-grid { grid-template-columns: 1fr; } /* Un solo plan por fila en móvil */
+    .intro-content h2 { font-size: 1.6rem; }
   }
 </style>
