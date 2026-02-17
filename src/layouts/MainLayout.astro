@@ -79,39 +79,42 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
       /* Ajustes para que el contenido no se pegue arriba */
       main { padding-top: 20px; }
 
-      /* Botón Flotante de Llamada (Derecha, arriba de WhatsApp) */
-.btn-call-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 110px; /* Se posiciona arriba de los 40px de WhatsApp */
-  right: 40px; 
-  background-color: #1a1a1a; 
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
+      /* AJUSTES PARA MÓVIL (Pantallas menores a 768px) */
+  @media (max-width: 768px) {
+    .hero-grid { 
+      grid-template-columns: 1fr; /* Una sola columna */
+      gap: 20px; 
+      text-align: center;
+      padding: 30px 0;
+    }
+    
+    .hero-clean h1 { 
+      font-size: 1.8rem; /* Tamaño de letra más pequeño para móvil */
+      line-height: 1.1;
+    }
 
-.btn-call-float:hover {
-  background-color: #00a69c; 
-  transform: scale(1.1);
-}
+    .lead {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
 
-/* Ajuste para móviles */
-@media (max-width: 768px) {
-  .btn-call-float {
-    width: 50px;
-    height: 50px;
-    bottom: 90px; /* Ajuste proporcional para pantallas pequeñas */
-    right: 20px;
+    .img-hero {
+      width: 90%; /* Que no toque los bordes */
+      margin: 0 auto;
+      max-height: 300px; /* Evita que la imagen sea gigante hacia abajo */
+      object-fit: cover;
+    }
+
+    /* Ajuste de tarjetas de precios */
+    .grid-3, .grid-2-centered {
+      grid-template-columns: 1fr;
+      padding: 20px 10px;
+    }
+
+    .card {
+      margin-bottom: 20px;
+    }
   }
-}
     </style>
   </body>
 </html>
