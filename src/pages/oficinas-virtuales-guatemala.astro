@@ -185,26 +185,76 @@ const currentCanonicalURL = "https://todo-es-digital.vercel.app/oficinas-virtual
 </MainLayout>
 
 <style>
-  /* Aquí incluyes el bloque de CSS que te proporcioné anteriormente, 
-     asegurándote de que todas las llaves { } estén cerradas */
+  /* Contenedores Base */
   .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
   .text-center { text-align: center; }
+  
+  /* Hero Section */
   .hero-clean { padding: 60px 0; background: #fff; }
   .hero-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
   .img-hero { width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-  .hero-clean h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2; }
+  .hero-clean h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2; text-align: center; }
   .lead { font-size: 1.15rem; color: #666; line-height: 1.6; margin: 0; }
-  
-  /* Resto de estilos de cards, promo-box y galería... */
-  .promo-box { background: #00a69c; border: 2px dashed #ffffff; padding: 25px; border-radius: 10px; text-align: center; color: white; }
+
+  /* SECCIÓN DE PLANES - CORRECCIÓN DE CENTRADO */
   .pricing-expert { padding: 60px 0; background: #fcfcfc; }
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 25px; }
-  .card { background: white; padding: 30px 25px; border-radius: 15px; border: 1px solid #eee; text-align: center; }
-  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+  
+  /* Centrado para los 3 planes principales */
+  .grid-3 { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 25px; 
+    margin-bottom: 25px; 
+  }
+
+  /* Centrado para los 2 planes adicionales */
+  .grid-2-centered { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 25px; 
+  }
+
+  /* Estilos de Tarjetas (Cards) */
+  .card { 
+    background: white; 
+    padding: 30px 25px; 
+    border-radius: 15px; 
+    border: 1px solid #eee; 
+    text-align: center; 
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 350px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  
+  .card.featured { border: 2px solid #00a69c; position: relative; }
+  .badge { background: #00a69c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); }
+  .price { font-size: 1.5rem; font-weight: bold; margin: 15px 0; color: #1a1a1a; }
+  .price span { font-size: 1rem; color: #666; }
+  .card ul { text-align: left; padding: 0; list-style: none; margin: 20px 0; }
+  .card ul li { margin-bottom: 10px; color: #444; font-size: 0.95rem; }
+  .card ul li::before { content: "•"; color: #00a69c; font-weight: bold; margin-right: 8px; }
+
+  /* Botones */
+  .btn { display: inline-block; padding: 12px 25px; background: #00a69c; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; width: 100%; transition: background 0.3s; }
+  .btn-dark { background: #1a1a1a; }
+  .btn:hover { opacity: 0.9; }
+
+  /* Otros Estilos */
+  .promo-box { background: #00a69c; border: 2px dashed #ffffff; padding: 25px; border-radius: 10px; text-align: center; color: white; margin-top: 30px; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
   .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; }
+
+  /* Tabla Comparativa */
+  .comparison-container { overflow-x: auto; margin-top: 30px; }
+  .comparison-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; }
+  .comparison-table th, .comparison-table td { padding: 15px; border: 1px solid #eee; text-align: left; }
+  .comparison-table th { background: #f8f8f8; }
 
   @media (max-width: 950px) {
     .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .grid-3 { grid-template-columns: 1fr; }
+    .card { max-width: 100%; }
   }
 </style>
