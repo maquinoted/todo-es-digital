@@ -10,6 +10,44 @@ import ContactForm from '../components/ContactForm.astro';
   canonicalURL={currentCanonicalURL}
 >
 <script type="application/ld+json" is:inline>
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Todo es Digital",
+    "image": "https://todoesdigital.com/recepcionista-oficina-virtual-guatemala.webp",
+    "@id": "https://todoesdigital.com",
+    "url": "https://todoesdigital.com",
+    "telephone": "+50223022200",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Edificio Zona Pradera, Torre 2, oficina 1108",
+      "addressLocality": "Ciudad de Guatemala",
+      "addressRegion": "Guatemala",
+      "addressCountry": "GT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 14.6033,
+      "longitude": -90.5061
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Oficinas Virtuales en Guatemala | Domicilio Fiscal Zona Pradera",
+    "description": "Potencie su negocio con domicilio fiscal y comercial en Zona Pradera, zona 10 de Ciudad de Guatemala.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Todo es Digital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://todoesdigital.com/images/logo.png"
+      }
+    },
+    "datePublished": "2024-01-01T08:00:00-06:00",
+    "dateModified": "2026-02-18T10:00:00-06:00"
+  },
   {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -22,40 +60,29 @@ import ContactForm from '../components/ContactForm.astro';
       "@type": "City",
       "name": "Guatemala"
     },
-    "description": "Servicio de oficinas virtuales con dirección fiscal y comercial en Guatemala."
-  }
-  </script>
-  <script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Inicio",
-    "item": "https://todoesdigital.com/"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "Oficinas Virtuales",
-    "item": "https://todoesdigital.com/oficinas-virtuales-guatemala"
-  }]
-}
-</script>
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Oficinas virtuales en Guatemala",
-  "description": "Oficinas virtuales, domicilio fiscal en zona 10, pbx, recepcionista, manejo de correspondencia.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Todo es Digital"
+    "description": "Servicio de oficinas virtuales con dirección fiscal y comercial en Zona Pradera, Guatemala."
   },
-  "datePublished": "2024-01-01T08:00:00-06:00",
-  "dateModified": "2026-02-18T10:00:00-06:00" 
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://todoesdigital.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Oficinas Virtuales",
+        "item": "https://todoesdigital.com/oficinas-virtuales-guatemala"
+      }
+    ]
+  }
+]
 </script>
+
   <section class="hero-clean">
     <div class="container hero-grid">
       <h1>Oficinas Virtuales en Guatemala</h1>
@@ -65,172 +92,7 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
-  <section class="pricing-expert">
-    <div class="container">
-      <h2 class="text-center">Planes de oficina virtual diseñados para su éxito empresarial</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Plan Básico</h3>
-          <div class="price">Desde Q375<span>/mes</span></div>
-          <p class="plan-desc">Ideal para formalización legal y fiscal ante la SAT.</p>
-          <ul>
-            <li>Dirección Fiscal en Zona Pradera.</li>
-            <li>Recepción de correspondencia.</li>
-            <li>WhatsApp Business.</li>
-            <li>Recepcionista.</li>
-            <li>08 horas mensuales de sala de reuniones.</li>
-            <li>Tarifa prefencial de parqueo.</li>
-            <li>PBX Cloud: IVR, 50 min de llamadas salientes al mes, hasta 4 usuarios, grabación e historial de llamadas.</li>
-          </ul>
-          <a href="https://wa.me/50223022200?text=Info%20Plan%20Basico" class="btn">Cotizar por WhatsApp</a>
-        </div>
-        <div class="card featured">
-          <div class="badge">Más Popular</div>
-          <h3>Plan EOffice</h3>
-          <div class="price">Q575<span>/mes</span></div>
-          <p class="plan-desc">Movilidad total con tecnología PBX exclusiva.</p>
-          <ul>
-            <li>Dirección Fiscal en Zona Pradera.</li>
-            <li>Recepción de correspondencia.</li>
-            <li>WhatsApp Business.</li>
-            <li>Recepcionista.</li>
-            <li>25 horas mensuales de sala de reuniones.</li>
-            <li>Tarifa prefencial de parqueo.</li>
-            <li>PBX Cloud: IVR, 150 min de llamadas salientes al mes, hasta 4 usuarios, grabación e historial de llamadas.</li>
-          </ul>
-          <a href="https://wa.me/50223022200?text=Info%20Plan%20EOffice" class="btn btn-dark">Cotizar por WhatsApp</a>
-        </div>
-        <div class="card">
-          <h3>Plan Premium</h3>
-          <div class="price">Q750<span>/mes</span></div>
-          <p class="plan-desc">Para equipos que requieren mayor infraestructura física.</p>
-          <ul>
-            <li>Dirección Fiscal en Zona Pradera.</li>
-            <li>Recepción de correspondencia.</li>
-            <li>WhatsApp Business.</li>
-            <li>Recepcionista.</li>
-            <li>40 horas mensuales de sala de reuniones.</li>
-            <li>Tarifa prefencial de parqueo.</li>
-            <li>PBX Cloud: IVR, 250 min de llamadas salientes al mes, hasta 4 usuarios, grabación e historial de llamadas.</li>
-          </ul>
-          <a href="https://wa.me/50223022200?text=Info%20Plan%20Premium" class="btn">Cotizar por WhatsApp</a>
-        </div>
-      </div>
-      <div class="grid-2-centered">
-        <div class="card">
-          <h3>Plan Dirección Fiscal</h3>
-          <div class="price">Q150<span>/mes</span></div>
-          <p class="plan-desc">Únicamente pago anual, pago 100% anticipado.</p>
-          <ul>
-            <li>Dirección fiscal y comercial para SAT y Registro Mercantil.</li>
-            <li>Recepción de correspondencia.</li>
-          </ul>
-          <a href="https://wa.me/50223022200?text=Info%20Plan%20DireccionFiscal" class="btn">Cotizar por WhatsApp</a>
-        </div>
-        <div class="card">
-          <h3>Plan PBX Cloud</h3>
-          <div class="price">Q150<span>/mes</span></div>
-          <p class="plan-desc">Llame desde su oficina, sin estar en la oficina.</p>
-          <ul>
-            <li>PBX Cloud: IVR, 250 min de llamadas salientes al mes, hasta 4 usuarios, grabación e historial de llamadas.</li>
-            <li>WhatsApp Business.</li>
-          </ul>
-          <a href="https://wa.me/50223022200?text=Info%20Plan%20PBXCloud" class="btn">Cotizar por WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
- <section class="oficinas-split-section">
-  <div class="container grid-two-columns">
-    
-    <div class="benefits-column">
-      <div class="benefits-info">
-        <p>
-          Nuestros planes de <strong>oficinas virtuales</strong> que incluyen uso de <strong>salas de reuniones</strong> garantizan una experiencia de servicio al cliente de élite. Disfrute de servicios como <strong>Agua, Café, Internet de alta velocidad, Aire Acondicionado</strong> y una <strong>tarifa preferencial de parqueo</strong> en Zona Pradera. Además, como beneficio exclusivo, otorgamos <strong>1 hora gratis de parqueo a motoristas</strong>.
-        </p>
-      </div>
-      <div class="promo-box">
-        <p>¡Optimice su inversión! Pague su plan de forma <strong>semestral</strong> y obtenga el <strong>7mo mes totalmente GRATIS</strong>.</p>
-      </div>
-    </div>
-
-    <div class="form-column">
-      <ContactForm serviceName="Oficinas Virtuales" formId="mgolzeyp" />
-    </div>
-
-  </div>
-</section>
-
-  <section class="educational-section">
-    <div class="container">
-      <h2>¿Qué es una oficina virtual y cómo aprovecharla en Guatemala?</h2>
-      <p>
-        Una <strong>oficina virtual</strong> es un servicio diseñado para empresas, emprendedores y profesionales independientes, en el cual cubre la necesidad de formalizar su negocio, proyectando imagen corporativa. 
-      </p>
-      <p>
-          <strong>Valor agregado:</strong> En Guatemala existen varios servicios de oficina virtual o Cowork, sin embargo, En <a href="https://todoesdigital.com">TodoEsDigital.com</a> nos enfocamos en la cultura de servicio, ubicación estratégica, servicios de tecnología e innovación. Siempre buscando cubrir necesidades de nuestros clientes y siendo empáticos con ellos.
-        </p>
-      <div class="strategy-box">
-        <h3>¿Cómo aprovechar este servicio al máximo?</h3>
-        <ul>
-          <li><strong>Formalización:</strong> Domicilio fiscal para patentes en el <a href="https://principal.registromercantil.gob.gt/" target="_blank">Registro Mercantil</a>  y facturación en la Superintendencia de Administración Tributaria SAT</li>
-          <li><strong>Movilidad con PBX Cloud:</strong>  Recepcionista atiende y transfiere llamadas a su móvil, se pueden personalizar los audios que elija que sus clientes escuchan al llamar, IVR o menú Digital. Adicional, su PBX puede convertirse en el WhatsApp de la oficina y es ajeno al personal</li>
-          <li><strong>Reuniones:</strong> Salas de reuniones en Zona 10 para cerrar ventas.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="comparison-section">
-    <div class="container">
-      <h2 class="text-center">Oficina Virtual vs. Oficina Convencional</h2>
-      <div class="comparison-container">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Característica</th>
-              <th>Oficina Convencional</th>
-              <th>Oficina Virtual (Todo es Digital)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Inversión Inicial</strong></td>
-              <td>Alta (Depósitos, mobiliario)</td>
-              <td>Suscripción mensual + Q300 contrato</td>
-            </tr>
-            <tr>
-              <td><strong>Costos Fijos</strong></td>
-              <td>Personal, renta, teléfono, luz, agua, internet</td>
-              <td><strong>Incluidos</strong> en su pago</td>
-            </tr>
-            <tr>
-              <td><strong>Ahorro Estimado</strong></td>
-              <td>0%</td>
-              <td><strong>Hasta un 90% mensual</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-   <section class="gallery-section">
-    <div class="container">
-      <h2 class="text-center">Nuestras Instalaciones: Prestigio y Comodidad</h2>
-      <div class="gallery-custom-grid">
-        <div class="gallery-item vertical"><img src="/salas-reuniones-renta-guatemala.webp" alt="Oficinas virtuales economicas Guatemala" loading="lazy" /></div>
-        <div class="gallery-item vertical"><img src="/oficina-virtual-guatemala.webp" alt="Oficina Virtual Guatemala" loading="lazy" /></div>
-        
-        <div class="gallery-item"><img src="/oficinas-virtuales-guatemala-2026.webp" alt="Oficinas virtuales Guatemala 2026" loading="lazy" /></div>
-        <div class="gallery-item"><img src="/recepcion-oficinas-virtuales-guatemala.webp" alt="Recepcion oficina virtual" loading="lazy" /></div>
-        <div class="gallery-item"><img src="/salas-reuniones-oficina-virtual-guatemala.webp" alt="Rena de oficina virtual" loading="lazy" /></div>
-        <div class="gallery-item"><img src="/oficinas-virtuales-alquiler-guatemala.webp" alt="Oficina Virtual con sala de reuniones" loading="lazy" /></div>
-        <div class="gallery-item"><img src="/oficinas-guatemala-domicilio-fiscal.webp" alt="Espacios de oficina virtual Guatemala" loading="lazy" /></div>
-      </div>
-    </div>
-  </section>
-</MainLayout>
+  </MainLayout>
 
 <style>
   /* Contenedores Base */
@@ -240,43 +102,18 @@ import ContactForm from '../components/ContactForm.astro';
   /* Hero Section */
   .hero-clean { padding: 60px 0; background: #fff; }
   .hero-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
-  .img-hero { width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
   .hero-clean h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2; text-align: center; }
   .lead { font-size: 1.15rem; color: #666; line-height: 1.6; margin: 0; }
 
-  /* SECCIÓN DE PLANES - CORRECCIÓN DE CENTRADO */
+  /* SECCIÓN DE PLANES */
   .pricing-expert { padding: 60px 0; background: #fcfcfc; }
-  
-  /* Centrado para los 3 planes principales */
-  .grid-3 { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 25px; 
-    margin-bottom: 25px; 
-  }
+  .grid-3 { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin-bottom: 25px; }
+  .grid-2-centered { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
 
-  /* Centrado para los 2 planes adicionales */
-  .grid-2-centered { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 25px; 
-  }
-
-  /* Estilos de Tarjetas (Cards) */
   .card { 
-    background: white; 
-    padding: 30px 25px; 
-    border-radius: 15px; 
-    border: 1px solid #eee; 
-    text-align: center; 
-    flex: 1; 
-    min-width: 300px; 
-    max-width: 350px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background: white; padding: 30px 25px; border-radius: 15px; border: 1px solid #eee; 
+    text-align: center; flex: 1; min-width: 300px; max-width: 350px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
-  
   .card.featured { border: 2px solid #00a69c; position: relative; }
   .badge { background: #00a69c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); }
   .price { font-size: 1.5rem; font-weight: bold; margin: 15px 0; color: #1a1a1a; }
@@ -285,114 +122,27 @@ import ContactForm from '../components/ContactForm.astro';
   .card ul li { margin-bottom: 10px; color: #444; font-size: 0.95rem; }
   .card ul li::before { content: "•"; color: #00a69c; font-weight: bold; margin-right: 8px; }
 
-  /* Botones */
   .btn { display: inline-block; padding: 12px 25px; background: #00a69c; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; width: 100%; transition: background 0.3s; }
   .btn-dark { background: #1a1a1a; }
-  .btn:hover { opacity: 0.9; }
+  
+  /* Oficinas Split Section */
+  .oficinas-split-section { padding: 60px 0; background-color: #fff; }
+  .grid-two-columns { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: start; }
+  .benefits-info p { font-size: 1.15rem; line-height: 1.8; color: #444; margin: 0; }
+  .promo-box { background: #00a69c; color: white; padding: 25px; border-radius: 12px; border: 2px dashed #ffffff; margin-top: 30px; text-align: center; }
 
-  /* Otros Estilos */
-  .promo-box { background: #00a69c; border: 2px dashed #ffffff; padding: 25px; border-radius: 10px; text-align: center; color: white; margin-top: 30px; }
-  /* Nueva Galería Asimétrica */
-.gallery-custom-grid {
-  display: grid;
-  /* Creamos 3 columnas de igual tamaño */
-  grid-template-columns: repeat(3, 1fr);
-  /* Definimos el tamaño de las filas */
-  grid-auto-rows: 200px; 
-  gap: 20px;
-  margin-top: 40px;
-}
+  /* Galería */
+  .gallery-custom-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px; gap: 20px; margin-top: 40px; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+  .gallery-item.vertical { grid-row: span 2; }
 
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.02);
-}
-
-/* Configuración para las 2 imágenes verticales */
-.gallery-item.vertical {
-  grid-row: span 2; /* Ocupan 2 filas de altura */
-}
-
-/* Ajuste para tablets y celulares */
-@media (max-width: 850px) {
-  .gallery-custom-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-  }
-}
-
-@media (max-width: 550px) {
-  .gallery-custom-grid {
-    grid-template-columns: 1fr; /* 1 sola columna en móviles */
-    grid-auto-rows: 250px;
-  }
-  .gallery-item.vertical {
-    grid-row: span 1; /* En móvil dejamos de forzar la verticalidad para que no se vea infinito */
-  }
-}
-
-  /* Tabla Comparativa */
-  .comparison-container { overflow-x: auto; margin-top: 30px; }
-  .comparison-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; }
+  /* Tabla */
+  .comparison-table { width: 100%; border-collapse: collapse; margin-top: 30px; }
   .comparison-table th, .comparison-table td { padding: 15px; border: 1px solid #eee; text-align: left; }
-  .comparison-table th { background: #f8f8f8; }
 
-  @media (max-width: 950px) {
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .card { max-width: 100%; }
-  }
-
-  <style>
-  .oficinas-split-section {
-    padding: 60px 0;
-    background-color: #fff;
-  }
-
-  .grid-two-columns {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr; /* El texto es un poco más ancho que el form */
-    gap: 50px;
-    align-items: start;
-  }
-
-  .benefits-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .benefits-info p {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #444;
-    margin: 0;
-  }
-
-  /* Estilo para la caja de la promo (puedes ajustarlo según tu diseño) */
-  .promo-box {
-    background: #00a69c;
-    color: white;
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px dashed #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 166, 156, 0.2);
-  }
-
-  /* Responsive: En celulares se pone uno arriba del otro */
+  /* Responsive */
   @media (max-width: 900px) {
-    .grid-two-columns {
-      grid-template-columns: 1fr;
-    }
-    
-    .oficinas-split-section {
-      padding: 40px 20px;
-    }
+    .grid-two-columns, .hero-grid { grid-template-columns: 1fr; }
+    .gallery-custom-grid { grid-template-columns: repeat(2, 1fr); }
   }
-</style>
 </style>
