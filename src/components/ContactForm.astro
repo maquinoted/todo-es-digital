@@ -1,6 +1,5 @@
 ---
-// Definimos las propiedades que recibe el componente
-// Al poner ="mgolzeyp" le decimos que ese es el valor de texto por defecto
+// Definimos las propiedades con valores por defecto
 const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props; 
 ---
 
@@ -22,6 +21,20 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
     <input type="tel" name="phone" id="whatsapp" placeholder="+502 0000 0000" required />
   </div>
 
+  {serviceName === "Oficinas Virtuales" && (
+    <div class="form-group">
+      <label for="plan">Plan de Interés</label>
+      <select name="plan-seleccionado" id="plan" required>
+        <option value="" disabled selected>Seleccione un plan</option>
+        <option value="Plan Básico">Plan Básico</option>
+        <option value="Plan EoOffice">Plan EoOffice</option>
+        <option value="Plan Premium">Plan Premium</option>
+        <option value="Plan Dirección Fiscal">Plan Dirección Fiscal</option>
+        <option value="Plan PBX Cloud">Plan PBX Cloud</option>
+      </select>
+    </div>
+  )}
+
   {serviceName === "Salas de Reuniones" && (
     <div class="form-group">
       <label for="date">Fecha y Hora Estimada</label>
@@ -31,7 +44,7 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
 
   <div class="form-group">
     <label for="message">Mensaje / Requerimientos Especiales</label>
-    <textarea name="message" id="message" rows="4" placeholder="Cuéntenos más sobre su necesidad..."></textarea>
+    <textarea name="message" id="message" rows="4" placeholder="¿Alguna duda adicional?"></textarea>
   </div>
 
   <button type="submit" class="btn-submit">Solicitar Información</button>
@@ -47,14 +60,20 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
   }
   .form-group { margin-bottom: 20px; text-align: left; }
   .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
-  .form-group input, .form-group textarea { 
+  
+  /* Actualizado para incluir el select */
+  .form-group input, 
+  .form-group textarea,
+  .form-group select { 
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
     border-radius: 6px; 
     font-family: inherit; 
     box-sizing: border-box;
+    background-color: white;
   }
+  
   .btn-submit { 
     background: #00a69c; 
     color: white; 
