@@ -1,10 +1,10 @@
 ---
 // Definimos las propiedades que recibe el componente
-// Añadimos valores por defecto para evitar errores si una prop llega vacía
+// Al poner ="mgolzeyp" le decimos que ese es el valor de texto por defecto
 const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props; 
 ---
 
-<form action={`https://formspree.io/f/${mgolzeyp}`} method="POST" class="contact-form">
+<form action={`https://formspree.io/f/${formId}`} method="POST" class="contact-form">
   <input type="hidden" name="_subject" value={`Nueva consulta: ${serviceName}`} />
 
   <div class="form-group">
