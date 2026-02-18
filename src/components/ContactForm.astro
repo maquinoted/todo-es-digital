@@ -1,6 +1,7 @@
 ---
 // Definimos las propiedades que recibe el componente
-const { serviceName, formId } = Astro.props; 
+// Añadimos valores por defecto para evitar errores si una prop llega vacía
+const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props; 
 ---
 
 <form action={`https://formspree.io/f/${mgolzeyp}`} method="POST" class="contact-form">
