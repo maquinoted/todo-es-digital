@@ -1,5 +1,6 @@
 ---
-const { serviceName, formId } = Astro.props; // formId es el código que te da Formspree
+// Definimos las propiedades que recibe el componente
+const { serviceName, formId } = Astro.props; 
 ---
 
 <form action={`https://formspree.io/f/${mgolzeyp}`} method="POST" class="contact-form">
@@ -36,10 +37,33 @@ const { serviceName, formId } = Astro.props; // formId es el código que te da F
 </form>
 
 <style>
-  .contact-form { background: #f9f9f9; padding: 30px; border-radius: 12px; border: 1px solid #eee; }
+  .contact-form { 
+    background: #f9f9f9; 
+    padding: 30px; 
+    border-radius: 12px; 
+    border: 1px solid #eee; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
   .form-group { margin-bottom: 20px; text-align: left; }
   .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
-  .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; }
-  .btn-submit { background: #00a69c; color: white; border: none; padding: 15px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; transition: 0.3s; }
+  .form-group input, .form-group textarea { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-family: inherit; 
+    box-sizing: border-box;
+  }
+  .btn-submit { 
+    background: #00a69c; 
+    color: white; 
+    border: none; 
+    padding: 15px 25px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    width: 100%; 
+    transition: background 0.3s; 
+  }
   .btn-submit:hover { background: #008f86; }
 </style>
