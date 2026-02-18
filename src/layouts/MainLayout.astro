@@ -31,6 +31,32 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
       "telephone": "+50223022200"
     }
     </script>
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "SiteNavigationElement",
+      "position": 1,
+      "name": "Oficinas Virtuales",
+      "url": "https://todoesdigital.com/oficinas-virtuales-guatemala"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 2,
+      "name": "Salas de Reuniones",
+      "url": "https://todoesdigital.com/alquiler-salas-reuniones-guatemala"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "position": 3,
+      "name": "Coworking",
+      "url": "https://todoesdigital.com/espacios-cowork-guatemala"
+    }
+  ]
+}
+</script>
     <script is:inline>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

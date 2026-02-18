@@ -1,6 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-const currentCanonicalURL = "https://todo-es-digital.vercel.app/espacios-cowork-guatemala";
+const currentCanonicalURL = "https://todoesdigital.com/espacios-cowork-guatemala";
 import ContactForm from '../components/ContactForm.astro';
 ---
 
@@ -9,6 +9,59 @@ import ContactForm from '../components/ContactForm.astro';
   description="Descubra los mejores espacios de cowork en Zona Pradera, Ciudad de Guatemala. Puestos flexibles, WiFi de alta velocidad y ambiente profesional para emprendedores."
   canonicalURL="https://todoesdigital.com/espacios-cowork-guatemala"
 >
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Espacios de Coworking",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Todo es Digital"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Guatemala"
+  },
+  "description": "Espacios de trabajo compartido y coworking en Guatemala. Oficinas flexibles con todos los servicios incluidos para emprendedores y empresas.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Planes de Coworking",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pases Diarios de Cowork"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Membresías Mensuales de Coworking"
+        }
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Inicio",
+    "item": "https://todoesdigital.com/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Coworking",
+    "item": "https://todoesdigital.com/espacios-cowork-guatemala"
+  }]
+}
+</script>
 
   <article class="container">
     <h1 class="hero-clean h1">Renta de Espacios de Cowork en Guatemala: Impulse su Productividad en Zona 10</h1>
