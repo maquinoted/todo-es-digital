@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Indica la ubicación del sitemap para facilitar el rastreo
-Sitemap: https://todo-es-digital.vercel.app/sitemap-index.xml
+Sitemap: https://todoesdigital.com/sitemap.xml
+Sitemap: https://todoesdigital.com/images_sitemap.xml
