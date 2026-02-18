@@ -3,52 +3,51 @@
 const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props; 
 ---
 
-<form action={`https://formspree.io/f/${formId}`} method="POST" class="contact-form">
-<input type="hidden" name="_next" value="https://todoesdigital.com/gracias" />
-
-  <div class="form-group">
-    <label for="full-name">Nombre Completo</label>
-    <input type="text" name="name" id="full-name" placeholder="Ej. Juan Pérez" required />
-  </div>
-
-  <div class="form-group">
-    <label for="email">Correo Electrónico</label>
-    <input type="email" name="email" id="email" placeholder="nombre@empresa.com" required />
-  </div>
-
-  <div class="form-group">
-    <label for="whatsapp">WhatsApp / Teléfono</label>
-    <input type="tel" name="phone" id="whatsapp" placeholder="+502 0000 0000" required />
-  </div>
-
-  {serviceName === "Oficinas Virtuales" && (
-    <div class="form-group">
-      <label for="plan">Plan de Interés</label>
-      <select name="plan-seleccionado" id="plan" required>
-        <option value="" disabled selected>Seleccione un plan</option>
-        <option value="Plan Básico">Plan Básico</option>
-        <option value="Plan EoOffice">Plan EoOffice</option>
-        <option value="Plan Premium">Plan Premium</option>
-        <option value="Plan Dirección Fiscal">Plan Dirección Fiscal</option>
-        <option value="Plan PBX Cloud">Plan PBX Cloud</option>
-      </select>
-    </div>
-  )}
-
-  {serviceName === "Salas de Reuniones" && (
-    <div class="form-group">
-      <label for="date">Fecha y Hora Estimada</label>
-      <input type="datetime-local" name="event-date" id="date" />
-    </div>
-  )}
-
-  <div class="form-group">
-    <label for="message">Mensaje / Requerimientos Especiales</label>
-    <textarea name="message" id="message" rows="4" placeholder="¿Alguna duda adicional?"></textarea>
-  </div>
-
-  <button type="submit" class="btn-submit">Solicitar Información</button>
+<form action={`https://formspree.io/f/${formId}`} method="POST" id="my-form" class="contact-form">
+  <input type="hidden" name="_subject" value={`Nueva consulta: ${serviceName}`} />
+  
+  <button type="submit" id="submit-button" class="btn-submit">Solicitar Información</button>
+  <p id="form-status"></p>
 </form>
+
+<script is:inline>
+  const form = document.getElementById("my-form");
+  const status = document.getElementById("form-status");
+  const button = document.getElementById("submit-button");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Evita que se abra la página de Formspree
+    
+    button.disabled = true;
+    button.innerText = "Enviando...";
+    
+    const data = new FormData(event.target);
+    
+    try {
+      const response = await fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // ¡ÉXITO! Aquí es donde ocurre la magia gratis
+        window.location.href = "/gracias"; 
+      } else {
+        const errorData = await response.json();
+        status.innerHTML = "Error: " + errorData.errors.map(error => error.message).join(", ");
+        button.disabled = false;
+        button.innerText = "Solicitar Información";
+      }
+    } catch (error) {
+      status.innerHTML = "Ups! Hubo un problema al enviar el formulario.";
+      button.disabled = false;
+      button.innerText = "Solicitar Información";
+    }
+  });
+</script>
 
 <style>
   .contact-form { 
