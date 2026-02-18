@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    { "source": "/paginas-web-guatemala", "destination": "/", "permanent": true },
+    { "source": "/curso-ingles-guatemala", "destination": "/", "permanent": true },
+    { "source": "/factura-electronica-fel-guatemala", "destination": "/", "permanent": true },
+    { "source": "/coworking-guatemala", "destination": "/espacios-cowork-guatemala", "permanent": true },
+    { "source": "/gracias-oficina-virtual.php", "destination": "/", "permanent": true },
+    { "source": "/landingpage/cotizacionesoficinasvirtuales", "destination": "/", "permanent": true },
+    { "source": "/landingpage/cotizacionescrm", "destination": "/", "permanent": true },
+    { "source": "/cotizacionessalasdereuniones", "destination": "/", "permanent": true },
+    { "source": "/centro-de-negocios-guatemala", "destination": "/", "permanent": true },
+    { "source": "/posicionamiento-web-seo-guatemala", "destination": "/", "permanent": true },
+    { "source": "/salas-reuniones-guatemala", "destination": "/alquiler-salas-reuniones-guatemala", "permanent": true },
+    { "source": "/oficinas-todo-incluido-guatemala", "destination": "/oficinas-virtuales-guatemala", "permanent": true }
+  ]
+}
