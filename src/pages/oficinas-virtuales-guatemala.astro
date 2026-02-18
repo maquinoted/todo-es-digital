@@ -93,21 +93,26 @@ import ContactForm from '../components/ContactForm.astro';
       </div>
     </div>
   </section>
-  <section>
-    <ContactForm serviceName="Oficinas Virtuales" formId="mgolzeyp" />
-  </section>
-  <section class="additional-benefits">
-    <div class="container">
+ <section class="oficinas-split-section">
+  <div class="container grid-two-columns">
+    
+    <div class="benefits-column">
       <div class="benefits-info">
         <p>
-          Nuestros planes de<strong>oficinas virtuales</strong>  que incluyen uso de <strong>salas de reuniones</strong> garantizan una experiencia de servicio al cliente de élite. Disfrute de servicios como <strong>Agua, Café, Internet de alta velocidad, Aire Acondicionado</strong> y una <strong>tarifa preferencial de parqueo</strong> en Zona Pradera. Además, como beneficio exclusivo, otorgamos <strong>1 hora gratis de parqueo a motoristas</strong>.
+          Nuestros planes de <strong>oficinas virtuales</strong> que incluyen uso de <strong>salas de reuniones</strong> garantizan una experiencia de servicio al cliente de élite. Disfrute de servicios como <strong>Agua, Café, Internet de alta velocidad, Aire Acondicionado</strong> y una <strong>tarifa preferencial de parqueo</strong> en Zona Pradera. Además, como beneficio exclusivo, otorgamos <strong>1 hora gratis de parqueo a motoristas</strong>.
         </p>
       </div>
       <div class="promo-box">
         <p>¡Optimice su inversión! Pague su plan de forma <strong>semestral</strong> y obtenga el <strong>7mo mes totalmente GRATIS</strong>.</p>
       </div>
     </div>
-  </section>
+
+    <div class="form-column">
+      <ContactForm serviceName="Oficinas Virtuales" formId="mgolzeyp" />
+    </div>
+
+  </div>
+</section>
 
   <section class="educational-section">
     <div class="container">
@@ -295,4 +300,52 @@ import ContactForm from '../components/ContactForm.astro';
     .hero-grid { grid-template-columns: 1fr; text-align: center; }
     .card { max-width: 100%; }
   }
+
+  <style>
+  .oficinas-split-section {
+    padding: 60px 0;
+    background-color: #fff;
+  }
+
+  .grid-two-columns {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* El texto es un poco más ancho que el form */
+    gap: 50px;
+    align-items: start;
+  }
+
+  .benefits-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .benefits-info p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 0;
+  }
+
+  /* Estilo para la caja de la promo (puedes ajustarlo según tu diseño) */
+  .promo-box {
+    background: #00a69c;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px dashed #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 166, 156, 0.2);
+  }
+
+  /* Responsive: En celulares se pone uno arriba del otro */
+  @media (max-width: 900px) {
+    .grid-two-columns {
+      grid-template-columns: 1fr;
+    }
+    
+    .oficinas-split-section {
+      padding: 40px 20px;
+    }
+  }
+</style>
 </style>
