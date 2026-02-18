@@ -4,6 +4,7 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
 ---
 
 <form action={`https://formspree.io/f/${formId}`} method="POST" class="contact-form">
+  <input type="hidden" name="_next" value="https://https://todoesdigital.com/gracias" />
   <input type="hidden" name="_subject" value={`Nueva consulta: ${serviceName}`} />
 
   <div class="form-group">

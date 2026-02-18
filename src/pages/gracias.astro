@@ -1,0 +1,47 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="¡Mensaje Enviado! | Todo es Digital">
+  <section class="thanks-section">
+    <div class="container text-center">
+      <div class="thanks-icon">✓</div>
+      <h1>¡Muchas gracias por escribirnos!</h1>
+      <p class="lead">Hemos recibido su solicitud. Uno de nuestros asesores se pondrá en contacto con usted en breve por WhatsApp o correo electrónico.</p>
+      
+      <button onclick="window.history.back()" class="btn btn-back">
+        ← Volver a la página anterior
+      </button>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .thanks-section {
+    padding: 100px 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  .thanks-icon {
+    font-size: 4rem;
+    color: #00a69c;
+    margin-bottom: 20px;
+  }
+  .thanks-section h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+  }
+  .btn-back {
+    margin-top: 30px;
+    max-width: 300px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+  }
+  .btn-back:hover {
+    transform: translateY(-2px);
+    background-color: #008f86;
+  }
+</style>
