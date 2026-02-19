@@ -59,22 +59,22 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
 </script>
 
     <script is:inline>
-  function loadGTM() {
-    if (window.gtmLoaded) return;
-    window.gtmLoaded = true;
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    // ABAJO: Aquí es donde se pasa tu ID GTM-KN6TS3V como el valor de 'i'
-    })(window,document,'script','dataLayer','GTM-KN6TS3V'); 
-  }
+      function loadGTM() {
+        if (window.gtmLoaded) return;
+        window.gtmLoaded = true;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        // ABAJO: Aquí es donde se pasa tu ID GTM-PNR969R8 como el valor de 'i'
+        })(window,document,'script','dataLayer','GTM-PNR969R8'); 
+      }
 
-  // Esto hace que el JS no se descargue hasta que el usuario se mueva
-  window.addEventListener('scroll', loadGTM, { once: true });
-  window.addEventListener('mousemove', loadGTM, { once: true });
-  window.addEventListener('touchstart', loadGTM, { once: true });
-</script>
+      // Esto hace que el JS no se descargue hasta que el usuario se mueva
+      window.addEventListener('scroll', loadGTM, { once: true });
+      window.addEventListener('mousemove', loadGTM, { once: true });
+      window.addEventListener('touchstart', loadGTM, { once: true });
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -134,7 +134,7 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
   </head>
   <body>
     <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN6TS3V"
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNR969R8"
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>    
     
