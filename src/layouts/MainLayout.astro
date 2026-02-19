@@ -57,6 +57,7 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
   ]
 }
 </script>
+
     <script is:inline>
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -64,6 +65,7 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-KN6TS3V');
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <style is:inline>
@@ -121,9 +123,10 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
 </style>
   </head>
   <body>
+    <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN6TS3V"
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
+    </noscript>    
     
     <Header />
     
