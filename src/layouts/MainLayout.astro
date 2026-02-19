@@ -59,12 +59,22 @@ const { title = "Todo es Digital", description, canonicalURL } = Astro.props;
 </script>
 
     <script is:inline>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-KN6TS3V');
-    </script>
+  function loadGTM() {
+    if (window.gtmLoaded) return;
+    window.gtmLoaded = true;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    // ABAJO: Aquí es donde se pasa tu ID GTM-KN6TS3V como el valor de 'i'
+    })(window,document,'script','dataLayer','GTM-KN6TS3V'); 
+  }
+
+  // Esto hace que el JS no se descargue hasta que el usuario se mueva
+  window.addEventListener('scroll', loadGTM, { once: true });
+  window.addEventListener('mousemove', loadGTM, { once: true });
+  window.addEventListener('touchstart', loadGTM, { once: true });
+</script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
