@@ -1,5 +1,16 @@
 {
   "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mail.todoesdigital.com"
+        }
+      ],
+      "destination": "/404",
+      "permanent": true
+    },
     { "source": "/paginas-web-guatemala", "destination": "/404", "permanent": true },
     { "source": "/curso-ingles-guatemala", "destination": "/404", "permanent": true },
     { "source": "/factura-electronica-fel-guatemala", "destination": "/404", "permanent": true },
