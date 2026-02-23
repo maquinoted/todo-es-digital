@@ -3,215 +3,97 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
 
 const currentCanonicalURL = "https://todoesdigital.com/guia-formalizacion-pymes-guatemala-2026";
-
-const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala",
-  "description": "Comparativa y requisitos para obtener dirección fiscal ante la SAT y Registro Mercantil.",
-  "author": { "@type": "Organization", "name": "Todo es Digital" },
-  "datePublished": "2026-02-22"
-};
 ---
 
 <MainLayout 
-  title="Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala"
-  description="Formaliza tu empresa ante la SAT. Comparativa visual de negocio formal vs. informal con oficina virtual."
+  title="Guía 2026: Cómo Formalizar tu Empresa"
+  description="Comparativa de formalización para empresas en Guatemala."
   canonicalURL={currentCanonicalURL}
 >
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
-
   <div class="container mx-auto px-4 py-16">
-    <main class="max-w-6xl mx-auto">
+    
+    <header class="text-center mb-16">
+      <h1 class="text-4xl font-black text-slate-900 uppercase">Guía de Formalización 2026</h1>
+    </header>
+
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-10 mb-20">
       
-      <header class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-4 uppercase">
-          Guía de Formalización <br/> <span class="text-teal-600">Oficinas Virtuales 2026</span>
-        </h1>
-      </header>
-
-      <section class="mb-24 px-4">
-        <h2 class="text-2xl font-bold text-center text-slate-800 mb-12 uppercase tracking-widest">Comparativa: Informal vs. Profesional</h2>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 justify-items-center items-center max-w-5xl mx-auto">
-          
-          <div class="biz-card card-informal">
-            <div class="stamp-container">
-                <span class="stamp-red">INFORMAL</span>
-            </div>
-            <div class="card-body">
-              <div class="card-header">
-                <h3 class="biz-name text-slate-700">Consultores Profesionales SA</h3>
-                <div class="biz-line bg-slate-200"></div>
-              </div>
-              <div class="card-info text-slate-500">
-                <p class="biz-owner text-slate-800">Jorge Perez</p>
-                <div class="biz-details">
-                  <p>📍 Valles del bosque, casa 4</p>
-                  <p>📞 +502 30459080</p>
-                  <p>✉️ consultoresvarios@gmail.com</p>
-                </div>
-              </div>
-            </div>
+      <div class="tarjeta-visual bg-white border-2 border-slate-200">
+        <div class="sello-informal">INFORMAL</div>
+        <div class="p-8 h-full flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-700">Consultores Profesionales SA</h3>
+            <p class="text-xl font-black text-slate-900 mt-2">Jorge Perez</p>
           </div>
-
-          <div class="biz-card card-professional">
-            <div class="verified-tag">VERIFIED ADDRESS</div>
-            <div class="card-body text-white">
-              <div class="card-header">
-                <h3 class="biz-name">Consultores Profesionales SA</h3>
-                <div class="biz-line bg-cyan-400 shadow-[0_0_8px_#22d3ee]"></div>
-              </div>
-              <div class="card-info text-slate-300">
-                <p class="biz-owner text-white">Jorge Perez</p>
-                <p class="biz-position text-cyan-400">Gerente General</p>
-                <div class="biz-details mt-4">
-                  <p><span class="label">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
-                  <p><span class="label">PBX:</span> +502 23022299</p>
-                  <p><span class="label">MAIL:</span> gerencia@consultoresprofesionales.com</p>
-                </div>
-              </div>
-            </div>
+          <div class="text-sm text-slate-500 space-y-1">
+            <p>📍 Valles del bosque, casa 4</p>
+            <p>📞 +502 30459080</p>
+            <p>✉️ consultoresvarios@gmail.com</p>
           </div>
-
         </div>
-      </section>
-
-      <div class="grid lg:grid-cols-3 gap-16 border-t pt-16">
-        <div class="lg:col-span-2 prose prose-slate max-w-none">
-          <h2 class="text-3xl font-extrabold text-slate-800 uppercase">Formalización ante la SAT</h2>
-          <p class="text-lg text-slate-600">
-            La comparativa superior es clara: el domicilio fiscal no es solo un papel, es la cara de tu empresa ante clientes y proveedores. Con <strong>Todo es Digital</strong>, obtienes una dirección en ubicaciones de prestigio como <strong>Zona Pradera</strong>, facilitando tus trámites ante la SAT y el Registro Mercantil.
-          </p>
-        </div>
-        <aside class="lg:col-span-1">
-            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
-                <h3 class="text-lg font-bold mb-4">¿Quieres la tarjeta de la derecha?</h3>
-                <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
-            </div>
-        </aside>
       </div>
-    </main>
+
+      <div class="tarjeta-visual bg-[#2d3136] text-white shadow-2xl border border-slate-700">
+        <div class="p-8 h-full flex flex-col justify-between">
+          <div>
+            <h3 class="text-cyan-400 text-lg font-bold">Consultores Profesionales SA</h3>
+            <div class="w-20 h-1 bg-cyan-400 my-2"></div>
+            <p class="text-xl font-black mt-2">Jorge Perez</p>
+            <p class="text-[10px] uppercase tracking-widest text-slate-400">Gerente General</p>
+          </div>
+          <div class="text-sm text-slate-300 space-y-1">
+            <p><span class="text-cyan-400 font-bold">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
+            <p><span class="text-cyan-400 font-bold">PBX:</span> +502 23022299</p>
+            <p><span class="text-cyan-400 font-bold">MAIL:</span> gerencia@consultoresprofesionales.com</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-10 pt-10 border-t">
+        <div class="lg:col-span-2 prose">
+            <h2>Formalización ante la SAT</h2>
+            <p>La diferencia entre ambas tarjetas es la confianza que generas en tus clientes. Una oficina virtual te da la presencia legal y comercial necesaria.</p>
+        </div>
+        <div>
+            <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
+        </div>
+    </div>
+
   </div>
 </MainLayout>
 
 <style>
-  /* CONFIGURACIÓN BASE DE TARJETAS */
-  .biz-card {
-    width: 100%;
-    max-width: 400px; /* Tamaño estándar de tarjeta en web */
-    height: 230px;
-    border-radius: 12px;
-    padding: 2rem;
+  /* ESTILO FORZADO DE TARJETAS */
+  .tarjeta-visual {
+    width: 400px;  /* Ancho fijo */
+    height: 230px; /* Alto fijo */
+    border-radius: 15px;
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Evita que se encojan */
   }
 
-  /* TARJETA INFORMAL (IZQUIERDA) */
-  .card-informal {
-    background-color: #fcfcf9;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    opacity: 0.85;
-  }
-
-  /* TARJETA PROFESIONAL (DERECHA) */
-  .card-professional {
-    background-color: #2d3136;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-  }
-
-  /* DETALLES INTERNOS */
-  .biz-name {
-    font-family: serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .biz-line {
-    width: 60px;
-    height: 2px;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .biz-owner {
-    font-weight: 800;
-    font-size: 1rem;
-    margin-bottom: 0px;
-  }
-
-  .biz-position {
-    font-size: 9px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  .biz-details {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  .label {
-    font-weight: 900;
-    margin-right: 4px;
-  }
-
-  /* STAMPS Y TAGS */
-  .stamp-container {
+  .sello-informal {
     position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    border: 4px solid rgba(239, 68, 68, 0.2);
+    color: rgba(239, 68, 68, 0.2);
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 0 1rem;
     pointer-events: none;
   }
 
-  .stamp-red {
-    border: 4px solid rgba(220, 38, 38, 0.2);
-    color: rgba(220, 38, 38, 0.2);
-    font-size: 3rem;
-    font-weight: 900;
-    transform: rotate(-15deg);
-    padding: 0.5rem 1rem;
-    border-radius: 12px;
-  }
-
-  .verified-tag {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: #22d3ee;
-    color: white;
-    font-size: 8px;
-    font-weight: 900;
-    padding: 4px 8px;
-    border-radius: 4px;
-    letter-spacing: 1px;
-  }
-
-  /* RESPONSIVO */
-  @media (max-width: 1024px) {
-    .card-professional {
-        margin-top: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .biz-card {
-        height: auto;
-        padding: 1.5rem;
-    }
-    .biz-name {
-        font-size: 1.1rem;
+  /* Ajuste para móviles para que no se rompa el ancho fijo */
+  @media (max-width: 450px) {
+    .tarjeta-visual {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.73/1;
     }
   }
 </style>
