@@ -8,7 +8,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala",
-  "description": "Comparativa y requisitos para obtener dirección fiscal ante la SAT y Registro Mercantil.",
+  "description": "Requisitos legales y comparativa visual para obtener dirección fiscal ante la SAT y Registro Mercantil en Guatemala.",
   "author": { "@type": "Organization", "name": "Todo es Digital" },
   "datePublished": "2026-02-22"
 };
@@ -16,7 +16,7 @@ const articleSchema = {
 
 <MainLayout 
   title="Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala"
-  description="Formaliza tu empresa ante la SAT. Comparativa visual de negocio formal vs. informal con oficina virtual."
+  description="Aprende los requisitos para obtener dirección fiscal ante la SAT y formalizar tu empresa con oficinas virtuales en Guatemala."
   canonicalURL={currentCanonicalURL}
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
@@ -26,8 +26,11 @@ const articleSchema = {
       
       <header class="header-section">
         <h1 class="main-title">
-          Guía de Formalización con <span class="text-teal">Oficinas Virtuales</span>
+          Guía 2026: Cómo Formalizar tu Empresa con <span class="text-teal">Oficinas Virtuales</span>
         </h1>
+        <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12">
+          Pasar de la informalidad a una empresa legalmente constituida ante la SAT y el Registro Mercantil es el paso más crítico para un empresario en Guatemala.
+        </p>
       </header>
 
       <section class="comparison-grid">
@@ -47,7 +50,7 @@ const articleSchema = {
               </div>
             </div>
           </div>
-          <p class="label-caption">Estado Actual</p>
+          <p class="label-caption">❌ Riesgo: No localizado por SAT</p>
         </div>
 
         <div class="column">
@@ -67,22 +70,35 @@ const articleSchema = {
             </div>
             <div class="glow-effect"></div>
           </div>
-          <p class="label-caption text-teal-bold">Con Oficina Virtual</p>
+          <p class="label-caption text-teal-bold">✅ Localización Fiscal Garantizada</p>
         </div>
 
       </section>
 
       <div class="footer-content-grid">
         <div class="prose-area">
-          <h2 class="section-subtitle">Formalización ante la SAT</h2>
+          <h2 class="section-subtitle">Requisitos para obtener Dirección Fiscal</h2>
           <p class="description-text">
-            La diferencia entre ambas tarjetas es la confianza que generas en tus clientes. Una <strong>oficina virtual en Guatemala</strong> no es solo una dirección; es el respaldo legal y comercial que tu empresa necesita para crecer.
+            Para operar formalmente en Guatemala, la SAT exige que tu empresa tenga un domicilio fiscal verificable. Las <strong>oficinas virtuales en Guatemala</strong> se han convertido en la herramienta legal predilecta por 3 razones:
           </p>
+          <ul class="text-slate-600 space-y-4 mt-6 list-disc pl-5">
+            <li><strong>Contrato de Subarrendamiento:</strong> Requisito indispensable para actualizar tu RTU.</li>
+            <li><strong>Localización SAT:</strong> Evita el estatus de "No Localizado" que bloquea tu emisión de facturas.</li>
+            <li><strong>Patente de Comercio:</strong> Proporcionamos la dirección física para inscribir tu empresa en el Registro Mercantil.</li>
+          </ul>
+          
+          <div class="mt-8 p-6 bg-teal-50 border-l-4 border-teal-600 rounded-r-xl">
+            <p class="italic text-teal-900">
+              "Formalizar tu empresa no es solo un trámite legal, es habilitar la capacidad de venderle a clientes corporativos que exigen factura de régimen general."
+            </p>
+          </div>
         </div>
+
         <aside class="sidebar-form">
            <div class="form-card">
-             <h3 class="form-title">¿Quieres formalizarte?</h3>
-             <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
+             <h3 class="form-title">Obtén tu Dirección Fiscal</h3>
+             <p class="text-sm text-slate-500 mb-6">Inicia tu trámite de formalización hoy mismo con asesoría profesional.</p>
+             <ContactForm serviceName="Grupo 1 Formalizacion" formId="mgolzeyp" />
            </div>
         </aside>
       </div>
@@ -91,115 +107,42 @@ const articleSchema = {
 </MainLayout>
 
 <style>
-  /* RESET Y ESTRUCTURA BASE */
-  .container-formalizacion {
-    width: 100%;
-    padding: 4rem 1rem;
-    background-color: white;
-  }
-  .content-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  /* ESTILOS INTERNOS (Mantenidos de tu versión correcta) */
+  .container-formalizacion { width: 100%; padding: 4rem 1rem; background-color: white; }
+  .content-wrapper { max-width: 1100px; margin: 0 auto; }
   .text-teal { color: #0d9488; }
   .text-cyan { color: #22d3ee; }
-  .main-title {
-    font-size: 3rem;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 4rem;
-    color: #0f172a;
-  }
+  .main-title { font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 2rem; color: #0f172a; line-height: 1.1; }
 
-  /* EL GRID QUE NO FALLA */
-  .comparison-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* DOS COLUMNAS IGUALES */
-    gap: 3rem;
-    margin-bottom: 5rem;
-  }
+  .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 5rem; }
+  .column { display: flex; flex-direction: column; align-items: center; }
 
-  .column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  .tarjeta-visual { width: 400px; height: 230px; border-radius: 12px; position: relative; padding: 2rem; box-sizing: border-box; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+  .tarjeta-visual:hover { transform: scale(1.02); }
 
-  /* DISEÑO DE TARJETA */
-  .tarjeta-visual {
-    width: 400px;
-    height: 230px;
-    border-radius: 12px;
-    position: relative;
-    padding: 2rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  }
+  .informal { background-color: white; border: 2px solid #e2e8f0; }
+  .profesional { background-color: #2d3136; color: white; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 
-  .informal {
-    background-color: white;
-    border: 2px solid #e2e8f0;
-  }
-
-  .profesional {
-    background-color: #2d3136;
-    color: white;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  }
-
-  .tarjeta-inner {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    z-index: 10;
-  }
-
+  .tarjeta-inner { height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 10; }
   .biz-name-card { font-weight: bold; font-size: 1.15rem; margin: 0; }
   .owner-name-card { font-size: 1.25rem; font-weight: 900; margin-top: 0.5rem; }
   .job-title-card { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; }
   .divider-cyan { width: 80px; height: 3px; background-color: #22d3ee; margin: 0.5rem 0; }
   .tarjeta-bottom { font-size: 0.85rem; line-height: 1.4; }
   
-  .sello-informal {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(-15deg);
-    border: 5px solid rgba(239, 68, 68, 0.1);
-    color: rgba(239, 68, 68, 0.1);
-    font-size: 4rem;
-    font-weight: 900;
-    pointer-events: none;
-    z-index: 1;
-  }
-
+  .sello-informal { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); border: 5px solid rgba(239, 68, 68, 0.1); color: rgba(239, 68, 68, 0.1); font-size: 4rem; font-weight: 900; pointer-events: none; z-index: 1; }
   .label-caption { margin-top: 1rem; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; }
   .text-teal-bold { color: #0d9488; }
 
-  /* FOOTER GRID */
-  .footer-content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 4rem;
-  }
-
+  .footer-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; border-top: 1px solid #e2e8f0; padding-top: 4rem; }
   .section-subtitle { font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; }
   .description-text { font-size: 1.125rem; color: #475569; line-height: 1.6; }
-  .form-card { background-color: #f8fafc; padding: 2rem; border-radius: 1rem; border: 1px solid #f1f5f9; }
-  .form-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; }
+  .form-card { background-color: #f8fafc; padding: 2.5rem; border-radius: 1.5rem; border: 1px solid #f1f5f9; position: sticky; top: 2rem; }
+  .form-title { font-size: 1.4rem; font-weight: bold; margin-bottom: 0.5rem; color: #0f172a; }
 
-  /* RESPONSIVO */
   @media (max-width: 900px) {
-    .comparison-grid, .footer-content-grid {
-      grid-template-columns: 1fr;
-    }
-    .tarjeta-visual {
-      width: 100%;
-      max-width: 400px;
-    }
+    .comparison-grid, .footer-content-grid { grid-template-columns: 1fr; }
+    .tarjeta-visual { width: 100%; max-width: 400px; }
+    .main-title { font-size: 2.2rem; }
   }
 </style>
