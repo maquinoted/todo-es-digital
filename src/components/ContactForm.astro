@@ -38,7 +38,13 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
   {serviceName === "Salas de Reuniones" && (
     <div class="form-group">
       <label for="date">Fecha y Hora Estimada</label>
-      <input type="datetime-local" name="event-date" id="date" />
+      <input 
+        type="datetime-local" 
+        name="event-date" 
+        id="date" 
+        step="3600" 
+        required 
+      />
     </div>
   )}
 
@@ -52,6 +58,26 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
 </form>
 
 <script is:inline>
+  // Lógica de validación de fecha y hora para Salas de Reuniones
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const now = new Date();
+    // Ajuste para formato local requerido por el input datetime-local
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    dateInput.min = now.toISOString().slice(0, 16);
+
+    dateInput.addEventListener('input', (e) => {
+      const selected = new Date(e.target.value);
+      const hours = selected.getHours();
+
+      // Regla: Solo entre 8:00 AM y 4:00 PM (16:00)
+      if (hours < 8 || hours > 16) {
+        alert("Por favor seleccione un horario entre las 08:00 y las 16:00 horas.");
+        e.target.value = "";
+      }
+    });
+  }
+
   const form = document.getElementById("my-form");
   const status = document.getElementById("form-status");
   const button = document.getElementById("submit-button");
