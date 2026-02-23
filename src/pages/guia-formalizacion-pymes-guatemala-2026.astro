@@ -4,105 +4,94 @@ import ContactForm from '../components/ContactForm.astro';
 
 const currentCanonicalURL = "https://todoesdigital.com/guia-formalizacion-pymes-guatemala-2026";
 
-// Schemas para diferenciar de la página de servicio
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala",
-  "description": "Requisitos y pasos para obtener tu dirección fiscal ante la SAT y el Registro Mercantil usando oficinas virtuales.",
+  "description": "Requisitos y pasos para obtener tu dirección fiscal ante la SAT y el Registro Mercantil.",
   "author": { "@type": "Organization", "name": "Todo es Digital" },
-  "publisher": { "@type": "Organization", "name": "Todo es Digital" },
   "datePublished": "2026-02-22"
 };
 ---
 
 <MainLayout 
   title="Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala"
-  description="Conoce los requisitos para formalizar tu empresa ante la SAT y obtener tu dirección fiscal en Guatemala de forma legal y profesional."
+  description="Requisitos para formalizar tu empresa ante la SAT usando dirección fiscal en Guatemala."
   canonicalURL={currentCanonicalURL}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
 
-  <main class="max-w-5xl mx-auto px-4 py-12">
-    <div class="text-center mb-12">
+  <main class="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-16 bg-white shadow-sm my-10 rounded-xl">
+    
+    <header class="mb-12 border-b border-slate-100 pb-8 text-center">
       <h1 class="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
         Guía 2026: Cómo Formalizar tu Empresa con <span class="text-teal-600">Oficinas Virtuales</span> en Guatemala
       </h1>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto">
-        Todo lo que necesitas saber sobre trámites ante la SAT, el Registro Mercantil y cómo una dirección fiscal profesional acelera tu crecimiento legal.
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto italic">
+        "El primer paso para dejar de ser un emprendedor y convertirte en empresario es la formalización legal."
       </p>
-    </div>
+    </header>
 
-    <div class="flex flex-col lg:flex-row gap-12">
+    <div class="flex flex-col lg:flex-row gap-16">
       <div class="lg:w-2/3">
-        <article class="prose prose-slate prose-lg max-w-none">
+        
+        <div class="mb-10">
+          <div class="lg:float-right lg:ml-8 lg:mb-4 w-full lg:w-1/2">
+            <img 
+              src="/images/formalizacion-sat-guatemala.jpg" 
+              alt="Documentos de formalización SAT Guatemala" 
+              class="rounded-2xl shadow-lg border border-slate-200 w-full object-cover"
+            />
+            <p class="text-[11px] text-slate-400 mt-2 text-center uppercase tracking-widest">Trámites legales 2026</p>
+          </div>
           
-          <h2>El camino a la formalidad en Guatemala</h2>
-          <p>
-            En el entorno económico de 2026, la formalización ya no es una opción, es una necesidad para proyectar confianza y acceder a mejores mercados. Sin embargo, uno de los mayores obstáculos para las PYMES es el <strong>domicilio fiscal</strong>.
+          <h2 class="text-3xl font-bold text-slate-800 mb-4">El camino de la formalidad en Guatemala</h2>
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Para el año 2026, la <strong>dirección fiscal</strong> es el eje central de cualquier auditoría de la SAT. Obtener una dirección profesional no solo es un requisito, es la forma en que el Registro Mercantil valida que tu operación tiene una base sólida y localizable.
           </p>
-
-          <h3>¿Qué es una dirección fiscal para la SAT?</h3>
-          <p>
-            La <strong>dirección fiscal para la SAT</strong> es el domicilio legal que registras ante la Superintendencia de Administración Tributaria. Es el lugar donde se centraliza tu contabilidad y donde recibirás notificaciones oficiales. 
+          
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Muchos negocios fallan en su inscripción inicial porque la dirección de su casa no califica como zona comercial o simplemente por seguridad y privacidad del representante legal.
           </p>
-          <blockquote>
-            <strong>Importante:</strong> Usar tu dirección de residencia personal puede vulnerar tu privacidad y, en muchos casos, no cumple con los requisitos de uso de suelo comercial necesarios para ciertas patentes.
-          </blockquote>
+        </div>
 
-          <h2>Requisitos para formalizar una empresa en Guatemala</h2>
-          <p>Para inscribirte legalmente, el Registro Mercantil y la SAT solicitarán los siguientes puntos clave:</p>
-          <ul>
-            <li><strong>Documento Personal de Identificación (DPI)</strong> vigente.</li>
-            <li><strong>Búsqueda de nombre:</strong> Asegurarte de que tu marca no esté registrada.</li>
-            <li><strong>Dirección Física Verificable:</strong> Aquí es donde las <strong>oficinas virtuales en Guatemala</strong> se convierten en tu mejor aliado, permitiéndote registrar un domicilio en zonas premium como la Zona 10.</li>
-            <li><strong>Inscripción en el RTU:</strong> Actualización de tus datos en la plataforma de la SAT.</li>
+        <div class="clear-both"></div> <article class="prose prose-slate lg:prose-lg max-w-none mt-8">
+          <h3 class="text-2xl font-bold text-slate-800">Requisitos para formalizar tu empresa</h3>
+          <ul class="space-y-4">
+            <li><strong>DPI vigente:</strong> Copia legalizada de ambos lados.</li>
+            <li><strong>Búsqueda de nombre:</strong> Verificar que tu marca esté libre en el Registro Mercantil.</li>
+            <li><strong>Dirección Fiscal Verificable:</strong> Contrato de <strong>oficina virtual en Guatemala</strong> listo para presentar ante la SAT.</li>
+            <li><strong>Actualización del RTU:</strong> El paso final para habilitar tu Factura Electrónica (FEL).</li>
           </ul>
 
-          <h3>¿Es legal usar oficinas virtuales para mi trámite?</h3>
-          <p>
-            <strong>Sí, es 100% legal.</strong> Según la normativa vigente, una empresa puede domiciliarse en un centro de negocios siempre que exista un contrato de arrendamiento o subarrendamiento que respalde el uso del espacio para fines comerciales y legales.
-          </p>
-
-          <div class="bg-slate-100 p-6 rounded-lg my-8 border-l-4 border-teal-500">
-            <h4 class="mt-0 text-teal-800">¿Buscas contratar el servicio directamente?</h4>
-            <p class="mb-4 text-sm">Esta es una guía informativa. Si lo que necesitas es ver nuestros precios y planes actuales para tu empresa, visita nuestra sección de:</p>
-            <a href="/oficinas-virtuales-guatemala" class="inline-block bg-teal-600 text-white px-6 py-2 rounded font-bold hover:bg-teal-700 transition-colors">
-              Planes de Oficinas Virtuales
-            </a>
+          <div class="bg-teal-50 p-8 rounded-2xl border-l-8 border-teal-500 my-12">
+            <h4 class="text-teal-900 font-bold text-xl mb-2">¿Es legal usar una oficina virtual?</h4>
+            <p class="text-teal-800 m-0">
+              Sí. En <strong>Todo es Digital</strong> proporcionamos el contrato de subarrendamiento con el aval del propietario, documento indispensable que solicita la SAT para aceptar una dirección fiscal en un centro empresarial.
+            </p>
           </div>
 
-          <h2>Beneficios de la formalización con Todo es Digital</h2>
+          <h3 class="text-2xl font-bold text-slate-800">Beneficios con Todo es Digital</h3>
           <p>
-            Al utilizar una <strong>oficina virtual guatemala</strong> con nosotros, no solo cumples con la ley, sino que obtienes ventajas competitivas:
-          </p>
-          <ol>
-            <li><strong>Ubicación Estratégica:</strong> Tu patente de comercio dirá "Zona 10", el corazón de los negocios en el país.</li>
-            <li><strong>Manejo de Notificaciones:</strong> Nuestro personal recibe y te alerta sobre cualquier documento legal de la SAT de forma inmediata.</li>
-            <li><strong>Escalabilidad:</strong> Empiezas con una oficina virtual y, conforme crezcas, puedes migrar a espacios de coworking o salas de reuniones.</li>
-          </ol>
-
-          <h3>Conclusión</h3>
-          <p>
-            Formalizar tu empresa es el primer paso para pensar en grande. No dejes que el costo de una oficina física te detenga. Las soluciones digitales de 2026 te permiten ser formal, legal y profesional desde el día uno.
+            Al elegir nuestra <strong>oficina virtual guatemala</strong> en Zona 10, obtienes recepción inmediata de notificaciones de la SAT, evitando multas por falta de localización.
           </p>
         </article>
       </div>
 
-      <div class="lg:w-1/3">
-        <div class="sticky top-10 bg-white border border-slate-200 shadow-xl rounded-2xl p-8">
-          <h3 class="text-2xl font-bold text-slate-800 mb-4">¿Dudas con tu trámite?</h3>
-          <p class="text-slate-600 mb-6">
-            Completa el formulario y un asesor te explicará cómo obtener tu dirección fiscal en menos de 24 horas.
-          </p>
+      <aside class="lg:w-1/3">
+        <div class="sticky top-12 bg-slate-50 border border-slate-200 rounded-3xl p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4 leading-tight">¿Dudas con tu trámite legal?</h3>
+          <p class="text-slate-600 mb-8">Nuestros expertos te guían en el uso de la dirección fiscal para tu inscripción.</p>
           
-          <ContactForm serviceName="Guia Formalizacion SAT" formId="mgolzeyp" />
+          <ContactForm serviceName="Guia SAT 2026" formId="mgolzeyp" />
           
-          <p class="text-[10px] text-slate-400 mt-6 text-center italic">
-            *Servicio exclusivo para emprendedores y empresas en Guatemala.
-          </p>
+          <div class="mt-8 pt-8 border-t border-slate-200">
+            <a href="/oficinas-virtuales-guatemala" class="text-teal-600 font-bold hover:underline flex items-center justify-center gap-2">
+              Ver planes de Oficinas Virtuales →
+            </a>
+          </div>
         </div>
-      </div>
+      </aside>
     </div>
   </main>
 </MainLayout>
