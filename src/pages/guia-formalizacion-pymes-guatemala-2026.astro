@@ -3,76 +3,112 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
 
 const currentCanonicalURL = "https://todoesdigital.com/guia-formalizacion-pymes-guatemala-2026";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala",
+  "description": "Comparativa y requisitos para obtener dirección fiscal ante la SAT y Registro Mercantil.",
+  "author": { "@type": "Organization", "name": "Todo es Digital" },
+  "datePublished": "2026-02-22"
+};
 ---
 
 <MainLayout 
-  title="Guía 2026: Cómo Formalizar tu Empresa"
-  description="Comparativa de formalización para empresas en Guatemala."
+  title="Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala"
+  description="Formaliza tu empresa ante la SAT. Comparativa visual de negocio formal vs. informal con oficina virtual."
   canonicalURL={currentCanonicalURL}
 >
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+
   <div class="container mx-auto px-4 py-16">
-    
-    <header class="text-center mb-16">
-      <h1 class="text-4xl font-black text-slate-900 uppercase">Guía de Formalización 2026</h1>
-    </header>
-
-    <div class="flex flex-col lg:flex-row justify-center items-center gap-10 mb-20">
+    <main class="max-w-6xl mx-auto">
       
-      <div class="tarjeta-visual bg-white border-2 border-slate-200">
-        <div class="sello-informal">INFORMAL</div>
-        <div class="p-8 h-full flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-bold text-slate-700">Consultores Profesionales SA</h3>
-            <p class="text-xl font-black text-slate-900 mt-2">Jorge Perez</p>
+      <header class="text-center mb-16">
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
+          Guía de Formalización con <span class="text-teal-600">Oficinas Virtuales</span>
+        </h1>
+      </header>
+
+      <section class="mb-24 flex justify-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-[900px]">
+          
+          <div class="tarjeta-contenedor">
+            <div class="tarjeta-visual bg-white border-2 border-slate-200 shadow-sm">
+              <div class="sello-informal">INFORMAL</div>
+              <div class="p-8 h-full flex flex-col justify-between relative z-10">
+                <div>
+                  <h3 class="text-lg font-bold text-slate-700 font-serif">Consultores Profesionales SA</h3>
+                  <p class="text-xl font-black text-slate-900 mt-2">Jorge Perez</p>
+                </div>
+                <div class="text-sm text-slate-500 space-y-1 font-sans">
+                  <p>📍 Valles del bosque, casa 4</p>
+                  <p>📞 +502 30459080</p>
+                  <p>✉️ consultoresvarios@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-center mt-4 text-slate-400 font-bold text-xs uppercase italic">Estado Actual</p>
           </div>
-          <div class="text-sm text-slate-500 space-y-1">
-            <p>📍 Valles del bosque, casa 4</p>
-            <p>📞 +502 30459080</p>
-            <p>✉️ consultoresvarios@gmail.com</p>
+
+          <div class="tarjeta-contenedor">
+            <div class="tarjeta-visual bg-[#2d3136] text-white shadow-2xl border border-slate-700 overflow-hidden">
+              <div class="p-8 h-full flex flex-col justify-between relative z-10">
+                <div>
+                  <h3 class="text-cyan-400 text-lg font-bold font-serif">Consultores Profesionales SA</h3>
+                  <div class="w-20 h-1 bg-cyan-400 my-2"></div>
+                  <p class="text-xl font-black mt-2">Jorge Perez</p>
+                  <p class="text-[10px] uppercase tracking-widest text-slate-400">Gerente General</p>
+                </div>
+                <div class="text-sm text-slate-300 space-y-1 font-sans">
+                  <p><span class="text-cyan-400 font-bold">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
+                  <p><span class="text-cyan-400 font-bold">PBX:</span> +502 23022299</p>
+                  <p><span class="text-cyan-400 font-bold">MAIL:</span> gerencia@consultoresprofesionales.com</p>
+                </div>
+              </div>
+              <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-cyan-500/10 blur-3xl rounded-full"></div>
+            </div>
+            <p class="text-center mt-4 text-teal-600 font-bold text-xs uppercase italic">Con Oficina Virtual</p>
           </div>
+
         </div>
+      </section>
+
+      <div class="grid lg:grid-cols-3 gap-16 border-t pt-16">
+        <div class="lg:col-span-2 prose prose-lg prose-slate max-w-none">
+          <h2 class="text-3xl font-bold text-slate-800">Formalización ante la SAT</h2>
+          <p>La diferencia entre ambas tarjetas es la confianza que generas en tus clientes. Una <strong>oficina virtual en Guatemala</strong> no es solo una dirección; es el respaldo legal y comercial que tu empresa necesita para crecer.</p>
+        </div>
+        <aside class="lg:col-span-1">
+           <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+             <h3 class="text-xl font-bold mb-4">¿Quieres formalizarte?</h3>
+             <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
+           </div>
+        </aside>
       </div>
-
-      <div class="tarjeta-visual bg-[#2d3136] text-white shadow-2xl border border-slate-700">
-        <div class="p-8 h-full flex flex-col justify-between">
-          <div>
-            <h3 class="text-cyan-400 text-lg font-bold">Consultores Profesionales SA</h3>
-            <div class="w-20 h-1 bg-cyan-400 my-2"></div>
-            <p class="text-xl font-black mt-2">Jorge Perez</p>
-            <p class="text-[10px] uppercase tracking-widest text-slate-400">Gerente General</p>
-          </div>
-          <div class="text-sm text-slate-300 space-y-1">
-            <p><span class="text-cyan-400 font-bold">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
-            <p><span class="text-cyan-400 font-bold">PBX:</span> +502 23022299</p>
-            <p><span class="text-cyan-400 font-bold">MAIL:</span> gerencia@consultoresprofesionales.com</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="grid lg:grid-cols-3 gap-10 pt-10 border-t">
-        <div class="lg:col-span-2 prose">
-            <h2>Formalización ante la SAT</h2>
-            <p>La diferencia entre ambas tarjetas es la confianza que generas en tus clientes. Una oficina virtual te da la presencia legal y comercial necesaria.</p>
-        </div>
-        <div>
-            <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
-        </div>
-    </div>
-
+    </main>
   </div>
 </MainLayout>
 
 <style>
-  /* ESTILO FORZADO DE TARJETAS */
+  /* ESTILOS QUE NO FALLAN */
+  .tarjeta-contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .tarjeta-visual {
-    width: 400px;  /* Ancho fijo */
-    height: 230px; /* Alto fijo */
-    border-radius: 15px;
+    width: 400px;
+    height: 230px;
+    border-radius: 12px;
     position: relative;
-    overflow: hidden;
-    flex-shrink: 0; /* Evita que se encojan */
+    transition: transform 0.3s ease;
+  }
+
+  .tarjeta-visual:hover {
+    transform: translateY(-5px);
   }
 
   .sello-informal {
@@ -80,20 +116,25 @@ const currentCanonicalURL = "https://todoesdigital.com/guia-formalizacion-pymes-
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-15deg);
-    border: 4px solid rgba(239, 68, 68, 0.2);
-    color: rgba(239, 68, 68, 0.2);
-    font-size: 3rem;
+    border: 4px solid rgba(239, 68, 68, 0.15);
+    color: rgba(239, 68, 68, 0.15);
+    font-size: 3.5rem;
     font-weight: 900;
     padding: 0 1rem;
+    z-index: 5;
     pointer-events: none;
+    white-space: nowrap;
   }
 
-  /* Ajuste para móviles para que no se rompa el ancho fijo */
+  /* Responsivo: Si la pantalla es pequeña, la tarjeta ocupa el ancho disponible pero mantiene proporción */
   @media (max-width: 450px) {
     .tarjeta-visual {
       width: 100%;
       height: auto;
-      aspect-ratio: 1.73/1;
+      aspect-ratio: 1.73 / 1;
+    }
+    .sello-informal {
+      font-size: 2rem;
     }
   }
 </style>
