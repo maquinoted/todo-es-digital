@@ -47,67 +47,64 @@ const breadcrumbSchema = {
       <section class="mb-24">
         <h2 class="text-2xl font-bold text-center text-slate-800 mb-10 uppercase tracking-wide">Comparativa: Informal vs. Profesional</h2>
         
-        <div class="grid md:grid-cols-2 gap-12 items-stretch bg-slate-50 p-8 md:p-12 rounded-[3rem] border border-slate-200 shadow-inner">
+        <div class="grid md:grid-cols-2 gap-12 items-center justify-items-center">
           
-          <div class="flex flex-col items-center justify-center space-y-6">
-            <div class="relative w-full max-w-[420px] aspect-[1.73/1] bg-[#fdfdfb] rounded-xl shadow-lg p-8 border border-slate-300 flex flex-col justify-between opacity-80 grayscale-[0.2] overflow-hidden">
-              <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-                <span class="border-4 border-red-600/30 text-red-600/30 text-5xl font-black uppercase tracking-tighter rotate-[-20deg] px-6 py-2 rounded-2xl">Informal</span>
-              </div>
-              
-              <div class="relative z-10">
-                <h3 class="text-slate-700 text-xl font-serif mb-1">Consultores Profesionales SA</h3>
-                <div class="w-20 h-px bg-slate-300 mb-4"></div>
-                <p class="text-slate-800 font-bold text-base">Jorge Perez</p>
-              </div>
+          <div class="w-full max-w-[420px] aspect-[1.73/1] bg-[#fdfdfb] rounded-xl shadow-lg p-8 border border-slate-300 relative overflow-hidden flex flex-col justify-between opacity-80 grayscale-[0.2]">
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+              <span class="border-4 border-red-600/30 text-red-600/30 text-5xl font-black uppercase tracking-tighter rotate-[-20deg] px-6 py-2 rounded-2xl">Informal</span>
+            </div>
+            
+            <div class="relative z-10">
+              <h3 class="text-slate-700 text-xl font-serif mb-1">Consultores Profesionales SA</h3>
+              <div class="w-20 h-px bg-slate-300 mb-4"></div>
+              <p class="text-slate-800 font-bold text-base leading-none">Jorge Perez</p>
+            </div>
 
-              <div class="relative z-10 space-y-1 text-slate-500 text-[12px] font-sans">
-                <p>📍 Valles del bosque, casa 4</p>
-                <p>📞 +502 30459080</p>
-                <p>✉️ consultoresvarios@gmail.com</p>
+            <div class="relative z-10 space-y-1 text-slate-500 text-[12px] font-sans">
+              <p>📍 Valles del bosque, casa 4</p>
+              <p>📞 +502 30459080</p>
+              <p>✉️ consultoresvarios@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="w-full max-w-[420px] aspect-[1.73/1] bg-[#2d3136] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] p-8 border-l border-t border-white/10 relative overflow-hidden flex flex-col justify-between transition-all hover:scale-[1.03] group">
+            
+            <div class="absolute -bottom-4 -right-4 z-20 bg-cyan-400 text-white px-3 py-1.5 rounded-lg text-[10px] font-black shadow-[0_0_20px_rgba(34,211,238,0.5)] border border-white/20 uppercase animate-pulse">
+              Verified Fiscal Address
+            </div>
+
+            <div class="relative z-10">
+              <h3 class="text-white text-xl md:text-2xl font-serif tracking-wide mb-1">Consultores Profesionales SA</h3>
+              <div class="w-32 h-[2px] bg-cyan-500 mb-6"></div>
+              <p class="text-slate-100 font-bold text-base leading-none">Jorge Perez</p>
+              <p class="text-cyan-500/80 text-[10px] uppercase tracking-widest mt-1">Gerente General</p>
+            </div>
+
+            <div class="relative z-10 space-y-2 text-slate-300 text-[12px]">
+              <p class="flex items-start gap-2 leading-tight">
+                <span class="text-cyan-500 font-bold text-[9px] mt-0.5 uppercase">Dir:</span>
+                Zona Pradera, torre 2 oficina 1108
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-cyan-500 font-bold text-[9px] uppercase">Pbx:</span>
+                +502 23022299
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-cyan-500 font-bold text-[9px] uppercase">Mail:</span>
+                gerencia@consultoresprofesionales.com
+              </p>
+            </div>
+            
+            <div class="absolute bottom-6 right-8 opacity-10 group-hover:opacity-30 transition-opacity">
+              <div class="w-10 h-10 border-2 border-white rotate-45 flex items-center justify-center">
+                  <div class="w-4 h-4 bg-white"></div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 mt-4 text-center">
             <p class="text-slate-400 text-xs font-bold uppercase tracking-widest italic">Dirección Residencial</p>
-          </div>
-
-          <div class="flex flex-col items-center justify-center space-y-6">
-            <div class="relative w-full max-w-[420px] aspect-[1.73/1] bg-[#2d3136] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] p-8 border-l border-t border-white/10 flex flex-col justify-between transition-all hover:scale-[1.03] group overflow-hidden">
-              
-              <div class="absolute -bottom-4 -right-4 z-20 bg-cyan-400 text-white px-3 py-1.5 rounded-lg text-[10px] font-black shadow-[0_0_20px_rgba(34,211,238,0.5)] border border-white/20 uppercase animate-pulse">
-                Verified Fiscal Address
-              </div>
-
-              <div class="relative z-10">
-                <h3 class="text-white text-xl md:text-2xl font-serif tracking-wide mb-1">Consultores Profesionales SA</h3>
-                <div class="w-32 h-[2px] bg-cyan-500 mb-6"></div>
-                <p class="text-slate-100 font-bold text-base leading-none">Jorge Perez</p>
-                <p class="text-cyan-500/80 text-[10px] uppercase tracking-widest mt-1">Gerente General</p>
-              </div>
-
-              <div class="relative z-10 space-y-2 text-slate-300 text-[12px]">
-                <p class="flex items-start gap-2 leading-tight">
-                  <span class="text-cyan-500 font-bold text-[9px] mt-0.5">DIR:</span>
-                  Zona Pradera, torre 2 oficina 1108
-                </p>
-                <p class="flex items-center gap-2">
-                  <span class="text-cyan-500 font-bold text-[9px]">PBX:</span>
-                  +502 23022299
-                </p>
-                <p class="flex items-center gap-2">
-                  <span class="text-cyan-500 font-bold text-[9px]">MAIL:</span>
-                  gerencia@consultoresprofesionales.com
-                </p>
-              </div>
-              
-              <div class="absolute bottom-6 right-8 opacity-10 group-hover:opacity-30 transition-opacity">
-                <div class="w-10 h-10 border-2 border-white rotate-45 flex items-center justify-center">
-                    <div class="w-4 h-4 bg-white"></div>
-                </div>
-              </div>
-            </div>
-            <p class="text-teal-600 text-xs font-bold uppercase tracking-widest italic tracking-widest">Dirección Fiscal Corporativa</p>
-          </div>
-
+            <p class="text-teal-600 text-xs font-bold uppercase tracking-widest italic">Dirección Fiscal Corporativa</p>
         </div>
       </section>
 
