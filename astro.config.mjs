@@ -1,10 +1,9 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://todoesdigital.com',
-  trailingSlash: 'never', // Esto le dice a Astro que prefieres URLs sin la barra final
+  trailingSlash: 'never', // Fuerza a Astro a no usar barras finales
+  integrations: [sitemap()],
 });
-// https://astro.build/config
-export default defineConfig({});
-
