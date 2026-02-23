@@ -21,67 +21,67 @@ const articleSchema = {
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
 
-  <div class="container mx-auto px-4 py-16">
-    <main class="max-w-6xl mx-auto">
+  <div class="container-formalizacion">
+    <main class="content-wrapper">
       
-      <header class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
-          Guía de Formalización con <span class="text-teal-600">Oficinas Virtuales</span>
+      <header class="header-section">
+        <h1 class="main-title">
+          Guía de Formalización con <span class="text-teal">Oficinas Virtuales</span>
         </h1>
       </header>
 
-      <section class="mb-24 flex justify-center">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-[900px]">
-          
-          <div class="tarjeta-contenedor">
-            <div class="tarjeta-visual bg-white border-2 border-slate-200 shadow-sm">
-              <div class="sello-informal">INFORMAL</div>
-              <div class="p-8 h-full flex flex-col justify-between relative z-10">
-                <div>
-                  <h3 class="text-lg font-bold text-slate-700 font-serif">Consultores Profesionales SA</h3>
-                  <p class="text-xl font-black text-slate-900 mt-2">Jorge Perez</p>
-                </div>
-                <div class="text-sm text-slate-500 space-y-1 font-sans">
-                  <p>📍 Valles del bosque, casa 4</p>
-                  <p>📞 +502 30459080</p>
-                  <p>✉️ consultoresvarios@gmail.com</p>
-                </div>
+      <section class="comparison-grid">
+        
+        <div class="column">
+          <div class="tarjeta-visual informal">
+            <div class="sello-informal">INFORMAL</div>
+            <div class="tarjeta-inner">
+              <div class="tarjeta-top">
+                <h3 class="biz-name-card">Consultores Profesionales SA</h3>
+                <p class="owner-name-card">Jorge Perez</p>
+              </div>
+              <div class="tarjeta-bottom text-slate">
+                <p>📍 Valles del bosque, casa 4</p>
+                <p>📞 +502 30459080</p>
+                <p>✉️ consultoresvarios@gmail.com</p>
               </div>
             </div>
-            <p class="text-center mt-4 text-slate-400 font-bold text-xs uppercase italic">Estado Actual</p>
           </div>
-
-          <div class="tarjeta-contenedor">
-            <div class="tarjeta-visual bg-[#2d3136] text-white shadow-2xl border border-slate-700 overflow-hidden">
-              <div class="p-8 h-full flex flex-col justify-between relative z-10">
-                <div>
-                  <h3 class="text-cyan-400 text-lg font-bold font-serif">Consultores Profesionales SA</h3>
-                  <div class="w-20 h-1 bg-cyan-400 my-2"></div>
-                  <p class="text-xl font-black mt-2">Jorge Perez</p>
-                  <p class="text-[10px] uppercase tracking-widest text-slate-400">Gerente General</p>
-                </div>
-                <div class="text-sm text-slate-300 space-y-1 font-sans">
-                  <p><span class="text-cyan-400 font-bold">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
-                  <p><span class="text-cyan-400 font-bold">PBX:</span> +502 23022299</p>
-                  <p><span class="text-cyan-400 font-bold">MAIL:</span> gerencia@consultoresprofesionales.com</p>
-                </div>
-              </div>
-              <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-cyan-500/10 blur-3xl rounded-full"></div>
-            </div>
-            <p class="text-center mt-4 text-teal-600 font-bold text-xs uppercase italic">Con Oficina Virtual</p>
-          </div>
-
+          <p class="label-caption">Estado Actual</p>
         </div>
+
+        <div class="column">
+          <div class="tarjeta-visual profesional">
+            <div class="tarjeta-inner">
+              <div class="tarjeta-top">
+                <h3 class="biz-name-card text-cyan">Consultores Profesionales SA</h3>
+                <div class="divider-cyan"></div>
+                <p class="owner-name-card text-white">Jorge Perez</p>
+                <p class="job-title-card">Gerente General</p>
+              </div>
+              <div class="tarjeta-bottom text-slate-light">
+                <p><span class="text-cyan">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
+                <p><span class="text-cyan">PBX:</span> +502 23022299</p>
+                <p><span class="text-cyan">MAIL:</span> gerencia@consultoresprofesionales.com</p>
+              </div>
+            </div>
+            <div class="glow-effect"></div>
+          </div>
+          <p class="label-caption text-teal-bold">Con Oficina Virtual</p>
+        </div>
+
       </section>
 
-      <div class="grid lg:grid-cols-3 gap-16 border-t pt-16">
-        <div class="lg:col-span-2 prose prose-lg prose-slate max-w-none">
-          <h2 class="text-3xl font-bold text-slate-800">Formalización ante la SAT</h2>
-          <p>La diferencia entre ambas tarjetas es la confianza que generas en tus clientes. Una <strong>oficina virtual en Guatemala</strong> no es solo una dirección; es el respaldo legal y comercial que tu empresa necesita para crecer.</p>
+      <div class="footer-content-grid">
+        <div class="prose-area">
+          <h2 class="section-subtitle">Formalización ante la SAT</h2>
+          <p class="description-text">
+            La diferencia entre ambas tarjetas es la confianza que generas en tus clientes. Una <strong>oficina virtual en Guatemala</strong> no es solo una dirección; es el respaldo legal y comercial que tu empresa necesita para crecer.
+          </p>
         </div>
-        <aside class="lg:col-span-1">
-           <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
-             <h3 class="text-xl font-bold mb-4">¿Quieres formalizarte?</h3>
+        <aside class="sidebar-form">
+           <div class="form-card">
+             <h3 class="form-title">¿Quieres formalizarte?</h3>
              <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
            </div>
         </aside>
@@ -91,50 +91,115 @@ const articleSchema = {
 </MainLayout>
 
 <style>
-  /* ESTILOS QUE NO FALLAN */
-  .tarjeta-contenedor {
+  /* RESET Y ESTRUCTURA BASE */
+  .container-formalizacion {
     width: 100%;
+    padding: 4rem 1rem;
+    background-color: white;
+  }
+  .content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .text-teal { color: #0d9488; }
+  .text-cyan { color: #22d3ee; }
+  .main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #0f172a;
+  }
+
+  /* EL GRID QUE NO FALLA */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* DOS COLUMNAS IGUALES */
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .column {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  /* DISEÑO DE TARJETA */
   .tarjeta-visual {
     width: 400px;
     height: 230px;
     border-radius: 12px;
     position: relative;
-    transition: transform 0.3s ease;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   }
 
-  .tarjeta-visual:hover {
-    transform: translateY(-5px);
+  .informal {
+    background-color: white;
+    border: 2px solid #e2e8f0;
   }
 
+  .profesional {
+    background-color: #2d3136;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+
+  .tarjeta-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+  }
+
+  .biz-name-card { font-weight: bold; font-size: 1.15rem; margin: 0; }
+  .owner-name-card { font-size: 1.25rem; font-weight: 900; margin-top: 0.5rem; }
+  .job-title-card { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; }
+  .divider-cyan { width: 80px; height: 3px; background-color: #22d3ee; margin: 0.5rem 0; }
+  .tarjeta-bottom { font-size: 0.85rem; line-height: 1.4; }
+  
   .sello-informal {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%) rotate(-15deg);
-    border: 4px solid rgba(239, 68, 68, 0.15);
-    color: rgba(239, 68, 68, 0.15);
-    font-size: 3.5rem;
+    border: 5px solid rgba(239, 68, 68, 0.1);
+    color: rgba(239, 68, 68, 0.1);
+    font-size: 4rem;
     font-weight: 900;
-    padding: 0 1rem;
-    z-index: 5;
     pointer-events: none;
-    white-space: nowrap;
+    z-index: 1;
   }
 
-  /* Responsivo: Si la pantalla es pequeña, la tarjeta ocupa el ancho disponible pero mantiene proporción */
-  @media (max-width: 450px) {
+  .label-caption { margin-top: 1rem; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; }
+  .text-teal-bold { color: #0d9488; }
+
+  /* FOOTER GRID */
+  .footer-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4rem;
+  }
+
+  .section-subtitle { font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; }
+  .description-text { font-size: 1.125rem; color: #475569; line-height: 1.6; }
+  .form-card { background-color: #f8fafc; padding: 2rem; border-radius: 1rem; border: 1px solid #f1f5f9; }
+  .form-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; }
+
+  /* RESPONSIVO */
+  @media (max-width: 900px) {
+    .comparison-grid, .footer-content-grid {
+      grid-template-columns: 1fr;
+    }
     .tarjeta-visual {
       width: 100%;
-      height: auto;
-      aspect-ratio: 1.73 / 1;
-    }
-    .sello-informal {
-      font-size: 2rem;
+      max-width: 400px;
     }
   }
 </style>
