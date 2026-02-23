@@ -35,10 +35,11 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
     </div>
   )}
 
-  {serviceName === "Salas de Reuniones" && (
+  {/* Lógica para Salas de Reuniones Y Espacios Cowork */}
+  {(serviceName === "Salas de Reuniones" || serviceName === "Espacios Cowork") && (
     <>
       <div class="form-group">
-        <label for="date">Fecha de la Reunión</label>
+        <label for="date">Fecha de la Reunión / Uso</label>
         <input 
           type="date" 
           name="event-date" 
@@ -92,14 +93,14 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
 </form>
 
 <script is:inline>
-  // Lógica para el campo de Fecha (Bloquear pasado)
+  // Bloquear fechas pasadas
   const dateInput = document.getElementById('date');
   if (dateInput) {
     const today = new Date().toISOString().split('T')[0];
     dateInput.setAttribute('min', today);
   }
 
-  // Validación básica para que la hora fin no sea antes que la de inicio
+  // Validación de lógica horaria
   const startTime = document.getElementById('start-time');
   const endTime = document.getElementById('end-time');
 
