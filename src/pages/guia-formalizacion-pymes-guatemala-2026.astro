@@ -47,62 +47,65 @@ const breadcrumbSchema = {
       <section class="grid md:grid-cols-2 gap-12 mb-24 items-center">
         
         <div class="group relative">
-          <div class="absolute -top-4 right-4 bg-slate-200 text-slate-600 px-4 py-1 rounded-full text-[10px] font-bold shadow-sm z-20">ESTADO ACTUAL</div>
-          <div class="bg-white border-2 border-slate-100 rounded-3xl p-10 shadow-inner opacity-60 transition-all group-hover:opacity-80">
+          <div class="absolute -top-4 left-4 bg-slate-200 text-slate-600 px-4 py-1 rounded-full text-[10px] font-bold shadow-sm z-20">ESTADO ACTUAL</div>
+          <div class="bg-white border-2 border-dashed border-slate-200 rounded-3xl p-10 shadow-inner opacity-60">
             <div class="space-y-6">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-400">?</div>
+                <div class="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center text-slate-400 font-bold italic underline">Informal</div>
                 <div>
-                  <div class="h-4 w-32 bg-slate-200 rounded mb-1"></div>
-                  <div class="h-3 w-20 bg-slate-100 rounded"></div>
+                  <h3 class="text-slate-400 text-xl font-serif">Consultores Varios</h3>
+                  <p class="text-slate-300 text-xs uppercase tracking-widest">Negocio No Registrado</p>
                 </div>
               </div>
               <div class="py-6 border-y border-slate-50 space-y-4">
-                <p class="text-slate-400 text-sm flex items-center gap-3 italic">⚠️ Sin dirección fiscal corporativa</p>
-                <p class="text-slate-400 text-sm flex items-center gap-3 italic">⚠️ Privacidad expuesta (dirección de casa)</p>
-                <p class="text-slate-400 text-sm flex items-center gap-3 italic">⚠️ Notificaciones de la SAT en riesgo</p>
+                <p class="text-slate-400 text-sm flex items-center gap-3">📍 Valles del Bosque, Casa 4 (Residencial)</p>
+                <p class="text-slate-400 text-sm flex items-center gap-3">📞 +502 3045-9080 (Móvil Personal)</p>
+                <p class="text-slate-400 text-sm flex items-center gap-3 font-mono text-[11px]">✉️ consultoresvarios@gmail.com</p>
               </div>
-              <div class="bg-red-50 text-red-400 text-center py-2 rounded-lg text-xs font-mono">STATUS: NO LOCALIZADO</div>
+              <div class="bg-red-50 text-red-400 text-center py-2 rounded-lg text-xs font-mono">RIESGO: NO LOCALIZADO POR SAT</div>
             </div>
           </div>
         </div>
 
-        <div class="group relative">
-          <div class="absolute -top-4 right-4 bg-teal-500 text-white px-4 py-1 rounded-full text-[10px] font-bold shadow-lg z-20 animate-pulse">ESTADO OBJETIVO</div>
-          <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-black rounded-3xl p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-slate-700 relative overflow-hidden transition-all group-hover:scale-[1.02] group-hover:shadow-teal-500/20">
-            <div class="absolute -right-10 -top-10 w-40 h-40 bg-teal-500/10 blur-3xl rounded-full"></div>
+        <div class="group relative flex justify-center">
+          <div class="absolute -bottom-6 -right-2 md:-right-6 z-20 bg-cyan-400 text-white px-4 py-2 rounded-xl text-[10px] font-black leading-tight shadow-[0_0_20px_rgba(34,211,238,0.6)] border border-white/20 text-center uppercase tracking-tighter animate-bounce">
+            Verified<br/>Fiscal Address
+          </div>
+
+          <div class="w-full max-w-[450px] aspect-[1.73/1] bg-[#2d3136] rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] p-8 md:p-10 relative overflow-hidden flex flex-col justify-between border-l-[1px] border-t-[1px] border-white/10 transition-all group-hover:scale-[1.02] group-hover:shadow-cyan-500/20">
             
-            <div class="relative z-10 h-full flex flex-col justify-between">
-              <div class="flex justify-between items-start mb-10">
-                <div>
-                  <h3 class="text-white font-bold text-2xl tracking-tight mb-1">Tu Empresa, S.A.</h3>
-                  <p class="text-teal-400 text-xs font-mono uppercase tracking-[0.3em]">Corporativo Premium</p>
-                </div>
-                <div class="bg-teal-500/20 p-3 rounded-xl border border-teal-500/40">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
+            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px); background-size: 4px 4px;"></div>
+
+            <div class="relative z-10">
+              <h3 class="text-white text-xl md:text-2xl font-serif tracking-wide mb-1">Consultores Profesionales SA</h3>
+              <div class="w-32 md:w-40 h-[2px] bg-cyan-500 mb-6"></div>
+              
+              <div class="space-y-0.5">
+                <p class="text-slate-100 font-bold text-lg leading-none">Jorge Perez</p>
+                <p class="text-slate-400 text-[10px] uppercase tracking-[0.2em] font-light">Gerente General</p>
+              </div>
+            </div>
+
+            <div class="relative z-10 space-y-2 md:space-y-3">
+              <div class="flex items-start gap-2 text-slate-300">
+                <span class="text-cyan-500 font-bold text-[9px] mt-1">DIR:</span>
+                <p class="text-[11px] md:text-[13px] leading-tight font-light">Zona Pradera, Torre 2 Oficina 1108,<br/>Ciudad de Guatemala.</p>
+              </div>
+              
+              <div class="flex items-center gap-2 text-slate-300">
+                <span class="text-cyan-500 font-bold text-[9px]">PBX:</span>
+                <p class="text-[11px] md:text-[13px] leading-tight">+502 2302-2299</p>
               </div>
 
-              <div class="space-y-4">
-                <div class="flex items-center gap-3 text-slate-100">
-                  <span class="w-2 h-2 bg-teal-500 rounded-full shadow-[0_0_8px_#14b8a6]"></span>
-                  <p class="text-sm font-medium">Dirección Fiscal: <span class="text-slate-400 font-light">Zona 10, Edificio Empresarial</span></p>
-                </div>
-                <div class="flex items-center gap-3 text-slate-100">
-                  <span class="w-2 h-2 bg-teal-500 rounded-full shadow-[0_0_8px_#14b8a6]"></span>
-                  <p class="text-sm font-medium">PBX Corporativo: <span class="text-slate-400 font-light">+(502) 2200-XXXX</span></p>
-                </div>
-                <div class="flex items-center gap-3 text-slate-100">
-                  <span class="w-2 h-2 bg-teal-500 rounded-full shadow-[0_0_8px_#14b8a6]"></span>
-                  <p class="text-sm font-medium">Registro SAT: <span class="text-teal-400 font-bold tracking-widest text-[10px]">LOCALIZADO ✅</span></p>
-                </div>
+              <div class="flex items-center gap-2 text-slate-300">
+                <span class="text-cyan-500 font-bold text-[9px]">MAIL:</span>
+                <p class="text-[11px] md:text-[13px] leading-tight font-medium text-cyan-50/90 tracking-wide">gerencia@consultoresprofesionales.com</p>
               </div>
+            </div>
 
-              <div class="mt-8 pt-6 border-t border-slate-700/50 flex justify-between items-center text-[10px] text-slate-500 font-mono">
-                <span>EXP: 2026-GUATEMALA</span>
-                <span class="text-teal-500/50 italic">Verified by TodoEsDigital</span>
+            <div class="absolute bottom-8 right-8 opacity-20 group-hover:opacity-40 transition-opacity">
+              <div class="w-8 h-8 border-2 border-slate-400 flex items-center justify-center rotate-45">
+                <div class="w-4 h-4 bg-slate-400"></div>
               </div>
             </div>
           </div>
@@ -119,11 +122,11 @@ const breadcrumbSchema = {
           <div class="grid sm:grid-cols-2 gap-6 my-10">
             <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
               <h4 class="text-teal-700 mt-0">Registro Mercantil</h4>
-              <p class="text-sm m-0">Inscribe tu empresa y obtén tu patente de comercio utilizando nuestra ubicación en Zona 10.</p>
+              <p class="text-sm m-0">Inscribe tu empresa y obtén tu patente de comercio utilizando nuestra ubicación en Zona 10 o Zona Pradera.</p>
             </div>
             <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
               <h4 class="text-teal-700 mt-0">Habilitación SAT</h4>
-              <p class="text-sm m-0">Actualiza tu RTU y activa tu factura electrónica (FEL) con un domicilio comercial verificado.</p>
+              <p class="text-sm m-0">Actualiza tu RTU y activa tu factura electrónica (FEL) con un domicilio comercial verificado y localizable.</p>
             </div>
           </div>
         </div>
@@ -141,7 +144,6 @@ const breadcrumbSchema = {
 </MainLayout>
 
 <style>
-  /* Suavizado de bordes para tipografía */
   h1, h2, h3 {
     text-wrap: balance;
   }
