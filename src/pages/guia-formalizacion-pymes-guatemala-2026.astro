@@ -25,29 +25,28 @@ const articleSchema = {
     <main class="max-w-6xl mx-auto">
       
       <header class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-4 uppercase tracking-tighter">
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-4 uppercase">
           Guía de Formalización <br/> <span class="text-teal-600">Oficinas Virtuales 2026</span>
         </h1>
-        <p class="text-slate-500 font-medium italic">La primera impresión es la que cierra el negocio.</p>
       </header>
 
-      <section class="mb-24 bg-slate-50 py-12 px-6 rounded-[3rem] border border-slate-100">
+      <section class="mb-24 px-4">
         <h2 class="text-2xl font-bold text-center text-slate-800 mb-12 uppercase tracking-widest">Comparativa: Informal vs. Profesional</h2>
         
-        <div class="flex flex-wrap justify-center gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 justify-items-center items-center max-w-5xl mx-auto">
           
-          <div class="business-card card-shadow-light bg-[#fdfdfb] border border-slate-200">
-            <div class="informal-overlay">
-                <span class="stamp">INFORMAL</span>
+          <div class="biz-card card-informal">
+            <div class="stamp-container">
+                <span class="stamp-red">INFORMAL</span>
             </div>
-            <div class="card-content">
-              <div class="mb-6">
-                <h3 class="text-slate-700 font-serif text-xl leading-tight">Consultores Profesionales SA</h3>
-                <div class="w-16 h-px bg-slate-300 mt-2"></div>
+            <div class="card-body">
+              <div class="card-header">
+                <h3 class="biz-name text-slate-700">Consultores Profesionales SA</h3>
+                <div class="biz-line bg-slate-200"></div>
               </div>
-              <div class="space-y-4">
-                <p class="text-slate-900 font-bold text-base uppercase tracking-tight">Jorge Perez</p>
-                <div class="text-slate-500 text-[12px] leading-relaxed space-y-1">
+              <div class="card-info text-slate-500">
+                <p class="biz-owner text-slate-800">Jorge Perez</p>
+                <div class="biz-details">
                   <p>📍 Valles del bosque, casa 4</p>
                   <p>📞 +502 30459080</p>
                   <p>✉️ consultoresvarios@gmail.com</p>
@@ -56,22 +55,20 @@ const articleSchema = {
             </div>
           </div>
 
-          <div class="business-card card-shadow-dark bg-[#2d3136] border border-white/10">
-            <div class="pro-label">VERIFIED ADDRESS</div>
-            <div class="card-content text-white">
-              <div class="mb-6">
-                <h3 class="text-white font-serif text-xl leading-tight tracking-wide">Consultores Profesionales SA</h3>
-                <div class="w-24 h-[2px] bg-cyan-400 mt-2 shadow-[0_0_8px_#22d3ee]"></div>
+          <div class="biz-card card-professional">
+            <div class="verified-tag">VERIFIED ADDRESS</div>
+            <div class="card-body text-white">
+              <div class="card-header">
+                <h3 class="biz-name">Consultores Profesionales SA</h3>
+                <div class="biz-line bg-cyan-400 shadow-[0_0_8px_#22d3ee]"></div>
               </div>
-              <div class="space-y-4">
-                <div>
-                    <p class="text-white font-bold text-base leading-none uppercase tracking-tight">Jorge Perez</p>
-                    <p class="text-cyan-400 text-[9px] font-black uppercase tracking-[0.2em] mt-1">Gerente General</p>
-                </div>
-                <div class="text-slate-300 text-[12px] leading-relaxed space-y-1">
-                  <p><span class="text-cyan-400 font-bold mr-1">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
-                  <p><span class="text-cyan-400 font-bold mr-1">PBX:</span> +502 23022299</p>
-                  <p><span class="text-cyan-400 font-bold mr-1">MAIL:</span> gerencia@consultoresprofesionales.com</p>
+              <div class="card-info text-slate-300">
+                <p class="biz-owner text-white">Jorge Perez</p>
+                <p class="biz-position text-cyan-400">Gerente General</p>
+                <div class="biz-details mt-4">
+                  <p><span class="label">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
+                  <p><span class="label">PBX:</span> +502 23022299</p>
+                  <p><span class="label">MAIL:</span> gerencia@consultoresprofesionales.com</p>
                 </div>
               </div>
             </div>
@@ -80,85 +77,141 @@ const articleSchema = {
         </div>
       </section>
 
-      <div class="max-w-4xl mx-auto prose prose-slate lg:prose-lg text-center lg:text-left border-t pt-16">
-        <h2 class="text-3xl font-extrabold text-slate-800 uppercase tracking-tighter">Formalización ante la SAT</h2>
-        <p class="text-lg text-slate-600">
-          Como viste arriba, la diferencia es abismal. Una <strong>oficina virtual</strong> no es solo una dirección; es el respaldo que tu empresa necesita para transmitir confianza y cumplir con los requisitos fiscales en Guatemala.
-        </p>
-        <div class="mt-10 flex justify-center lg:justify-start">
-            <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
+      <div class="grid lg:grid-cols-3 gap-16 border-t pt-16">
+        <div class="lg:col-span-2 prose prose-slate max-w-none">
+          <h2 class="text-3xl font-extrabold text-slate-800 uppercase">Formalización ante la SAT</h2>
+          <p class="text-lg text-slate-600">
+            La comparativa superior es clara: el domicilio fiscal no es solo un papel, es la cara de tu empresa ante clientes y proveedores. Con <strong>Todo es Digital</strong>, obtienes una dirección en ubicaciones de prestigio como <strong>Zona Pradera</strong>, facilitando tus trámites ante la SAT y el Registro Mercantil.
+          </p>
         </div>
+        <aside class="lg:col-span-1">
+            <div class="bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
+                <h3 class="text-lg font-bold mb-4">¿Quieres la tarjeta de la derecha?</h3>
+                <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
+            </div>
+        </aside>
       </div>
     </main>
   </div>
 </MainLayout>
 
 <style>
-  /* ESTILOS DE OBJETO TARJETA */
-  .business-card {
-    width: 380px;
-    height: 220px;
-    padding: 2.2rem;
+  /* CONFIGURACIÓN BASE DE TARJETAS */
+  .biz-card {
+    width: 100%;
+    max-width: 400px; /* Tamaño estándar de tarjeta en web */
+    height: 230px;
     border-radius: 12px;
+    padding: 2rem;
     position: relative;
     overflow: hidden;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
   }
 
-  .card-shadow-light {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  /* TARJETA INFORMAL (IZQUIERDA) */
+  .card-informal {
+    background-color: #fcfcf9;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    opacity: 0.85;
   }
 
-  .card-shadow-dark {
+  /* TARJETA PROFESIONAL (DERECHA) */
+  .card-professional {
+    background-color: #2d3136;
+    border: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-    transform: translateY(-5px);
   }
 
-  .informal-overlay {
+  /* DETALLES INTERNOS */
+  .biz-name {
+    font-family: serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .biz-line {
+    width: 60px;
+    height: 2px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .biz-owner {
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+
+  .biz-position {
+    font-size: 9px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .biz-details {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .label {
+    font-weight: 900;
+    margin-right: 4px;
+  }
+
+  /* STAMPS Y TAGS */
+  .stamp-container {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.15;
     pointer-events: none;
   }
 
-  .stamp {
-    border: 5px solid #dc2626;
-    color: #dc2626;
+  .stamp-red {
+    border: 4px solid rgba(220, 38, 38, 0.2);
+    color: rgba(220, 38, 38, 0.2);
     font-size: 3rem;
     font-weight: 900;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
     transform: rotate(-15deg);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
   }
 
-  .pro-label {
+  .verified-tag {
     position: absolute;
-    bottom: 12px;
-    right: 12px;
+    bottom: 15px;
+    right: 15px;
     background: #22d3ee;
     color: white;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 900;
     padding: 4px 8px;
     border-radius: 4px;
     letter-spacing: 1px;
-    box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
   }
 
-  @media (max-width: 450px) {
-    .business-card {
-        width: 100%;
-        height: auto;
-        min-height: 220px;
+  /* RESPONSIVO */
+  @media (max-width: 1024px) {
+    .card-professional {
+        margin-top: 1rem;
     }
-    .card-shadow-dark {
-        transform: none;
+  }
+
+  @media (max-width: 480px) {
+    .biz-card {
+        height: auto;
+        padding: 1.5rem;
+    }
+    .biz-name {
+        font-size: 1.1rem;
     }
   }
 </style>
