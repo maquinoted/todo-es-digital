@@ -25,109 +25,140 @@ const articleSchema = {
     <main class="max-w-6xl mx-auto">
       
       <header class="text-center mb-16">
-        <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-6">
-          Guía de Formalización con <span class="text-teal-600">Oficinas Virtuales</span>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-4 uppercase tracking-tighter">
+          Guía de Formalización <br/> <span class="text-teal-600">Oficinas Virtuales 2026</span>
         </h1>
+        <p class="text-slate-500 font-medium italic">La primera impresión es la que cierra el negocio.</p>
       </header>
 
-      <section class="mb-24">
-        <h2 class="text-2xl font-bold text-center text-slate-800 mb-12 uppercase">Comparativa: Informal vs. Profesional</h2>
+      <section class="mb-24 bg-slate-50 py-12 px-6 rounded-[3rem] border border-slate-100">
+        <h2 class="text-2xl font-bold text-center text-slate-800 mb-12 uppercase tracking-widest">Comparativa: Informal vs. Profesional</h2>
         
-        <div class="grid md:grid-cols-2 gap-10 items-center justify-items-center">
+        <div class="flex flex-wrap justify-center gap-12">
           
-          <div class="card-business card-informal">
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-              <span class="informal-stamp">Informal</span>
+          <div class="business-card card-shadow-light bg-[#fdfdfb] border border-slate-200">
+            <div class="informal-overlay">
+                <span class="stamp">INFORMAL</span>
             </div>
-            <div class="relative z-10 h-full flex flex-col justify-between">
-              <div>
-                <h3 class="text-slate-700 text-xl font-serif">Consultores Profesionales SA</h3>
-                <p class="text-slate-800 font-bold text-base mt-2">Jorge Perez</p>
+            <div class="card-content">
+              <div class="mb-6">
+                <h3 class="text-slate-700 font-serif text-xl leading-tight">Consultores Profesionales SA</h3>
+                <div class="w-16 h-px bg-slate-300 mt-2"></div>
               </div>
-              <div class="text-slate-500 text-[13px] leading-relaxed">
-                <p>📍 Valles del bosque, casa 4</p>
-                <p>📞 +502 30459080</p>
-                <p>✉️ consultoresvarios@gmail.com</p>
+              <div class="space-y-4">
+                <p class="text-slate-900 font-bold text-base uppercase tracking-tight">Jorge Perez</p>
+                <div class="text-slate-500 text-[12px] leading-relaxed space-y-1">
+                  <p>📍 Valles del bosque, casa 4</p>
+                  <p>📞 +502 30459080</p>
+                  <p>✉️ consultoresvarios@gmail.com</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="card-business card-pro">
-            <div class="absolute -bottom-3 -right-3 z-30 bg-cyan-400 text-white px-3 py-1 rounded shadow-lg text-[10px] font-black animate-pulse">
-              VERIFIED ADDRESS
-            </div>
-            <div class="relative z-10 h-full flex flex-col justify-between text-white">
-              <div>
-                <h3 class="text-white text-xl font-serif">Consultores Profesionales SA</h3>
-                <div class="w-24 h-0.5 bg-cyan-400 my-3"></div>
-                <p class="text-white font-bold text-base leading-none">Jorge Perez</p>
-                <p class="text-cyan-400 text-[9px] uppercase tracking-widest mt-1">Gerente General</p>
+          <div class="business-card card-shadow-dark bg-[#2d3136] border border-white/10">
+            <div class="pro-label">VERIFIED ADDRESS</div>
+            <div class="card-content text-white">
+              <div class="mb-6">
+                <h3 class="text-white font-serif text-xl leading-tight tracking-wide">Consultores Profesionales SA</h3>
+                <div class="w-24 h-[2px] bg-cyan-400 mt-2 shadow-[0_0_8px_#22d3ee]"></div>
               </div>
-              <div class="text-slate-300 text-[13px] leading-relaxed space-y-1">
-                <p><span class="text-cyan-400 font-bold text-[10px] mr-1">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
-                <p><span class="text-cyan-400 font-bold text-[10px] mr-1">PBX:</span> +502 23022299</p>
-                <p><span class="text-cyan-400 font-bold text-[10px] mr-1">MAIL:</span> gerencia@consultoresprofesionales.com</p>
+              <div class="space-y-4">
+                <div>
+                    <p class="text-white font-bold text-base leading-none uppercase tracking-tight">Jorge Perez</p>
+                    <p class="text-cyan-400 text-[9px] font-black uppercase tracking-[0.2em] mt-1">Gerente General</p>
+                </div>
+                <div class="text-slate-300 text-[12px] leading-relaxed space-y-1">
+                  <p><span class="text-cyan-400 font-bold mr-1">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
+                  <p><span class="text-cyan-400 font-bold mr-1">PBX:</span> +502 23022299</p>
+                  <p><span class="text-cyan-400 font-bold mr-1">MAIL:</span> gerencia@consultoresprofesionales.com</p>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
-      <div class="grid lg:grid-cols-3 gap-16 border-t pt-16">
-        <div class="lg:col-span-2 prose prose-lg">
-          <h2 class="text-3xl font-bold">Formalización ante la SAT</h2>
-          <p>Obtén el respaldo legal que tu empresa necesita ante la SAT con nuestras oficinas virtuales.</p>
+      <div class="max-w-4xl mx-auto prose prose-slate lg:prose-lg text-center lg:text-left border-t pt-16">
+        <h2 class="text-3xl font-extrabold text-slate-800 uppercase tracking-tighter">Formalización ante la SAT</h2>
+        <p class="text-lg text-slate-600">
+          Como viste arriba, la diferencia es abismal. Una <strong>oficina virtual</strong> no es solo una dirección; es el respaldo que tu empresa necesita para transmitir confianza y cumplir con los requisitos fiscales en Guatemala.
+        </p>
+        <div class="mt-10 flex justify-center lg:justify-start">
+            <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
         </div>
-        <aside class="lg:col-span-1">
-           <ContactForm serviceName="Guia Formalizacion" formId="mgolzeyp" />
-        </aside>
       </div>
     </main>
   </div>
 </MainLayout>
 
 <style>
-  /* ESTILOS DE TARJETA GARANTIZADOS */
-  .card-business {
-    width: 100%;
-    max-width: 420px;
-    height: 240px;
-    padding: 2rem;
+  /* ESTILOS DE OBJETO TARJETA */
+  .business-card {
+    width: 380px;
+    height: 220px;
+    padding: 2.2rem;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    justify-content: center;
   }
 
-  .card-informal {
-    background-color: #fdfdfb;
-    border: 1px solid #e2e8f0;
-    opacity: 0.8;
+  .card-shadow-light {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   }
 
-  .card-pro {
-    background-color: #2d3136;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    transform: scale(1.05);
+  .card-shadow-dark {
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
   }
 
-  .informal-stamp {
-    border: 3px solid rgba(220, 38, 38, 0.3);
-    color: rgba(220, 38, 38, 0.3);
-    font-size: 2.5rem;
+  .informal-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .stamp {
+    border: 5px solid #dc2626;
+    color: #dc2626;
+    font-size: 3rem;
     font-weight: 900;
-    text-transform: uppercase;
-    transform: rotate(-15deg);
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    border-radius: 1rem;
+    transform: rotate(-15deg);
   }
 
-  @media (max-width: 768px) {
-    .card-pro {
-        transform: scale(1);
+  .pro-label {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: #22d3ee;
+    color: white;
+    font-size: 9px;
+    font-weight: 900;
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+  }
+
+  @media (max-width: 450px) {
+    .business-card {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+    }
+    .card-shadow-dark {
+        transform: none;
     }
   }
 </style>
