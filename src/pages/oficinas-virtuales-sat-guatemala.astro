@@ -1,0 +1,51 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+const currentCanonicalURL = "https://todoesdigital.com/oficinas-virtuales-sat-guatemala";
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<MainLayout 
+  title="Oficinas Virtuales para SAT en Guatemala: Dirección Fiscal Zona 10"
+  description="Formalice su empresa ante la SAT con nuestra oficina virtual. Obtenga dirección fiscal legal en un centro empresarial de prestigio en Zona 10."
+  canonicalURL={currentCanonicalURL}
+>
+  <section class="hero-clean">
+    <div class="container">
+      <h1>Oficinas Virtuales para SAT: La Clave para la Formalización Legal</h1>
+      <p class="lead">
+        Obtener su <strong>dirección fiscal para la SAT</strong> es el requisito número uno para operar legalmente. En <strong>Todo es Digital</strong>, facilitamos el proceso de <strong>formalizar una empresa en Guatemala</strong>.
+      </p>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="container">
+      <h2>¿Por qué usar una oficina virtual para su dirección fiscal?</h2>
+      <p>
+        Para cumplir con los <strong>requisitos para formalizar una empresa en Guatemala</strong>, la SAT exige una ubicación verificable. Nuestra <strong>oficina virtual guatemala</strong> le otorga ese respaldo jurídico en el mejor <strong>centro empresarial zona 10</strong>.
+      </p>
+      
+      <div class="internal-link-box">
+        <p>¿Busca planes corporativos generales? Conozca todos nuestros servicios de <a href="/oficinas-virtuales-guatemala">oficinas virtuales en Guatemala</a> aquí.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="container centered-flex">
+        <ContactForm serviceName="Oficinas Virtuales" formId="mgolzeyp" />
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  /* Mantén tu estilo limpio */
+  .internal-link-box {
+    background: #f0fdfa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00a69c;
+    margin: 30px 0;
+  }
+  .internal-link-box a { font-weight: bold; color: #00a69c; }
+</style>
