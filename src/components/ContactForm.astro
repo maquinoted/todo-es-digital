@@ -43,6 +43,8 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
         name="event-date" 
         id="date" 
         step="3600" 
+        onkeydown="return false;"
+        onpaste="return false;"
         required 
       />
     </div>
