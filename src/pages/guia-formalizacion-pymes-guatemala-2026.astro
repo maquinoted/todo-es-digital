@@ -2,21 +2,22 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
 
-const currentCanonicalURL = "https://todoesdigital.com/guia-formalizacion-pymes-guatemala-2026";
+const currentCanonicalURL = "https://todoesdigital.com/como-formalizar-domicilio-fiscal-oficina-virtual-guatemala";
 
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala",
-  "description": "Requisitos legales y comparativa visual para obtener dirección fiscal ante la SAT y Registro Mercantil en Guatemala.",
+  "headline": "Cómo formalizar tu domicilio fiscal con una oficina virtual en Guatemala (Guía 2026)",
+  "description": "Guía legal paso a paso para inscribir tu dirección fiscal ante la SAT y el Registro Mercantil utilizando oficinas virtuales de prestigio.",
   "author": { "@type": "Organization", "name": "Todo es Digital" },
-  "datePublished": "2026-02-22"
+  "datePublished": "2026-02-23",
+  "image": "https://todoesdigital.com/images/guia-formalizacion-sat.jpg"
 };
 ---
 
 <MainLayout 
-  title="Guía 2026: Cómo Formalizar tu Empresa con Oficinas Virtuales en Guatemala"
-  description="Aprende los requisitos para obtener dirección fiscal ante la SAT y formalizar tu empresa con oficinas virtuales en Guatemala."
+  title="Cómo formalizar tu domicilio fiscal con una oficina virtual | Guía SAT 2026"
+  description="Aprende a formalizar tu negocio ante la SAT con una oficina virtual. Guía sobre requisitos legales, contratos y beneficios comerciales."
   canonicalURL={currentCanonicalURL}
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
@@ -25,11 +26,12 @@ const articleSchema = {
     <main class="content-wrapper">
       
       <header class="header-section">
+        <span class="text-teal-600 font-bold uppercase tracking-widest text-xs block text-center mb-4 italic">Asesoría Corporativa y Legal</span>
         <h1 class="main-title">
-          Guía 2026: Cómo Formalizar tu Empresa con <span class="text-teal">Oficinas Virtuales</span>
+          Cómo formalizar tu <span class="text-teal">domicilio fiscal</span> con una oficina virtual
         </h1>
-        <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12">
-          Pasar de la informalidad a una empresa legalmente constituida ante la SAT y el Registro Mercantil es el paso más crítico para un empresario en Guatemala.
+        <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
+          En Guatemala, el 70% de los emprendimientos enfrentan problemas con la SAT por falta de una <strong>dirección fiscal localizable</strong>. Formalizar tu sede corporativa es el primer paso para emitir facturas, contratar con el Estado y proyectar solidez.
         </p>
       </header>
 
@@ -37,20 +39,20 @@ const articleSchema = {
         
         <div class="column">
           <div class="tarjeta-visual informal">
-            <div class="sello-informal">INFORMAL</div>
+            <div class="sello-informal">RIESGO</div>
             <div class="tarjeta-inner">
               <div class="tarjeta-top">
                 <h3 class="biz-name-card">Consultores Profesionales SA</h3>
                 <p class="owner-name-card">Jorge Perez</p>
               </div>
               <div class="tarjeta-bottom text-slate">
-                <p>Dirección: Valles del bosque, casa 4</p>
-                <p>Teléfono: +502 30459080</p>
-                <p>Correo: consultoresvarios@gmail.com</p>
+                <p><strong>Dirección:</strong> Valles del bosque, casa 4</p>
+                <p><strong>Estatus SAT:</strong> Riesgo de "No Localizado"</p>
+                <p><strong>Impacto:</strong> Bloqueo de FEL y pérdida de privacidad.</p>
               </div>
             </div>
           </div>
-          <p class="label-caption">❌ Riesgo: No localizado por SAT</p>
+          <p class="label-caption">❌ Sedes Informales (Casa/Habitación)</p>
         </div>
 
         <div class="column">
@@ -63,42 +65,71 @@ const articleSchema = {
                 <p class="job-title-card">Gerente General</p>
               </div>
               <div class="tarjeta-bottom text-slate-light">
-                <p><span class="text-cyan">Dirección:</span> Zona Pradera, torre 2 oficina 1108</p>
-                <p><span class="text-cyan">PBX:</span> +502 23022299</p>
-                <p><span class="text-cyan">Correo:</span> gerencia@consultoresprofesionales.com</p>
+                <p><span class="text-cyan font-bold">Dirección:</span> Zona Pradera, torre 2 oficina 1108</p>
+                <p><span class="text-cyan font-bold">Estatus SAT:</span> Dirección Fiscal Verificada</p>
+                <p><span class="text-cyan font-bold">Impacto:</span> Facturación ilimitada y prestigio.</p>
               </div>
             </div>
             <div class="glow-effect"></div>
           </div>
-          <p class="label-caption text-teal-bold">✅ Localización Fiscal Garantizada</p>
+          <p class="label-caption text-teal-bold text-cyan-500">✅ Domicilio Fiscal Corporativo</p>
         </div>
 
       </section>
 
       <div class="footer-content-grid">
         <div class="prose-area">
-          <h2 class="section-subtitle">Requisitos para obtener Dirección Fiscal</h2>
+          <h2 class="section-subtitle">Pasos para la Formalización Legal</h2>
           <p class="description-text">
-            Para operar formalmente en Guatemala, la SAT exige que tu empresa tenga un domicilio fiscal verificable. Las <strong>oficinas virtuales en Guatemala</strong> se han convertido en la herramienta legal predilecta por 3 razones:
+            Para que una oficina virtual sea válida ante la **Superintendencia de Administración Tributaria (SAT)** y el **Registro Mercantil**, debe cumplir con protocolos específicos:
           </p>
-          <ul class="text-slate-600 space-y-4 mt-6 list-disc pl-5">
-            <li><strong>Contrato de Subarrendamiento:</strong> Requisito indispensable para actualizar tu RTU.</li>
-            <li><strong>Localización SAT:</strong> Evita el estatus de "No Localizado" que bloquea tu emisión de facturas.</li>
-            <li><strong>Patente de Comercio:</strong> Proporcionamos la dirección física para inscribir tu empresa en el Registro Mercantil.</li>
-          </ul>
           
-          <div class="mt-8 p-6 bg-teal-50 border-l-4 border-teal-600 rounded-r-xl">
-            <p class="italic text-teal-900">
-              "Formalizar tu empresa no es solo un trámite legal, es habilitar la capacidad de venderle a clientes corporativos que exigen factura de régimen general."
-            </p>
+          <div class="space-y-8 mt-10">
+            <div class="legal-step">
+              <h4 class="font-bold text-slate-900 flex items-center gap-3">
+                <span class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm italic">1</span>
+                Suscripción del Contrato de Subarrendamiento
+              </h4>
+              <p class="text-slate-600 pl-11 text-sm leading-relaxed">
+                No basta con un recibo de pago. Necesitas un contrato legal que otorgue el derecho de uso de la dirección para fines de **RTU (Registro Tributario Unificado)**.
+              </p>
+            </div>
+
+            <div class="legal-step">
+              <h4 class="font-bold text-slate-900 flex items-center gap-3">
+                <span class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm italic">2</span>
+                Inscripción en el Registro Mercantil
+              </h4>
+              <p class="text-slate-600 pl-11 text-sm leading-relaxed">
+                Utiliza la dirección corporativa para obtener tu **Patente de Comercio de Sociedad o Empresa**. Esto blinda tu imagen ante futuros socios o inversionistas.
+              </p>
+            </div>
+
+            <div class="legal-step">
+              <h4 class="font-bold text-slate-900 flex items-center gap-3">
+                <span class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm italic">3</span>
+                Actualización de Datos en Agencia Virtual
+              </h4>
+              <p class="text-slate-600 pl-11 text-sm leading-relaxed">
+                Vincula tu nueva dirección en Zona Pradera o Zona 10 a través de la Agencia Virtual de la SAT para activar tu **Factura Electrónica (FEL)**.
+              </p>
+            </div>
           </div>
+
+          <h3 class="text-2xl font-bold mt-16 mb-6 text-slate-800">¿Es legal usar una oficina virtual para la SAT?</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Totalmente. La legislación guatemalteca permite que las empresas tengan un domicilio fiscal donde se reciba correspondencia y se realicen notificaciones oficiales. El secreto es contar con un proveedor que garantice la **presencia física** y la recepción de delegados de la SAT en caso de auditorías de campo.
+          </p>
         </div>
 
         <aside class="sidebar-form">
            <div class="form-card">
-             <h3 class="form-title">Obtén tu Dirección Fiscal</h3>
-             <p class="text-sm text-slate-500 mb-6">Inicia tu trámite de formalización hoy mismo con asesoría profesional.</p>
-             <ContactForm serviceName="Grupo 1 Formalizacion" formId="mgolzeyp" />
+             <h3 class="form-title">Inicia tu Formalización</h3>
+             <p class="text-sm text-slate-500 mb-6">Obtén hoy mismo el contrato de subarrendamiento para tu trámite ante la SAT.</p>
+             <ContactForm serviceName="Guia Paso a Paso Formalizacion" formId="mgolzeyp" />
+             <div class="mt-6 pt-6 border-t border-slate-200">
+               <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest text-center">Contrato Avalado por Abogados</p>
+             </div>
            </div>
         </aside>
       </div>
@@ -107,19 +138,17 @@ const articleSchema = {
 </MainLayout>
 
 <style>
-  /* ESTILOS INTERNOS (Mantenidos de tu versión correcta) */
+  /* ESTILOS GANADORES PREVIAMENTE VALIDADOS */
   .container-formalizacion { width: 100%; padding: 4rem 1rem; background-color: white; }
   .content-wrapper { max-width: 1100px; margin: 0 auto; }
   .text-teal { color: #0d9488; }
   .text-cyan { color: #22d3ee; }
-  .main-title { font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 2rem; color: #0f172a; line-height: 1.1; }
+  .main-title { font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 2rem; color: #0f172a; line-height: 1.1; letter-spacing: -0.02em; }
 
   .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 5rem; }
   .column { display: flex; flex-direction: column; align-items: center; }
 
-  .tarjeta-visual { width: 400px; height: 230px; border-radius: 12px; position: relative; padding: 2rem; box-sizing: border-box; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-  .tarjeta-visual:hover { transform: scale(1.02); }
-
+  .tarjeta-visual { width: 400px; height: 230px; border-radius: 12px; position: relative; padding: 2rem; box-sizing: border-box; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
   .informal { background-color: white; border: 2px solid #e2e8f0; }
   .profesional { background-color: #2d3136; color: white; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 
@@ -135,7 +164,7 @@ const articleSchema = {
   .text-teal-bold { color: #0d9488; }
 
   .footer-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; border-top: 1px solid #e2e8f0; padding-top: 4rem; }
-  .section-subtitle { font-size: 2rem; font-weight: bold; margin-bottom: 1.5rem; }
+  .section-subtitle { font-size: 2.25rem; font-weight: 900; margin-bottom: 1.5rem; letter-spacing: -0.01em; color: #0f172a; }
   .description-text { font-size: 1.125rem; color: #475569; line-height: 1.6; }
   .form-card { background-color: #f8fafc; padding: 2.5rem; border-radius: 1.5rem; border: 1px solid #f1f5f9; position: sticky; top: 2rem; }
   .form-title { font-size: 1.4rem; font-weight: bold; margin-bottom: 0.5rem; color: #0f172a; }
