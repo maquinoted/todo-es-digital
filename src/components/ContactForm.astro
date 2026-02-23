@@ -1,6 +1,10 @@
 ---
 // Definimos las propiedades con valores por defecto
 const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props; 
+
+// Normalizamos para que detecte "Coworking", "Cowork", "Espacios Cowork", etc.
+const normalizedService = serviceName.toLowerCase().trim();
+const isEventService = normalizedService.includes("sala") || normalizedService.includes("cowork");
 ---
 
 <form action={`https://formspree.io/f/${formId}`} method="POST" id="my-form" class="contact-form">
@@ -21,7 +25,7 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
     <input type="tel" name="phone" id="whatsapp" placeholder="+502 0000 0000" required />
   </div>
 
-  {serviceName === "Oficinas Virtuales" && (
+  {normalizedService.includes("virtual") && (
     <div class="form-group">
       <label for="plan">Plan de Interés</label>
       <select name="plan-seleccionado" id="plan" required>
@@ -35,11 +39,10 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
     </div>
   )}
 
-  {/* Lógica para Salas de Reuniones Y Espacios Cowork */}
-  {(serviceName === "Salas de Reuniones" || serviceName === "Espacios Cowork") && (
+  {isEventService && (
     <>
       <div class="form-group">
-        <label for="date">Fecha de la Reunión / Uso</label>
+        <label for="date">Fecha de Uso</label>
         <input 
           type="date" 
           name="event-date" 
@@ -93,88 +96,70 @@ const { serviceName = "Servicio", formId = "mgolzeyp" } = Astro.props;
 </form>
 
 <script is:inline>
-  // Bloquear fechas pasadas
-  const dateInput = document.getElementById('date');
-  if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.setAttribute('min', today);
+  function setupForm() {
+    const dateInput = document.getElementById('date');
+    const startTime = document.getElementById('start-time');
+    const endTime = document.getElementById('end-time');
+
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+
+    if (startTime && endTime) {
+      const validateHours = () => {
+        if (startTime.value && endTime.value && endTime.value <= startTime.value) {
+          alert("La hora de finalización debe ser posterior a la hora de inicio.");
+          endTime.value = "";
+        }
+      };
+      startTime.addEventListener('change', validateHours);
+      endTime.addEventListener('change', validateHours);
+    }
   }
 
-  // Validación de lógica horaria
-  const startTime = document.getElementById('start-time');
-  const endTime = document.getElementById('end-time');
-
-  if (startTime && endTime) {
-    endTime.addEventListener('change', () => {
-      if (endTime.value <= startTime.value) {
-        alert("La hora de finalización debe ser posterior a la hora de inicio.");
-        endTime.value = "";
-      }
-    });
-  }
+  setupForm();
 
   const form = document.getElementById("my-form");
   const status = document.getElementById("form-status");
   const button = document.getElementById("submit-button");
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    button.disabled = true;
-    button.innerText = "Enviando...";
-    const data = new FormData(event.target);
-    try {
-      const response = await fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (response.ok) {
-        window.location.href = "/gracias"; 
-      } else {
-        const errorData = await response.json();
+  if (form) {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      button.disabled = true;
+      button.innerText = "Enviando...";
+      const data = new FormData(event.target);
+      try {
+        const response = await fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          window.location.href = "/gracias"; 
+        } else {
+          const errorData = await response.json();
+          status.style.color = "red";
+          status.innerHTML = "Error: " + (errorData.errors ? errorData.errors.map(error => error.message).join(", ") : "Revisa los campos.");
+          button.disabled = false;
+          button.innerText = "Solicitar Información";
+        }
+      } catch (error) {
         status.style.color = "red";
-        status.innerHTML = "Error: " + (errorData.errors ? errorData.errors.map(error => error.message).join(", ") : "Revisa los campos.");
+        status.innerHTML = "Ups! Hubo un problema al enviar el formulario.";
         button.disabled = false;
         button.innerText = "Solicitar Información";
       }
-    } catch (error) {
-      status.style.color = "red";
-      status.innerHTML = "Ups! Hubo un problema al enviar el formulario.";
-      button.disabled = false;
-      button.innerText = "Solicitar Información";
-    }
-  });
+    });
+  }
 </script>
 
 <style>
-  .contact-form { 
-    background: #f9f9f9; 
-    padding: 30px; 
-    border-radius: 12px; 
-    border: 1px solid #eee; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  }
+  .contact-form { background: #f9f9f9; padding: 30px; border-radius: 12px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
   .form-group { margin-bottom: 20px; text-align: left; }
   .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
-  .form-group input, .form-group textarea, .form-group select { 
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 6px; 
-    font-family: inherit; 
-    box-sizing: border-box;
-    background-color: white;
-  }
-  .btn-submit { 
-    background: #00a69c; 
-    color: white; 
-    border: none; 
-    padding: 15px 25px; 
-    border-radius: 8px; 
-    font-weight: bold; 
-    cursor: pointer; 
-    width: 100%; 
-    transition: background 0.3s; 
-  }
+  .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; box-sizing: border-box; background-color: white; }
+  .btn-submit { background: #00a69c; color: white; border: none; padding: 15px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; transition: background 0.3s; }
   .btn-submit:hover { background: #008f86; }
 </style>
