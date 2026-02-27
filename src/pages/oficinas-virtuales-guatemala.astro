@@ -92,11 +92,19 @@ import ContactForm from '../components/ContactForm.astro';
 </script>
 
   <section class="hero-clean">
-    <div class="container hero-grid">
-      <h1>Oficinas Virtuales en Guatemala y domicilio fiscal en Zona Pradera</h1>
-      <p class="lead">
-          Potencie su negocio con nuestro servicio de <strong>oficina virtual</strong> y proyecte la imagen profesional que sus clientes exigen mientras trabaja desde la comodidad de su hogar, con todos los servicios de una oficina tradicional, reduciendo costos administrativos.
-        </p>
+    <div class="container hero-content-wrapper">
+      <h1 class="text-center full-width-h1">Oficinas Virtuales en Guatemala y domicilio fiscal en Zona Pradera</h1>
+      
+      <div class="hero-grid-split">
+        <div class="text-block">
+          <p class="lead">
+            Potencie su negocio con nuestro servicio de <strong>oficina virtual</strong> y proyecte la imagen profesional que sus clientes exigen mientras trabaja desde la comodidad de su hogar, con todos los servicios de una oficina tradicional, reduciendo costos administrativos.
+          </p>
+        </div>
+        <div class="image-block">
+          <img src="/oficinas-guatemala.webp" alt="Oficinas modernas en Guatemala Zona Pradera" loading="eager" width="600" height="400" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -270,11 +278,40 @@ import ContactForm from '../components/ContactForm.astro';
   .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
   .text-center { text-align: center; }
   
-  /* Hero Section */
-  .hero-clean { padding: 60px 0; background: #fff; }
-  .hero-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
-  .hero-clean h1 { font-size: 2.5rem; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2; text-align: center; }
-  .lead { font-size: 1.15rem; color: #666; line-height: 1.6; margin: 0; }
+  /* === HERO SECTION REESTRUCTURADO === */
+  .hero-clean { padding: 80px 0; background: #fff; }
+  
+  /* Asegura que el H1 ocupe todo el ancho y esté centrado */
+  .full-width-h1 { 
+    font-size: 2.8rem; 
+    color: #1a1a1a; 
+    margin-bottom: 40px; 
+    line-height: 1.2; 
+    width: 100%;
+  }
+
+  /* Nuevo Grid para texto e imagen debajo del H1 */
+  .hero-grid-split { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* Mitad y mitad */
+    gap: 50px; 
+    align-items: center; 
+  }
+
+  /* Alineación del texto a la izquierda */
+  .hero-grid-split .text-block {
+    text-align: left;
+  }
+
+  .lead { font-size: 1.2rem; color: #444; line-height: 1.7; margin: 0; }
+
+  /* Estilos para la imagen de la derecha */
+  .image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
 
   /* SECCIÓN DE PLANES */
   .pricing-expert { padding: 60px 0; background: #fcfcfc; }
@@ -311,8 +348,16 @@ import ContactForm from '../components/ContactForm.astro';
   .oficinas-split-section { padding: 60px 0; background-color: #fff; }
   .grid-two-columns { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: start; }
 
+  /* === RESPONSIVE === */
   @media (max-width: 900px) {
-    .grid-two-columns, .hero-grid { grid-template-columns: 1fr; }
+    .full-width-h1 { font-size: 2.2rem; }
+    .hero-grid-split { 
+      grid-template-columns: 1fr; /* Una columna en móvil */
+      text-align: center;
+      gap: 30px;
+    }
+    .hero-grid-split .text-block { text-align: center; } /* Centra texto en móvil */
+    .grid-two-columns { grid-template-columns: 1fr; }
     .gallery-custom-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
