@@ -9,6 +9,49 @@ import ContactForm from '../components/ContactForm.astro';
   description="Formalice su empresa ante la SAT con nuestra oficina virtual. Obtenga dirección fiscal legal en un centro empresarial de prestigio en Zona 10."
   canonicalURL={currentCanonicalURL}
 >
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Oficinas Virtuales para SAT",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Todo es Digital",
+          "url": "https://todoesdigital.com"
+        },
+        "description": "Servicio de dirección fiscal y comercial en Guatemala para trámites ante la SAT y Registro Mercantil.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Guatemala"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es el domicilio fiscal según la SAT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Según el Artículo 114 del Código Tributario de Guatemala, es el lugar físico localizable que el contribuyente designa para recibir notificaciones y cumplir obligaciones tributarias."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se puede usar una oficina virtual para la SAT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, siempre que la oficina virtual proporcione una ubicación física real, verificable y con contrato de arrendamiento legal, como el que ofrece Todo es Digital."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <section class="hero-clean">
     <div class="container">
       <h1>Oficinas Virtuales para SAT: Su Dirección Fiscal Legal en Guatemala</h1>
@@ -23,7 +66,7 @@ import ContactForm from '../components/ContactForm.astro';
       <div class="sat-quote-box">
         <h3>¿Por qué elegir una Oficina Virtual para su trámite de SAT?</h3>
         <p>
-          De acuerdo con el <strong>Artículo 114 del Código Tributario de Guatemala</strong>, el domicilio fiscal es el lugar que el contribuyente designa para el cumplimiento de sus obligaciones tributarias y para recibir notificaciones. Para la <strong>SAT</strong>, este debe ser un lugar físico localizable donde se presuma que se desarrolla la actividad económica o se encuentra la administración de la empresa.
+          De acuerdo con el <strong>Artículo 114 del Código Tributario de Guatemala</strong>, el domicilio fiscal es el lugar que el contribuyente designa para el cumplimiento de sus obligaciones tributarias y para recibir notificaciones. Para la <strong>SAT</strong>, este debe ser un lugar físico localizable donde se presuma que se desarrolla la actividad económica.
         </p>
         <p class="legal-note">
           Nuestra <strong>oficina virtual en Zona Pradera</strong> cumple estrictamente con este requisito, proporcionando una ubicación física real y verificable.
@@ -70,7 +113,7 @@ import ContactForm from '../components/ContactForm.astro';
   <section class="conversion-split">
     <div class="container grid-2">
       <div class="text-column">
-        <h4>¿Por qué usar una oficina virtual para su dirección fiscal?</h4>
+        <h2>¿Por qué usar una oficina virtual para su dirección fiscal?</h2>
         <p>
           Para cumplir con los <strong>requisitos para formalizar una empresa en Guatemala</strong>, la SAT exige una ubicación verificable. Nuestra <strong>oficina virtual guatemala</strong> le otorga ese respaldo jurídico en el mejor <strong>centro empresarial zona 10</strong>.
         </p>
@@ -91,11 +134,11 @@ import ContactForm from '../components/ContactForm.astro';
 <style>
   .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
   
-  /* Layout de dos columnas para conversión */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; padding: 60px 0; }
 
   .hero-clean { padding: 60px 0; background: #fff; text-align: center; }
   .lead { font-size: 1.2rem; color: #444; max-width: 800px; margin: 0 auto; }
+  .lead a { color: #007a73; font-weight: bold; }
 
   .definition-sat { padding: 40px 0; background: #fff; }
   .sat-quote-box { 
@@ -105,23 +148,36 @@ import ContactForm from '../components/ContactForm.astro';
     border-radius: 0 10px 10px 0; 
   }
   .sat-quote-box h3 { color: #007a73; margin-bottom: 15px; font-size: 1.4rem; }
-  .legal-note { margin-top: 15px; font-style: italic; font-weight: 600; color: #007a73 !important; }
+  .legal-note { margin-top: 15px; font-style: italic; font-weight: 600; color: #006b64 !important; }
 
   .legal-steps { padding: 60px 0; background: #f9f9f9; }
   .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
-  .step-card { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid #007a73; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-  .step-number { font-size: 1.5rem; font-weight: 900; color: #007a73; opacity: 0.3; display: block; margin-bottom: 10px; }
+  
+  /* AJUSTES PARA PAGESPEED ACCESIBILITY */
+  .step-card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 12px; 
+    border-top: 5px solid #006b64; /* Verde más oscuro */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+  }
+  .step-number { 
+    font-size: 1.5rem; 
+    font-weight: 900; 
+    color: #006b64; /* Verde sólido sin opacidad para contraste */
+    display: block; 
+    margin-bottom: 10px; 
+  }
 
   .internal-link-box {
     background: #f0fdfa;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #00a69c;
+    border: 1px solid #007a73;
     margin: 30px 0;
   }
-  .internal-link-box a { font-weight: bold; color: #00a69c; }
+  .internal-link-box a { font-weight: bold; color: #007a73; }
 
-  /* Responsive */
   @media (max-width: 900px) {
     .grid-2 { grid-template-columns: 1fr; gap: 30px; }
     .text-column { text-align: center; }
