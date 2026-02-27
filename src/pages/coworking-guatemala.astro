@@ -68,13 +68,12 @@ import ContactForm from '../components/ContactForm.astro';
     
     <div class="hero-grid">
       <div class="column-left image-gallery">
-
         <img 
           src="/coworking-guatemala.webp" 
           alt="Área de trabajo compartido y networking en Todo es Digital, Guatemala" 
-          width="600" 
-          height="400" 
-          class="img-hero img-second"
+          width="400" 
+          height="600" 
+          class="img-hero"
         />
       </div>
 
@@ -172,25 +171,21 @@ import ContactForm from '../components/ContactForm.astro';
     margin-bottom: 60px; 
   }
 
-  /* NUEVO ESTILO: Galería de imágenes en columna */
+  /* Galería de imágenes en columna */
   .image-gallery {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre las dos imágenes */
+    gap: 20px;
   }
 
   .img-hero { 
     width: 100%; /* Ocupa el ancho de la columna (400px) */
     height: auto; /* Mantiene proporción */
-    aspect-ratio: 600 / 400; /* Fuerza la proporción original si es necesario */
-    object-fit: cover; 
+    /* Ajustado a proporción 4:6 (400x600) vertical */
+    aspect-ratio: 400 / 600; 
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor si no es exacta */
     border-radius: 12px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-  }
-
-  /* Opcional: si la segunda imagen es más baja */
-  .img-second {
-    aspect-ratio: 400 / 600; /* O ajusta según la altura real de la imagen */
   }
 
   /* Caja de Precio */
