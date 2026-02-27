@@ -9,66 +9,24 @@ import ContactForm from '../components/ContactForm.astro';
   description="Renta de espacios de coworking en Zona Pradera, Guatemala. Planes por día desde Q165 o 4 horas por Q100. Internet de alta velocidad y ambiente corporativo."
   canonicalURL={currentCanonicalURL}
 >
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Coworking en Guatemala",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Todo es Digital"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Guatemala"
-  },
-  "description": "Espacios de trabajo compartido en Zona 10. Solución profesional para emprendedores que buscan coworking con internet de alta velocidad y ambiente ejecutivo.",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Planes de Coworking",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Pase Diario de Coworking",
-          "price": "165.00",
-          "priceCurrency": "GTQ"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Pase de 4 Horas",
-          "price": "100.00",
-          "priceCurrency": "GTQ"
-        }
-      }
-    ]
-  }
-}
-</script>
 
   <article class="container">
     <h1 class="hero-clean-title">Coworking en Guatemala: Su Oficina Profesional en Zona 10</h1>
     
     <div class="hero-grid">
-      <div class="column-left">
-        <div class="vertical-image-frame">
-          <img 
-            src="/coworking-guatemala.webp" 
-            alt="Espacio de coworking profesional en Zona Pradera, Guatemala" 
-            width="600" 
-            height="400"
-            class="img-fit-cover"
-          />
+      <div class="column-left gallery-layout">
+        <div class="main-vertical">
+          <img src="/coworking-guatemala.webp" alt="Espacio de coworking vertical" class="img-fit" />
+        </div>
+        <div class="side-horizontals">
+          <img src="/cowork-guatemala-zona10.webp" alt="Coworking Zona 10" class="img-fit horizontal" />
+          <img src="/oficina-virtual-guatemala.webp" alt="Ambiente de trabajo" class="img-fit horizontal" />
         </div>
       </div>
 
       <div class="column-right">
         <p class="lead">
-          Deje atrás las distracciones de casa y el ruido de las cafeterías. En <strong>Todo es Digital</strong> le ofrecemos un entorno de <strong>coworking en Guatemala</strong> diseñado para el enfoque total y la productividad empresarial.
+          Deje atrás las distracciones de casa y el ruido de las cafeterías. Ofrecemos un entorno diseñado para el enfoque total y la productividad empresarial en <strong>Zona Pradera</strong>.
         </p>
 
         <div class="pricing-container">
@@ -85,136 +43,102 @@ import ContactForm from '../components/ContactForm.astro';
         <div class="important-notes">
           <h4>Requisitos y Condiciones:</h4>
           <ul>
-            <li>Pago 100% anticipado para reservar espacio.</li>
-            <li>Presentación de identificación obligatoria.</li>
-            <li>Tarifa de parqueo preferencial: **Q9 por hora**.</li>
-            <li class="restricted">No incluye uso de sala de reuniones ni dirección fiscal.</li>
+            <li>✓ Agua, Café e Internet incluido.</li>
+            <li>✓ Pago 100% anticipado requerido.</li>
+            <li>✓ Presentar identificación oficial.</li>
+            <li>✓ Tarifa parqueo: **Q9 por hora**.</li>
+            <li class="restricted">No incluye salas de reuniones ni dirección fiscal.</li>
           </ul>
         </div>
       </div>
     </div>
 
     <section class="benefits-section">
-      <h2 class="text-center">¿Por qué cambiar la cafetería por nuestro Cowork?</h2>
+      <h2 class="text-center">Productividad Real sin Interrupciones</h2>
       <div class="grid-3">
         <div class="benefit-card">
           <h3>Adiós al Ruido</h3>
-          <p>Olvídese del estruendo de licuadoras, música alta o conversaciones ajenas que interrumpen sus llamadas importantes.</p>
+          <p>Sin licuadoras de cafetería ni ruidos domésticos que interrumpan sus llamadas.</p>
         </div>
         <div class="benefit-card">
-          <h3>Internet de Verdad</h3>
-          <p>No dependa de conexiones públicas inestables. Disfrute de fibra óptica simétrica de alta velocidad.</p>
+          <h3>Internet Estable</h3>
+          <p>Conexión de fibra óptica dedicada para videollamadas fluidas.</p>
         </div>
         <div class="benefit-card">
-          <h3>Imagen Ejecutiva</h3>
-          <p>Reciba a sus clientes en un edificio corporativo nivel AAA en <strong>Zona Pradera</strong>, no en una mesa de restaurante.</p>
+          <h3>Imagen AAA</h3>
+          <p>Trabaje desde el complejo corporativo más prestigioso de Guatemala.</p>
         </div>
       </div>
     </section>
 
-    <section class="amenities-box">
-      <h2>Todo lo que incluye su pase:</h2>
-      <div class="amenities-grid">
-        <span>✓ Internet de Alta Velocidad</span>
-        <span>✓ Estación de Café y Té</span>
-        <span>✓ Agua Pura Ilimitada</span>
-        <span>✓ Ambiente con A/C</span>
-        <span>✓ Servicios Sanitarios</span>
-        <span>✓ Mobiliario Ergonómico</span>
+    <section class="contact-split">
+      <div class="contact-info-side">
+        <h2>¿Listo para reservar?</h2>
+        <p>Contáctenos directamente para verificar disponibilidad inmediata. Atendemos de lunes a viernes de 8:00 AM a 5:00 PM.</p>
+        <div class="quick-links">
+          <a href="https://wa.me/50223022200" class="contact-link"><strong>WhatsApp:</strong> +502 2302 2200</a>
+          <p><strong>Ubicación:</strong> Zona Pradera, Torre IV, Ciudad de Guatemala.</p>
+          <p><strong>Clima:</strong> Espacios 100% climatizados.</p>
+        </div>
+      </div>
+      
+      <div class="form-side-compact">
+        <ContactForm serviceName="Coworking Galería" formId="mgolzeyp" />
       </div>
     </section>
 
-    <div class="cta-section text-center">
-      <h2>Reserve su espacio de trabajo hoy</h2>
-      <p>Incremente su productividad en el mejor ambiente de negocios de Guatemala.</p>
-      <a href="https://wa.me/50223022200?text=Quiero%20reservar%20mi%20espacio%20de%20coworking" class="btn-whatsapp">¡Reservar vía WhatsApp!</a>
-    </div>
-
-    <section class="form-wrapper">
-      <ContactForm serviceName="Coworking Nuevo" formId="mgolzeyp" />
-    </section>
   </article>
 
 </MainLayout>
 
 <style>
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
   .text-center { text-align: center; }
   
-  .hero-clean-title { 
-    font-size: 2.5rem; 
-    color: #1a1a1a; 
-    margin: 30px 0 50px; 
-    text-align: center; 
-    font-weight: 800;
+  .hero-clean-title { font-size: 2.5rem; color: #1a1a1a; margin: 30px 0 50px; text-align: center; font-weight: 800; }
+
+  /* ESTRUCTURA DE GALERÍA (1 Vertical, 2 Horizontales) */
+  .hero-grid { display: grid; grid-template-columns: 500px 1fr; gap: 40px; align-items: start; margin-bottom: 60px; }
+  
+  .gallery-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+  .main-vertical { grid-row: span 2; height: 500px; }
+  .side-horizontals { display: flex; flex-direction: column; gap: 15px; }
+  .side-horizontals .horizontal { height: 242px; }
+  
+  .img-fit { 
+    width: 100%; height: 100%; object-fit: cover; 
+    border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
   }
 
-  .hero-grid { 
-    display: grid; 
-    grid-template-columns: 400px 1fr; 
-    gap: 60px; 
-    align-items: start;
+  /* PRECIOS Y NOTAS */
+  .pricing-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0; }
+  .price-card { background: #f0fdfa; border: 1.5px solid #00a69c; padding: 15px; border-radius: 10px; text-align: center; }
+  .price-card .amount { font-size: 1.8rem; font-weight: 800; margin: 5px 0; }
+  .lead { font-size: 1.15rem; line-height: 1.6; color: #444; }
+  .important-notes { background: #fdfaf0; padding: 20px; border-radius: 10px; font-size: 0.95rem; }
+  .important-notes ul { list-style: none; padding: 0; }
+  .restricted { color: #b91c1c; font-weight: 600; margin-top: 10px; }
+
+  /* BENEFICIOS */
+  .benefits-section { padding: 40px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+  .benefit-card { padding: 25px; border: 1px solid #eee; border-radius: 12px; }
+  .benefit-card h3 { color: #00a69c; margin-bottom: 10px; }
+
+  /* SPLIT FORMULARIO (Info Izquierda, Form Derecha) */
+  .contact-split { 
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; 
+    background: #f8fafc; padding: 50px; border-radius: 20px; align-items: center;
   }
+  .contact-info-side h2 { font-size: 2rem; margin-bottom: 20px; }
+  .quick-links { margin-top: 20px; border-top: 1px solid #ddd; padding-top: 20px; }
+  .contact-link { display: block; color: #25d366; text-decoration: none; font-size: 1.2rem; margin-bottom: 10px; }
 
-  /* FIX DEFINITIVO PARA IMAGEN 600x400 en Marco 400x600 */
-  .vertical-image-frame {
-    width: 400px !important;
-    height: 600px !important;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    position: relative;
-    background: #f0f0f0;
-  }
-
-  .img-fit-cover {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Corta los lados de la foto horizontal para que llene el marco vertical */
-    object-position: center;
-  }
-
-  /* Planes de precios */
-  .pricing-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
-  .price-card { background: #f0fdfa; border: 2px solid #00a69c; padding: 20px; border-radius: 12px; text-align: center; }
-  .price-card h3 { margin: 0; color: #007a73; font-size: 1.2rem; }
-  .price-card .amount { font-size: 2rem; font-weight: 800; color: #1a1a1a; margin: 10px 0; }
-  .price-card .amount span { font-size: 0.9rem; color: #666; font-weight: 400; }
-
-  .lead { font-size: 1.2rem; line-height: 1.6; color: #444; margin-bottom: 25px; }
-
-  .important-notes { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px; border-radius: 0 12px 12px 0; }
-  .important-notes h4 { margin-top: 0; color: #92400e; }
-  .important-notes ul { list-style: none; padding: 0; margin: 10px 0; }
-  .important-notes li { margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: center; }
-  .important-notes li::before { content: "•"; color: #f59e0b; font-weight: bold; margin-right: 10px; }
-  .restricted { color: #b91c1c; font-weight: 600; }
-
-  /* Ventajas */
-  .benefits-section { padding: 60px 0; }
-  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-  .benefit-card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #eee; transition: 0.3s; }
-  .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-  .benefit-card h3 { color: #00a69c; margin-top: 0; }
-
-  /* Amenities */
-  .amenities-box { background: #1a1a1a; color: white; padding: 50px; border-radius: 20px; margin: 40px 0; }
-  .amenities-box h2 { text-align: center; margin-top: 0; margin-bottom: 30px; }
-  .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-  .amenities-grid span { font-weight: 500; font-size: 1rem; }
-
-  /* CTA */
-  .btn-whatsapp { 
-    display: inline-block; padding: 20px 40px; background: #25d366; color: white; 
-    text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; 
-    margin-top: 25px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-  }
-
-  .cta-section { padding: 60px 0; background: #f8fafc; border-radius: 24px; margin: 40px 0; }
-
-  @media (max-width: 950px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .vertical-image-frame { margin: 0 auto 30px; width: 100% !important; max-width: 400px; height: 500px !important; }
-    .hero-clean-title { font-size: 2rem; }
+  /* MEDIA QUERIES */
+  @media (max-width: 1000px) {
+    .hero-grid, .contact-split { grid-template-columns: 1fr; }
+    .gallery-layout { grid-template-columns: 1fr; }
+    .main-vertical { height: 400px; }
+    .contact-split { padding: 30px; gap: 30px; }
   }
 </style>
