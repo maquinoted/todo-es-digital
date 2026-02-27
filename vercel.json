@@ -16,7 +16,7 @@
     { "source": "/paginas-web-guatemala", "destination": "/404", "permanent": true },
     { "source": "/curso-ingles-guatemala", "destination": "/404", "permanent": true },
     { "source": "/factura-electronica-fel-guatemala", "destination": "/404", "permanent": true },
-    { "source": "/coworking-guatemala", "destination": "/espacios-cowork-guatemala", "permanent": true },
+    { "source": "/espacios-cowork-guatemala", "destination": "/coworking-guatemala", "permanent": true },
     { "source": "/gracias-oficina-virtual.php", "destination": "/404", "permanent": true },
     { "source": "/landingpage/cotizacionesoficinasvirtuales", "destination": "/404", "permanent": true },
     { "source": "/landingpage/cotizacionescrm", "destination": "/404", "permanent": true },
