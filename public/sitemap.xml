@@ -2,27 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://todoesdigital.com/</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://todoesdigital.com/oficinas-virtuales-guatemala</loc>
-    <lastmod>2026-02-16</lastmod>
-    <priority>0.8</priority>
+    <loc>https://todoesdigital.com/ahorro-oficina-compartida-guatemala-2026</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://todoesdigital.com/alquiler-salas-reuniones-guatemala</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://todoesdigital.com/espacios-cowork-guatemala</loc>
-    <lastmod>2026-02-16</lastmod>
+    <loc>https://todoesdigital.com/coworking-guatemala</loc>
+    <lastmod>2026-02-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://todoesdigital.com/ahorro-oficina-compartida-guatemala-2026</loc>
-    <lastmod>2026-02-22</lastmod>
-    <priority>0.7</priority>
+    <loc>https://todoesdigital.com/oficinas-virtuales-guatemala</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://todoesdigital.com/oficinas-virtuales-sat-guatemala</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://todoesdigital.com/que-es-una-pyme-en-guatemala</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://todoesdigital.com/requisitos-creacion-empresa-guatemala</loc>
+    <lastmod>2026-02-27</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>
