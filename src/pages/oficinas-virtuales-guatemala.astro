@@ -328,14 +328,34 @@ import ContactForm from '../components/ContactForm.astro';
     text-align: center; flex: 1; min-width: 300px; max-width: 350px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
   .card.featured { border: 2px solid #00a69c; position: relative; }
-  .badge { background: #00a69c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); }
+  .badge {
+    background: #007a73; /* Aplicamos el mismo verde oscuro al badge */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .price { font-size: 1.5rem; font-weight: bold; margin: 15px 0; color: #1a1a1a; }
   .price span { font-size: 1rem; color: #666; }
   .card ul { text-align: left; padding: 0; list-style: none; margin: 20px 0; }
   .card ul li { margin-bottom: 10px; color: #444; font-size: 0.95rem; }
   .card ul li::before { content: "•"; color: #00a69c; font-weight: bold; margin-right: 8px; }
 
-  .btn { display: inline-block; padding: 12px 25px; background: #00a69c; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; width: 100%; transition: background 0.3s; }
+  .btn { 
+    background: #007a73; /* Un verde más oscuro para contraste WCAG AA */
+    color: white; 
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s;
+  }
   .btn-dark { background: #1a1a1a; }
 
   .promo-box { background: #00a69c; border: 2px dashed #ffffff; padding: 25px; border-radius: 10px; text-align: center; color: white; margin-top: 30px; }
