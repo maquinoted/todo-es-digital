@@ -160,6 +160,19 @@ const isEventService = normalizedService.includes("sala") || normalizedService.i
   .form-group { margin-bottom: 20px; text-align: left; }
   .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
   .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; box-sizing: border-box; background-color: white; }
-  .btn-submit { background: #00a69c; color: white; border: none; padding: 15px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; transition: background 0.3s; }
-  .btn-submit:hover { background: #008f86; }
+  .btn-submit {
+  background-color: #007a73; /* Verde más profundo para mejor contraste */
+  color: #ffffff;            /* Blanco puro */
+  font-weight: 700;          /* Texto más grueso ayuda a la legibilidad */
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+  .btn-submit:hover {
+  background-color: #005f59; /* Un tono aún más oscuro al pasar el mouse */
+}
 </style>
