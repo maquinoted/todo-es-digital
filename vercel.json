@@ -24,6 +24,11 @@
     { "source": "/centro-de-negocios-guatemala", "destination": "/", "permanent": true },
     { "source": "/posicionamiento-web-seo-guatemala", "destination": "/404", "permanent": true },
     { "source": "/salas-reuniones-guatemala", "destination": "/alquiler-salas-reuniones-guatemala", "permanent": true },
-    { "source": "/oficinas-todo-incluido-guatemala", "destination": "/oficinas-virtuales-guatemala", "permanent": true }
+    { "source": "/oficinas-todo-incluido-guatemala", "destination": "/oficinas-virtuales-guatemala", "permanent": true },
+    { 
+      "source": "/guia-formalizacion-pymes-guatemala-2026", 
+      "destination": "/que-es-una-pyme-en-guatemala", 
+      "permanent": true 
+    }
   ]
 }
