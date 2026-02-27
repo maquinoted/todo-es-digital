@@ -1,0 +1,180 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+const currentCanonicalURL = "https://todoesdigital.com/oficinas-virtuales-guatemala";
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<MainLayout 
+  title="Requisitos para la Creación de una Empresa en Guatemala | S.A. e Individual"
+  description="Guía completa de requisitos para la creación de una empresa en Guatemala. Formalice su Sociedad Anónima o Empresa Individual con domicilio fiscal en Zona 10."
+  canonicalURL={currentCanonicalURL}
+>
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Asesoría en Domicilio Fiscal para Creación de Empresas",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Todo es Digital"
+        },
+        "description": "Facilitamos el cumplimiento de requisitos de dirección fiscal para la creación de empresas individuales y sociedades anónimas en Guatemala."
+      },
+      {
+        "@type": "HowTo",
+        "name": "Cómo crear una empresa en Guatemala",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "text": "Definir si será Empresa Individual o Sociedad Anónima."
+          },
+          {
+            "@type": "HowToStep",
+            "text": "Solicitar el Domicilio Fiscal y Comercial (Oficina Virtual)."
+          },
+          {
+            "@type": "HowToStep",
+            "text": "Inscripción en el Registro Mercantil y obtención de patentes."
+          },
+          {
+            "@type": "HowToStep",
+            "text": "Activación en la SAT y obtención de RTU."
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <section class="hero-clean">
+    <div class="container">
+      <h1>Requisitos para la Creación de una Empresa en Guatemala</h1>
+      <p class="lead">
+        Ya sea que busque establecer una <strong>Sociedad Anónima</strong> o una <strong>Empresa Individual</strong>, el paso fundamental es contar con un domicilio fiscal verificado para sus trámites ante el Registro Mercantil y la SAT.
+      </p>
+    </div>
+  </section>
+
+  <section class="definition-sat">
+    <div class="container">
+      <div class="sat-quote-box">
+        <h2>Formalización Legal: El Domicilio como Base del Negocio</h2>
+        <p>
+          Para la <strong>creación de una empresa en Guatemala</strong>, la ley exige designar una sede física. Esta dirección aparecerá en sus patentes de comercio y en su RTU. Nuestra <strong>oficina virtual</strong> le proporciona el respaldo jurídico necesario para que su trámite sea aprobado sin contratiempos.
+        </p>
+        <p class="legal-note">
+          Ideal para Sociedades Anónimas que requieren una imagen corporativa de alto nivel en Zona Pradera.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal-steps">
+    <div class="container">
+      <h2>Pasos para Crear su Empresa en Guatemala con Éxito</h2>
+      <p class="intro-legal">
+        Siga esta guía técnica para formalizar su emprendimiento o estructura societaria bajo las normativas vigentes:
+      </p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <h3>Definición de Figura Legal</h3>
+          <p>Determine si operará como Comerciante Individual o si constituirá una <strong>Sociedad Anónima</strong>. Ambas requieren una dirección física para ser inscritas.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <h3>Contrato de Oficina Virtual</h3>
+          <p>Obtenga su contrato de arrendamiento en Zona 10. Este documento es indispensable para que el notario elabore la escritura o para la inscripción de empresa.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <h3>Registro Mercantil y SAT</h3>
+          <p>Gestione sus patentes de comercio y sociedad. Con nuestro domicilio fiscal, la <strong>SAT</strong> validará su RTU de forma inmediata al ser una ubicación física real.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">04</span>
+          <h3>Operación y Recepción</h3>
+          <p>Una vez creada la empresa, asegure la recepción de correspondencia legal y notificaciones de la administración tributaria en un lugar de prestigio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conversion-split">
+    <div class="container grid-2">
+      <div class="text-column">
+        <h2>Impulse la Creación de su Sociedad Anónima o Empresa</h2>
+        <p>
+          No detenga su crecimiento por falta de una ubicación física. Nuestra <strong>oficina virtual guatemala</strong> es la solución más eficiente para cumplir con todos los requisitos legales, ahorrando costos operativos desde el primer día.
+        </p>
+        
+        <div class="internal-link-box">
+          <p>Conozca más detalles sobre nuestros <a href="/oficinas-virtuales-guatemala">planes de oficinas virtuales</a> para empresas nuevas.</p>
+        </div>
+      </div>
+      
+      <div class="form-column">
+        <ContactForm serviceName="Creacion Empresa" formId="mgolzeyp" />
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
+
+<style>
+  .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; padding: 60px 0; }
+
+  .hero-clean { padding: 60px 0; background: #fff; text-align: center; }
+  .lead { font-size: 1.2rem; color: #444; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+
+  .definition-sat { padding: 40px 0; background: #fff; }
+  .sat-quote-box { 
+    background: #f8fafc; 
+    border-left: 5px solid #007a73; 
+    padding: 30px; 
+    border-radius: 0 10px 10px 0; 
+  }
+  .sat-quote-box h2 { color: #007a73; margin-bottom: 15px; font-size: 1.6rem; }
+  .legal-note { margin-top: 15px; font-style: italic; font-weight: 600; color: #006b64 !important; }
+
+  .legal-steps { padding: 60px 0; background: #f9f9f9; }
+  .legal-steps h2 { color: #1a1a1a; text-align: center; margin-bottom: 40px; }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+  
+  .step-card { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 12px; 
+    border-top: 5px solid #006b64;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+  }
+  .step-number { 
+    font-size: 1.5rem; 
+    font-weight: 900; 
+    color: #006b64; 
+    display: block; 
+    margin-bottom: 10px; 
+  }
+  .step-card h3 { font-size: 1.2rem; color: #1a1a1a; margin-bottom: 10px; }
+
+  .internal-link-box {
+    background: #f0fdfa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #007a73;
+    margin: 30px 0;
+  }
+  .internal-link-box a { font-weight: bold; color: #007a73; }
+
+  @media (max-width: 900px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 30px; }
+    .text-column { text-align: center; }
+  }
+</style>
