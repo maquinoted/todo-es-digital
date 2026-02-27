@@ -59,12 +59,12 @@ import ContactForm from '../components/ContactForm.astro';
           ✓ Acceso inmediato | ✓ Sin contratos forzosos | ✓ Ambiente 100% corporativo
         </p>
         
-        <a href="https://wa.me/50223022200?text=Quiero%20reservar%20coworking%20en%20Torre%202" class="btn-primary">Verificar Disponibilidad en Torre 2</a>
+        <a href="https://wa.me/50223022200?text=Quiero%20reservar%20mi%20espacio%20de%20coworking" class="btn-primary">Reservar Espacio de Coworking</a>
       </div>
     </div>
 
     <section class="benefits-section">
-      <h2 class="text-center">Solución Profesional a los Retos del Teletrabajo</h2>
+      <h2 class="text-center">Beneficios de elegir nuestras Oficinas Compartidas en Guatemala</h2>
       <div class="grid-3">
         <div class="benefit-card">
           <h3>Concentración Absoluta</h3>
@@ -77,6 +77,30 @@ import ContactForm from '../components/ContactForm.astro';
         <div class="benefit-card">
           <h3>Ubicación Estratégica</h3>
           <p>Sitúe su base de operaciones en el complejo corporativo más importante de Guatemala, facilitando sus gestiones en Zona 10.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="educational-section">
+      <div class="content-wrapper">
+        <h2>¿Qué es el Coworking en Guatemala y por qué es tendencia?</h2>
+        <p>
+          El <strong>coworking en Guatemala</strong> ha evolucionado de ser una simple moda para freelancers a convertirse en la infraestructura crítica para el ecosistema empresarial moderno. No se trata solo de "alquilar un escritorio", sino de acceder a un entorno de alto nivel que potencia la credibilidad y eficiencia de su operación.
+        </p>
+        
+        <div class="advantage-grid">
+          <div class="advantage-item">
+            <h4>Para Empresas y Sucursales</h4>
+            <p>Reduzca costos fijos de alquiler y mantenimiento. El coworking permite a las empresas establecer células de trabajo en <strong>Zona 10</strong> con flexibilidad total, ideal para equipos de ventas o proyectos temporales que requieren cercanía con clientes clave en Zona Pradera.</p>
+          </div>
+          <div class="advantage-item">
+            <h4>Para Emprendedores</h4>
+            <p>El aislamiento en casa puede estancar el crecimiento. Al aprovechar nuestras oficinas compartidas, el emprendedor transiciona de una imagen doméstica a una presencia corporativa AAA en <strong>Torre 2</strong>, fundamental para cerrar negociaciones y proyectar solidez.</p>
+          </div>
+          <div class="advantage-item">
+            <h4>Para Profesionales Independientes</h4>
+            <p>Especialistas en IT, consultores y abogados encuentran en el coworking la solución al internet inestable y la falta de privacidad. Es el espacio perfecto para trabajar con estándares de oficina corporativa pagando únicamente por el tiempo que realmente utiliza.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -158,6 +182,14 @@ import ContactForm from '../components/ContactForm.astro';
   .benefit-card { padding: 35px; border: 1px solid #eee; border-radius: 15px; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
   .benefit-card h3 { color: #00a69c; margin-bottom: 15px; margin-top: 0; font-size: 1.4rem; }
 
+  /* Estilos Nueva Sección Educativa */
+  .educational-section { padding: 80px 50px; background: #fff; border-radius: 30px; margin: 40px 0; border: 1px solid #f0f0f0; }
+  .educational-section h2 { font-size: 2.2rem; color: #1a1a1a; margin-bottom: 20px; text-align: center; }
+  .educational-section p { font-size: 1.15rem; color: #444; line-height: 1.8; margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; text-align: center; }
+  .advantage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+  .advantage-item h4 { color: #00a69c; font-size: 1.3rem; margin-bottom: 15px; border-bottom: 2px solid #f0fdfa; display: inline-block; }
+  .advantage-item p { text-align: left; font-size: 1rem; margin-top: 10px; }
+
   .details-section { padding: 60px 0; background: #fafafa; border-radius: 25px; margin: 40px 0; }
   .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 0 50px; }
   .details-card h3 { font-size: 1.6rem; margin-bottom: 25px; color: #1a1a1a; margin-top: 0; border-bottom: 2px solid #00a69c; display: inline-block; }
@@ -180,6 +212,7 @@ import ContactForm from '../components/ContactForm.astro';
 
   @media (max-width: 950px) {
     .hero-grid, .details-grid, .contact-split { grid-template-columns: 1fr; }
+    .educational-section { padding: 40px 20px; }
     .gallery-square-grid { max-width: 400px; margin: 0 auto 30px; }
     .details-grid { padding: 0 25px; gap: 40px; }
     .contact-split { padding: 50px 30px; }
