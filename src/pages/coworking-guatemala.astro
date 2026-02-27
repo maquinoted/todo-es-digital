@@ -91,9 +91,10 @@ import ContactForm from '../components/ContactForm.astro';
     <section class="contact-split">
       <div class="contact-info-side">
         <h2>¿Listo para reservar su lugar hoy?</h2>
-        <p>Complete el formulario y nuestro equipo le contactará para coordinar su ingreso inmediato a nuestras instalaciones.</p>
+        <p>Complete el formulario y nuestro equipo le contactará para coordinar su ingreso inmediato.</p>
         <div class="quick-links">
-          <p><strong>Horario de atención:</strong> Lunes a Viernes | 8:00 AM - 5:00 PM</p>
+          <p><strong>Horario:</strong> Lunes a Viernes | 8:00 AM - 5:00 PM</p>
+          <p><strong>Ubicación:</strong> Zona Pradera, Torre IV, Guatemala.</p>
           <a href="https://wa.me/50223022200" class="whatsapp-link">WhatsApp Directo: +502 2302 2200</a>
         </div>
       </div>
@@ -106,3 +107,79 @@ import ContactForm from '../components/ContactForm.astro';
   </article>
 
 </MainLayout>
+
+<style>
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
+  .text-center { text-align: center; }
+  
+  .hero-clean-title { font-size: 2.5rem; color: #1a1a1a; margin: 30px 0 50px; text-align: center; font-weight: 800; }
+
+  /* GALERÍA 4 CUADRADOS */
+  .hero-grid { display: grid; grid-template-columns: 450px 1fr; gap: 50px; align-items: center; margin-bottom: 60px; }
+  
+  .gallery-square-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+  }
+  
+  .img-square { 
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+
+  /* PRECIOS */
+  .pricing-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0; }
+  .price-card { background: #f0fdfa; border: 2px solid #00a69c; padding: 20px; border-radius: 12px; text-align: center; }
+  .price-card h3 { color: #007a73; font-size: 1.2rem; margin-top: 0; }
+  .price-card .amount { font-size: 2rem; font-weight: 800; color: #1a1a1a; margin: 5px 0; }
+  .price-card .amount span { font-size: 0.9rem; color: #666; font-weight: 400; }
+  .lead { font-size: 1.2rem; line-height: 1.6; color: #444; }
+  .cta-mini-text { font-size: 0.95rem; color: #777; margin-bottom: 20px; }
+
+  .btn-primary { 
+    display: inline-block; padding: 18px 35px; background: #00a69c; color: white !important; 
+    text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s;
+  }
+  .btn-primary:hover { background: #007a73; transform: scale(1.02); }
+
+  /* BENEFICIOS */
+  .benefits-section { padding: 40px 0; border-top: 1px solid #eee; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+  .benefit-card { padding: 30px; border: 1px solid #eee; border-radius: 15px; background: #fff; }
+  .benefit-card h3 { color: #00a69c; margin-bottom: 12px; margin-top: 0; }
+
+  /* DETALLES */
+  .details-section { padding: 50px 0; background: #fafafa; border-radius: 20px; margin: 40px 0; }
+  .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 0 40px; }
+  .details-card h3 { font-size: 1.4rem; margin-bottom: 20px; color: #1a1a1a; margin-top: 0; }
+  
+  .check-list, .info-list { list-style: none; padding: 0; }
+  .check-list li { margin-bottom: 12px; display: flex; align-items: center; }
+  .check-list li::before { content: "✓"; color: #00a69c; font-weight: bold; margin-right: 12px; }
+  
+  .info-list li { margin-bottom: 12px; position: relative; padding-left: 20px; }
+  .info-list li::before { content: "•"; position: absolute; left: 0; color: #00a69c; font-weight: bold; }
+  .restricted-item { color: #b91c1c; margin-top: 15px; font-weight: 600; }
+
+  /* CONTACTO SPLIT */
+  .contact-split { 
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; 
+    background: #1a1a1a; color: white; padding: 60px; border-radius: 25px; align-items: center;
+  }
+  .contact-info-side h2 { font-size: 2.2rem; color: #00a69c; margin-bottom: 20px; margin-top: 0; }
+  .whatsapp-link { display: inline-block; color: #25d366; text-decoration: none; font-size: 1.3rem; font-weight: bold; margin-top: 15px; }
+  .quick-links p { margin: 8px 0; opacity: 0.9; }
+
+  /* RESPONSIVE */
+  @media (max-width: 950px) {
+    .hero-grid, .details-grid, .contact-split { grid-template-columns: 1fr; }
+    .gallery-square-grid { max-width: 400px; margin: 0 auto; }
+    .details-grid { padding: 0 20px; gap: 30px; }
+    .contact-split { padding: 40px 25px; }
+    .hero-clean-title { font-size: 2rem; }
+  }
+</style>
