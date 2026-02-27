@@ -18,6 +18,20 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
+  <section class="definition-sat">
+    <div class="container">
+      <div class="sat-quote-box">
+        <h3>¿Qué es el Domicilio Fiscal según la SAT?</h3>
+        <p>
+          De acuerdo con el <strong>Artículo 114 del Código Tributario de Guatemala</strong>, el domicilio fiscal es el lugar que el contribuyente designa para el cumplimiento de sus obligaciones tributarias y para recibir notificaciones. Para la <strong>SAT</strong>, este debe ser un lugar físico localizable donde se presuma que se desarrolla la actividad económica o se encuentra la administración de la empresa.
+        </p>
+        <p class="legal-note">
+          Nuestra <strong>oficina virtual en Zona Pradera</strong> cumple estrictamente con este requisito, proporcionando una ubicación física real y verificable.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="details">
     <div class="container">
       <h2>¿Por qué usar una oficina virtual para su dirección fiscal?</h2>
@@ -35,32 +49,32 @@ import ContactForm from '../components/ContactForm.astro';
     <div class="container">
       <h2>Pasos para obtener un Domicilio Fiscal en Guatemala (SAT)</h2>
       <p class="intro-legal">
-        Según el <strong>Código Tributario (Decreto 6-91)</strong> y las normativas vigentes de la SAT, el domicilio fiscal es el lugar que el contribuyente designa para recibir notificaciones. Estos son los pasos esenciales:
+        Basado en el <strong>Decreto 6-91</strong>, estos son los pasos esenciales para establecer su sede legal:
       </p>
 
       <div class="steps-grid">
         <div class="step-card">
           <span class="step-number">01</span>
           <h3>Contrato de Arrendamiento</h3>
-          <p>La SAT requiere un documento que respalde el uso del inmueble. Nuestras <strong>oficinas virtuales en Zona Pradera</strong> le proporcionan un contrato legal firmado para este fin.</p>
+          <p>La SAT requiere respaldo del uso del inmueble. Nuestras <strong>oficinas virtuales</strong> le proporcionan un contrato legal firmado para este fin.</p>
         </div>
 
         <div class="step-card">
           <span class="step-number">02</span>
           <h3>Actualización de RTU Digital</h3>
-          <p>Debe realizar la actualización de datos en su <strong>Agencia Virtual SAT</strong>, indicando la ubicación exacta (Torre, Oficina y Nivel) que le asignamos.</p>
+          <p>Debe realizar la actualización en su <strong>Agencia Virtual SAT</strong>, indicando la ubicación exacta que le asignamos.</p>
         </div>
 
         <div class="step-card">
           <span class="step-number">03</span>
           <h3>Documentación de Soporte</h3>
-          <p>Tener listos los requisitos como el DPI del Representante Legal, acta de constitución y el recibo de servicios que nosotros le facilitamos.</p>
+          <p>Tener listos requisitos como el DPI del Representante Legal, acta de constitución y el recibo de servicios que facilitamos.</p>
         </div>
 
         <div class="step-card">
           <span class="step-number">04</span>
           <h3>Ratificación de Domicilio</h3>
-          <p>Al contar con recepción física en <strong>Zona Pradera</strong>, garantizamos que su empresa esté localizable para cualquier verificación de la administración tributaria.</p>
+          <p>Garantizamos que su empresa esté localizable en <strong>Zona Pradera</strong> para cualquier verificación de la administración tributaria.</p>
         </div>
       </div>
     </div>
@@ -74,7 +88,21 @@ import ContactForm from '../components/ContactForm.astro';
 </MainLayout>
 
 <style>
-  /* Estilos existentes */
+  .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+  .centered-flex { display: flex; justify-content: center; padding: 40px 0; }
+  
+  /* Estilo para la definición SAT */
+  .definition-sat { padding: 40px 0; background: #fff; }
+  .sat-quote-box { 
+    background: #f8fafc; 
+    border-left: 5px solid #007a73; 
+    padding: 30px; 
+    border-radius: 0 10px 10px 0; 
+  }
+  .sat-quote-box h3 { color: #007a73; margin-bottom: 15px; font-size: 1.4rem; }
+  .sat-quote-box p { font-size: 1.05rem; line-height: 1.6; color: #334155; }
+  .legal-note { margin-top: 15px; font-style: italic; font-weight: 600; color: #007a73 !important; }
+
   .internal-link-box {
     background: #f0fdfa;
     padding: 20px;
@@ -84,33 +112,11 @@ import ContactForm from '../components/ContactForm.astro';
   }
   .internal-link-box a { font-weight: bold; color: #00a69c; }
 
-  /* Estilos para la nueva sección legal */
   .legal-steps { padding: 60px 0; background: #f9f9f9; }
   .intro-legal { margin-bottom: 40px; color: #555; font-size: 1.1rem; line-height: 1.6; }
-  .steps-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 25px; 
-  }
-  .step-card { 
-    background: white; 
-    padding: 25px; 
-    border-radius: 12px; 
-    border-top: 4px solid #007a73; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-  }
-  .step-number { 
-    font-size: 1.5rem; 
-    font-weight: 900; 
-    color: #007a73; 
-    opacity: 0.3; 
-    display: block; 
-    margin-bottom: 10px; 
-  }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+  .step-card { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid #007a73; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+  .step-number { font-size: 1.5rem; font-weight: 900; color: #007a73; opacity: 0.3; display: block; margin-bottom: 10px; }
   .step-card h3 { font-size: 1.2rem; color: #1a1a1a; margin-bottom: 15px; }
   .step-card p { font-size: 0.95rem; color: #666; line-height: 1.5; }
-
-  /* Contenedor base para consistencia */
-  .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
-  .centered-flex { display: flex; justify-content: center; padding: 40px 0; }
 </style>
