@@ -5,128 +5,216 @@ import ContactForm from '../components/ContactForm.astro';
 ---
 
 <MainLayout
-  title="Coworking en Guatemala: Espacios de Trabajo Flexibles en Zona 10"
-  description="Los mejores espacios de coworking en Guatemala, Zona 10. Alquiler de espacios compartidas en Zona Pradera con alta velocidad de internet."
+  title="Coworking en Guatemala: Espacios Profesionales en Zona 10"
+  description="Renta de espacios de coworking en Zona Pradera, Guatemala. Planes por día desde Q165 o 4 horas por Q100. Internet de alta velocidad y ambiente corporativo."
   canonicalURL={currentCanonicalURL}
 >
-  <script type="application/ld+json" is:inline>
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Coworking en Guatemala"
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Coworking en Guatemala",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Todo es Digital"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Guatemala"
+  },
+  "description": "Espacios de trabajo compartido en Zona 10. Solución profesional para emprendedores que buscan coworking con internet de alta velocidad y ambiente ejecutivo.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Planes de Coworking",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pase Diario de Coworking",
+          "price": "165.00",
+          "priceCurrency": "GTQ"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pase de 4 Horas",
+          "price": "100.00",
+          "priceCurrency": "GTQ"
+        }
+      }
+    ]
   }
-  </script>
+}
+</script>
 
   <article class="container">
-    <h1 class="hero-clean-title">Coworking en Guatemala: Impulse su Productividad en Zona 10</h1>
+    <h1 class="hero-clean-title">Coworking en Guatemala: Su Oficina Profesional en Zona 10</h1>
     
     <div class="hero-grid">
       <div class="column-left">
-        <div class="force-vertical-frame">
+        <div class="vertical-image-frame">
           <img 
             src="/coworking-guatemala.webp" 
-            alt="Área de trabajo compartido y networking en Todo es Digital, Guatemala" 
-            class="img-fit-absolute"
+            alt="Espacio de coworking profesional en Zona Pradera, Guatemala" 
+            width="600" 
+            height="400"
+            class="img-fit-cover"
           />
         </div>
       </div>
 
       <div class="column-right">
         <p class="lead">
-          ¿Busca un <strong>espacio de coworking en Guatemala</strong> que combine prestigio, tecnología y flexibilidad? 
-          Nuestros <strong>espacios de cowork en Zona 10</strong> están diseñados para profesionales que no se conforman con lo común.
+          Deje atrás las distracciones de casa y el ruido de las cafeterías. En <strong>Todo es Digital</strong> le ofrecemos un entorno de <strong>coworking en Guatemala</strong> diseñado para el enfoque total y la productividad empresarial.
         </p>
 
-        <div class="price-highlight-box">
-          <h2>Pase de Coworking por dia</h2>
-          <p class="price">Q165<span> por persona</span></p>
-          <p>La opción perfecta para reuniones rápidas, entrevistas o concentrarse en un ambiente corporativo de alto nivel en Ciudad de Guatemala.</p>
+        <div class="pricing-container">
+          <div class="price-card">
+            <h3>Pase por Día</h3>
+            <p class="amount">Q165<span>/ persona</span></p>
+          </div>
+          <div class="price-card">
+            <h3>Pase 4 Horas</h3>
+            <p class="amount">Q100<span>/ persona</span></p>
+          </div>
         </div>
 
-        <p>En <strong>Todo es Digital</strong>, transformamos el concepto de <strong>oficinas compartidas en Guatemala</strong>. Ubicados en el exclusivo complejo <strong>Zona Pradera</strong>, le ofrecemos la infraestructura que su negocio necesita para escalar.</p>
-        
-        <div class="benefits-mini">
-          <h3>¿Por qué elegir nuestro Coworking?</h3>
+        <div class="important-notes">
+          <h4>Requisitos y Condiciones:</h4>
           <ul>
-            <li><strong>Ubicación AAA:</strong> El centro de negocios más importante de Guatemala.</li>
-            <li><strong>Networking Real:</strong> Rodeado de empresas líderes y tomadores de decisión.</li>
-            <li><strong>Flexibilidad Total:</strong> Sin contratos forzosos ni trámites complejos.</li>
+            <li>Pago 100% anticipado para reservar espacio.</li>
+            <li>Presentación de identificación obligatoria.</li>
+            <li>Tarifa de parqueo preferencial: **Q9 por hora**.</li>
+            <li class="restricted">No incluye uso de sala de reuniones ni dirección fiscal.</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <section class="extra-benefits">
-      <h2>Servicios Incluidos en su Espacio de Cowork</h2>
+    <section class="benefits-section">
+      <h2 class="text-center">¿Por qué cambiar la cafetería por nuestro Cowork?</h2>
       <div class="grid-3">
-        <div class="card"><h3>Tecnología y Red</h3><ul><li>Internet de Fibra Óptica.</li></ul></div>
-        <div class="card"><h3>Infraestructura VIP</h3><ul><li>Mobiliario ergonómico.</li></ul></div>
-        <div class="card"><h3>Servicios de Oficina</h3><ul><li>Recepción profesional.</li></ul></div>
+        <div class="benefit-card">
+          <h3>Adiós al Ruido</h3>
+          <p>Olvídese del estruendo de licuadoras, música alta o conversaciones ajenas que interrumpen sus llamadas importantes.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Internet de Verdad</h3>
+          <p>No dependa de conexiones públicas inestables. Disfrute de fibra óptica simétrica de alta velocidad.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Imagen Ejecutiva</h3>
+          <p>Reciba a sus clientes en un edificio corporativo nivel AAA en <strong>Zona Pradera</strong>, no en una mesa de restaurante.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="amenities-box">
+      <h2>Todo lo que incluye su pase:</h2>
+      <div class="amenities-grid">
+        <span>✓ Internet de Alta Velocidad</span>
+        <span>✓ Estación de Café y Té</span>
+        <span>✓ Agua Pura Ilimitada</span>
+        <span>✓ Ambiente con A/C</span>
+        <span>✓ Servicios Sanitarios</span>
+        <span>✓ Mobiliario Ergonómico</span>
       </div>
     </section>
 
     <div class="cta-section text-center">
-      <a href="https://wa.me/50223022200?text=Quiero%20saber%20mas%20de%20coworking" class="btn">¡Reserve su espacio ahora!</a>
+      <h2>Reserve su espacio de trabajo hoy</h2>
+      <p>Incremente su productividad en el mejor ambiente de negocios de Guatemala.</p>
+      <a href="https://wa.me/50223022200?text=Quiero%20reservar%20mi%20espacio%20de%20coworking" class="btn-whatsapp">¡Reservar vía WhatsApp!</a>
     </div>
 
     <section class="form-wrapper">
-        <ContactForm serviceName="Coworking" formId="mgolzeyp" />
+      <ContactForm serviceName="Coworking Nuevo" formId="mgolzeyp" />
     </section>
   </article>
 
 </MainLayout>
 
 <style>
-  .container { max-width: 1150px; margin: 0 auto; padding: 0 20px 40px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
   .text-center { text-align: center; }
   
-  .hero-clean-title { font-size: 2.4rem; color: #1a1a1a; margin: 20px 0 40px; text-align: center; font-weight: 800; }
+  .hero-clean-title { 
+    font-size: 2.5rem; 
+    color: #1a1a1a; 
+    margin: 30px 0 50px; 
+    text-align: center; 
+    font-weight: 800;
+  }
 
   .hero-grid { 
     display: grid; 
     grid-template-columns: 400px 1fr; 
-    gap: 50px; 
-    align-items: start; 
-    margin-bottom: 60px; 
+    gap: 60px; 
+    align-items: start;
   }
 
-  /* EL FIX TÉCNICO DEFINITIVO */
-  .force-vertical-frame {
+  /* FIX DEFINITIVO PARA IMAGEN 600x400 en Marco 400x600 */
+  .vertical-image-frame {
     width: 400px !important;
     height: 600px !important;
-    position: relative !important;
-    overflow: hidden !important;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    background: #eee; /* Color de carga */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    position: relative;
+    background: #f0f0f0;
   }
 
-  .img-fit-absolute {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
+  .img-fit-cover {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Recorta los lados para que sea vertical */
-    object-position: center !important;
-    display: block !important;
+    object-fit: cover !important; /* Corta los lados de la foto horizontal para que llene el marco vertical */
+    object-position: center;
   }
 
-  /* Estilos de las cajas y textos */
-  .price-highlight-box { background: #f0fdfa; border: 2px solid #00a69c; padding: 25px; border-radius: 12px; margin: 25px 0; }
-  .price-highlight-box h2 { margin: 0; color: #00a69c; font-size: 1.5rem; }
-  .price-highlight-box .price { font-size: 2.2rem; font-weight: 800; margin: 10px 0; }
-  .lead { font-size: 1.25rem; color: #444; line-height: 1.6; }
-  .benefits-mini ul { list-style: none; padding: 0; }
-  .benefits-mini ul li { margin-bottom: 10px; padding-left: 25px; position: relative; }
-  .benefits-mini ul li::before { content: "→"; position: absolute; left: 0; color: #00a69c; font-weight: bold; }
+  /* Planes de precios */
+  .pricing-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+  .price-card { background: #f0fdfa; border: 2px solid #00a69c; padding: 20px; border-radius: 12px; text-align: center; }
+  .price-card h3 { margin: 0; color: #007a73; font-size: 1.2rem; }
+  .price-card .amount { font-size: 2rem; font-weight: 800; color: #1a1a1a; margin: 10px 0; }
+  .price-card .amount span { font-size: 0.9rem; color: #666; font-weight: 400; }
 
-  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-  .card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #f0f0f0; }
-  .btn { display: inline-block; padding: 20px 45px; background: #25d366; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
+  .lead { font-size: 1.2rem; line-height: 1.6; color: #444; margin-bottom: 25px; }
+
+  .important-notes { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 20px; border-radius: 0 12px 12px 0; }
+  .important-notes h4 { margin-top: 0; color: #92400e; }
+  .important-notes ul { list-style: none; padding: 0; margin: 10px 0; }
+  .important-notes li { margin-bottom: 8px; font-size: 0.95rem; display: flex; align-items: center; }
+  .important-notes li::before { content: "•"; color: #f59e0b; font-weight: bold; margin-right: 10px; }
+  .restricted { color: #b91c1c; font-weight: 600; }
+
+  /* Ventajas */
+  .benefits-section { padding: 60px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+  .benefit-card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #eee; transition: 0.3s; }
+  .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+  .benefit-card h3 { color: #00a69c; margin-top: 0; }
+
+  /* Amenities */
+  .amenities-box { background: #1a1a1a; color: white; padding: 50px; border-radius: 20px; margin: 40px 0; }
+  .amenities-box h2 { text-align: center; margin-top: 0; margin-bottom: 30px; }
+  .amenities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+  .amenities-grid span { font-weight: 500; font-size: 1rem; }
+
+  /* CTA */
+  .btn-whatsapp { 
+    display: inline-block; padding: 20px 40px; background: #25d366; color: white; 
+    text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; 
+    margin-top: 25px; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  }
+
+  .cta-section { padding: 60px 0; background: #f8fafc; border-radius: 24px; margin: 40px 0; }
 
   @media (max-width: 950px) {
     .hero-grid { grid-template-columns: 1fr; }
-    .force-vertical-frame { margin: 0 auto 30px; max-width: 100%; }
+    .vertical-image-frame { margin: 0 auto 30px; width: 100% !important; max-width: 400px; height: 500px !important; }
+    .hero-clean-title { font-size: 2rem; }
   }
 </style>
