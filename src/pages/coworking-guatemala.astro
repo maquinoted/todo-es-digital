@@ -68,13 +68,15 @@ import ContactForm from '../components/ContactForm.astro';
     
     <div class="hero-grid">
       <div class="column-left image-gallery">
-        <img 
-          src="/coworking-guatemala.webp" 
-          alt="Área de trabajo compartido y networking en Todo es Digital, Guatemala" 
-          width="400" 
-          height="600" 
-          class="img-hero"
-        />
+        <div class="img-wrapper">
+          <img 
+            src="/coworking-guatemala.webp" 
+            alt="Área de trabajo compartido y networking en Todo es Digital, Guatemala" 
+            width="400" 
+            height="600" 
+            class="img-hero"
+          />
+        </div>
       </div>
 
       <div class="column-right">
@@ -148,11 +150,9 @@ import ContactForm from '../components/ContactForm.astro';
 </MainLayout>
 
 <style>
-  /* Contenedores Base */
   .container { max-width: 1150px; margin: 0 auto; padding: 0 20px 40px; }
   .text-center { text-align: center; }
   
-  /* Ajuste H1 al Nav */
   .hero-clean-title { 
     font-size: 2.4rem; 
     color: #1a1a1a; 
@@ -162,7 +162,6 @@ import ContactForm from '../components/ContactForm.astro';
     font-weight: 800;
   }
 
-  /* Hero Grid */
   .hero-grid { 
     display: grid; 
     grid-template-columns: 400px 1fr; 
@@ -171,24 +170,21 @@ import ContactForm from '../components/ContactForm.astro';
     margin-bottom: 60px; 
   }
 
-  /* Galería de imágenes en columna */
-  .image-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  /* Forzamos la visualización vertical */
+  .img-wrapper {
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 
   .img-hero { 
-    width: 100%; /* Ocupa el ancho de la columna (400px) */
-    height: auto; /* Mantiene proporción */
-    /* Ajustado a proporción 4:6 (400x600) vertical */
-    aspect-ratio: 400 / 600; 
-    object-fit: cover; /* Recorta la imagen para llenar el contenedor si no es exacta */
-    border-radius: 12px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen llene el 400x600 sin deformarse */
   }
 
-  /* Caja de Precio */
   .price-highlight-box {
     background: #f0fdfa;
     border: 2px solid #00a69c;
@@ -207,7 +203,6 @@ import ContactForm from '../components/ContactForm.astro';
   .benefits-mini ul li { margin-bottom: 10px; position: relative; padding-left: 25px; }
   .benefits-mini ul li::before { content: "→"; position: absolute; left: 0; color: #00a69c; font-weight: bold; }
 
-  /* Grid de Beneficios */
   .extra-benefits { padding: 60px 0; border-top: 1px solid #eee; }
   .extra-benefits h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
 
@@ -232,7 +227,6 @@ import ContactForm from '../components/ContactForm.astro';
   .card ul li { margin-bottom: 12px; font-size: 1rem; display: flex; align-items: center; color: #555; }
   .card ul li::before { content: "✓"; color: #00a69c; font-weight: bold; margin-right: 12px; }
 
-  /* Botón WhatsApp */
   .btn { 
     display: inline-block; 
     padding: 20px 45px; 
@@ -255,8 +249,7 @@ import ContactForm from '../components/ContactForm.astro';
 
   @media (max-width: 950px) {
     .hero-grid { grid-template-columns: 1fr; }
-    /* Centrar imágenes en móvil */
-    .image-gallery { max-width: 450px; margin: 0 auto 30px; }
+    .img-wrapper { max-width: 100%; height: auto; aspect-ratio: 400/600; margin: 0 auto 30px; }
     .hero-clean-title { font-size: 1.8rem; margin: 10px 0 30px; }
   }
 </style>
