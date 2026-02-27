@@ -41,7 +41,7 @@ const images = [
       "closes": "17:00"
     },
     "priceRange": "Q100 - Q165",
-    "description": "Servicio de coworking profesional en Guatemala. Ofrecemos estaciones de trabajo con internet simétrico, café ilimitado y ambiente corporativo en Zona 10.",
+    "description": "Servicio de coworking profesional en Guatemala. Estaciones de trabajo con internet simétrico, café, agua, A/C y servicios sanitarios en Zona 10.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Planes de Coworking",
@@ -136,12 +136,12 @@ const images = [
     <section class="educational-section">
         <h2 class="section-title">¿Qué es el Coworking en Guatemala y por qué es tendencia?</h2>
         <p class="small-p">
-          El <strong>coworking en Guatemala</strong> ha evolucionado de ser una simple moda para freelancers a convertirse en la nueva modalidad de trabajo para el ecosistema empresarial. No se trata solo de "alquilar un escritorio", sino de acceder a un entorno de alto nivel que potencia la credibilidad y eficiencia de su operación.
+          El <strong>coworking en Guatemala</strong> ha evolucionado para convertirse en la nueva modalidad de trabajo para el ecosistema empresarial. No se trata solo de "alquilar un escritorio", sino de acceder a un entorno de alto nivel que potencia la eficiencia de su operación.
         </p>
         <div class="advantage-grid">
             <div class="advantage-item">
               <h3>Para Empresas</h3>
-              <p>Reduzca costos fijos de alquiler y mantenimiento. Establezca células de trabajo en Zona 10 con flexibilidad total.</p>
+              <p>Reduzca costos fijos de mantenimiento. Establezca células de trabajo en Zona 10 con flexibilidad total.</p>
             </div>
             <div class="advantage-item">
               <h3>Para Emprendedores</h3>
@@ -149,9 +149,30 @@ const images = [
             </div>
             <div class="advantage-item">
               <h3>Para Profesionales</h3>
-              <p>Especialistas en IT y consultores encuentran la solución al internet inestable y la falta de privacidad con estándares AAA.</p>
+              <p>La solución al internet inestable y la falta de privacidad con estándares AAA para consultores y especialistas.</p>
             </div>
         </div>
+    </section>
+
+    <section class="benefits-section">
+      <h2 class="text-center section-title">Beneficios de elegir nuestras Oficinas Compartidas en Guatemala</h2>
+      <div class="grid-3">
+        <div class="benefit-card">
+          <div class="icon-bg">🎯</div>
+          <h3>Concentración Absoluta</h3>
+          <p>Elimine el ruido doméstico y las distracciones de las cafeterías públicas para un enfoque total.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon-bg">⚡</div>
+          <h3>Infraestructura de Red</h3>
+          <p>Internet simétrico redundante. Garantizamos estabilidad para sus videoconferencias sin caídas.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="icon-bg">📍</div>
+          <h3>Ubicación Estratégica</h3>
+          <p>Sitúe su base en el complejo corporativo más importante, facilitando sus gestiones en Zona 10.</p>
+        </div>
+      </div>
     </section>
 
     <section class="details-section">
@@ -199,11 +220,11 @@ const images = [
 
 <style>
   :root {
-    --primary: #00a69c;
-    --primary-dark: #008f86;
-    --primary-light: #f0fdfa;
-    --dark: #1a1a1a;
-    --grey-text: #4b5563;
+    --primary: #007a73;       /* Oscurecido para accesibilidad */
+    --primary-dark: #005c57; 
+    --primary-light: #e6f7f6;
+    --dark: #111827;         
+    --grey-text: #374151;     /* Oscurecido para legibilidad */
     --white: #ffffff;
   }
 
@@ -245,7 +266,7 @@ const images = [
   .price-card .amount span { font-size: 0.8rem; color: var(--grey-text); }
   
   .lead { font-size: 1rem; line-height: 1.6; color: var(--grey-text); margin-bottom: 20px; }
-  .bullet-highlights { font-size: 0.85rem; font-weight: 600; color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .bullet-highlights { font-size: 0.9rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
   .dot { width: 4px; height: 4px; background: var(--primary); border-radius: 50%; }
 
   .btn-primary { 
@@ -253,7 +274,7 @@ const images = [
     text-decoration: none; border-radius: 100px; font-weight: 700; font-size: 0.95rem; 
     transition: transform 0.2s;
   }
-  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-primary:hover { background: var(--dark); transform: translateY(-2px); }
 
   .section-title { font-size: 1.8rem; font-weight: 800; color: var(--dark); margin-bottom: 20px; }
 
@@ -275,7 +296,7 @@ const images = [
   .check-list li, .info-list li { margin-bottom: 12px; font-size: 0.9rem; color: var(--grey-text); list-style: none; display: flex; align-items: center; }
   .check-list li::before { content: "✓"; color: var(--primary); font-weight: 900; margin-right: 12px; }
   .info-list li::before { content: "•"; color: var(--primary); margin-right: 12px; }
-  .restricted-item { color: #b91c1c !important; font-weight: 700; background: #fef2f2; padding: 10px; border-radius: 8px; border: 1px dashed #fecaca; }
+  .restricted-item { color: #991b1b !important; font-weight: 700; background: #fef2f2; padding: 10px; border-radius: 8px; border: 1px dashed #fecaca; }
 
   .contact-split { 
     display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; 
