@@ -67,13 +67,20 @@ import ContactForm from '../components/ContactForm.astro';
     <h1 class="hero-clean-title">Coworking en Guatemala: Impulse su Productividad en Zona 10</h1>
     
     <div class="hero-grid">
-      <div class="column-left">
+      <div class="column-left image-gallery">
         <img 
           src="/cowork-guatemala-zona10.webp" 
           alt="Espacio de coworking moderno en Zona Pradera, Guatemala" 
           width="400" 
           height="600" 
           class="img-hero"
+        />
+        <img 
+          src="/coworking-guatemala.webp" 
+          alt="Área de trabajo compartido y networking en Todo es Digital, Guatemala" 
+          width="400" 
+          height="600" 
+          class="img-hero img-second"
         />
       </div>
 
@@ -171,12 +178,25 @@ import ContactForm from '../components/ContactForm.astro';
     margin-bottom: 60px; 
   }
 
+  /* NUEVO ESTILO: Galería de imágenes en columna */
+  .image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las dos imágenes */
+  }
+
   .img-hero { 
-    width: 400px; 
-    height: 550px; 
+    width: 100%; /* Ocupa el ancho de la columna (400px) */
+    height: auto; /* Mantiene proporción */
+    aspect-ratio: 400 / 600; /* Fuerza la proporción original si es necesario */
     object-fit: cover; 
     border-radius: 12px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+  }
+
+  /* Opcional: si la segunda imagen es más baja */
+  .img-second {
+    aspect-ratio: 400 / 550; /* O ajusta según la altura real de la imagen */
   }
 
   /* Caja de Precio */
@@ -246,7 +266,8 @@ import ContactForm from '../components/ContactForm.astro';
 
   @media (max-width: 950px) {
     .hero-grid { grid-template-columns: 1fr; }
-    .img-hero { width: 100%; height: auto; max-width: 450px; margin: 0 auto 30px; display: block; }
+    /* Centrar imágenes en móvil */
+    .image-gallery { max-width: 450px; margin: 0 auto 30px; }
     .hero-clean-title { font-size: 1.8rem; margin: 10px 0 30px; }
   }
 </style>
