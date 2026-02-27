@@ -68,13 +68,13 @@ import ContactForm from '../components/ContactForm.astro';
     
     <div class="hero-grid">
       <div class="column-left image-gallery">
-        <div class="img-wrapper">
+        <div class="img-wrapper" style="width: 400px !important; height: 600px !important; overflow: hidden !important; border-radius: 12px;">
           <img 
             src="/coworking-guatemala.webp" 
             alt="Área de trabajo compartido y networking en Todo es Digital, Guatemala" 
             width="400" 
             height="600" 
-            class="img-hero"
+            style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;"
           />
         </div>
       </div>
@@ -170,19 +170,8 @@ import ContactForm from '../components/ContactForm.astro';
     margin-bottom: 60px; 
   }
 
-  /* Forzamos la visualización vertical */
   .img-wrapper {
-    width: 400px;
-    height: 600px;
-    overflow: hidden;
-    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-
-  .img-hero { 
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Esto hace que la imagen llene el 400x600 sin deformarse */
   }
 
   .price-highlight-box {
@@ -249,7 +238,7 @@ import ContactForm from '../components/ContactForm.astro';
 
   @media (max-width: 950px) {
     .hero-grid { grid-template-columns: 1fr; }
-    .img-wrapper { max-width: 100%; height: auto; aspect-ratio: 400/600; margin: 0 auto 30px; }
+    .img-wrapper { max-width: 400px !important; height: 600px !important; margin: 0 auto 30px; }
     .hero-clean-title { font-size: 1.8rem; margin: 10px 0 30px; }
   }
 </style>
