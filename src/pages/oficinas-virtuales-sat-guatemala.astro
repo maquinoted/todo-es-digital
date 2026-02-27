@@ -32,19 +32,6 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
-  <section class="details">
-    <div class="container">
-      <h2>¿Por qué usar una oficina virtual para su dirección fiscal?</h2>
-      <p>
-        Para cumplir con los <strong>requisitos para formalizar una empresa en Guatemala</strong>, la SAT exige una ubicación verificable. Nuestra <strong>oficina virtual guatemala</strong> le otorga ese respaldo jurídico en el mejor <strong>centro empresarial zona 10</strong>.
-      </p>
-      
-      <div class="internal-link-box">
-        <p>¿Busca planes corporativos generales? Conozca todos nuestros servicios de <a href="/oficinas-virtuales-guatemala">oficinas virtuales en Guatemala</a> aquí.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="legal-steps">
     <div class="container">
       <h2>Pasos para obtener un Domicilio Fiscal en Guatemala (SAT)</h2>
@@ -80,18 +67,36 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
 
-  <section class="form-section">
-    <div class="container centered-flex">
+  <section class="conversion-split">
+    <div class="container grid-2">
+      <div class="text-column">
+        <h2>¿Por qué usar una oficina virtual para su dirección fiscal?</h2>
+        <p>
+          Para cumplir con los <strong>requisitos para formalizar una empresa en Guatemala</strong>, la SAT exige una ubicación verificable. Nuestra <strong>oficina virtual guatemala</strong> le otorga ese respaldo jurídico en el mejor <strong>centro empresarial zona 10</strong>.
+        </p>
+        
+        <div class="internal-link-box">
+          <p>¿Busca planes corporativos generales? Conozca todos nuestros servicios de <a href="/oficinas-virtuales-guatemala">oficinas virtuales en Guatemala</a> aquí.</p>
+        </div>
+      </div>
+      
+      <div class="form-column">
         <ContactForm serviceName="Oficinas Virtuales SAT" formId="mgolzeyp" />
+      </div>
     </div>
   </section>
+
 </MainLayout>
 
 <style>
   .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
-  .centered-flex { display: flex; justify-content: center; padding: 40px 0; }
   
-  /* Estilo para la definición SAT */
+  /* Layout de dos columnas para conversión */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; padding: 60px 0; }
+
+  .hero-clean { padding: 60px 0; background: #fff; text-align: center; }
+  .lead { font-size: 1.2rem; color: #444; max-width: 800px; margin: 0 auto; }
+
   .definition-sat { padding: 40px 0; background: #fff; }
   .sat-quote-box { 
     background: #f8fafc; 
@@ -100,8 +105,12 @@ import ContactForm from '../components/ContactForm.astro';
     border-radius: 0 10px 10px 0; 
   }
   .sat-quote-box h3 { color: #007a73; margin-bottom: 15px; font-size: 1.4rem; }
-  .sat-quote-box p { font-size: 1.05rem; line-height: 1.6; color: #334155; }
   .legal-note { margin-top: 15px; font-style: italic; font-weight: 600; color: #007a73 !important; }
+
+  .legal-steps { padding: 60px 0; background: #f9f9f9; }
+  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
+  .step-card { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid #007a73; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+  .step-number { font-size: 1.5rem; font-weight: 900; color: #007a73; opacity: 0.3; display: block; margin-bottom: 10px; }
 
   .internal-link-box {
     background: #f0fdfa;
@@ -112,11 +121,9 @@ import ContactForm from '../components/ContactForm.astro';
   }
   .internal-link-box a { font-weight: bold; color: #00a69c; }
 
-  .legal-steps { padding: 60px 0; background: #f9f9f9; }
-  .intro-legal { margin-bottom: 40px; color: #555; font-size: 1.1rem; line-height: 1.6; }
-  .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-  .step-card { background: white; padding: 25px; border-radius: 12px; border-top: 4px solid #007a73; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-  .step-number { font-size: 1.5rem; font-weight: 900; color: #007a73; opacity: 0.3; display: block; margin-bottom: 10px; }
-  .step-card h3 { font-size: 1.2rem; color: #1a1a1a; margin-bottom: 15px; }
-  .step-card p { font-size: 0.95rem; color: #666; line-height: 1.5; }
+  /* Responsive */
+  @media (max-width: 900px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 30px; }
+    .text-column { text-align: center; }
+  }
 </style>
