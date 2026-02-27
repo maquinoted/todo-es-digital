@@ -9,72 +9,24 @@ import ContactForm from '../components/ContactForm.astro';
   description="Los mejores espacios de coworking en Guatemala, Zona 10. Alquiler de espacios compartidas en Zona Pradera con alta velocidad de internet."
   canonicalURL={currentCanonicalURL}
 >
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Coworking en Guatemala",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Todo es Digital"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Guatemala"
-  },
-  "description": "Espacios de coworking en Guatemala. Oficinas compartidas y flexibles en Zona 10 con todos los servicios incluidos para profesionales.",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Planes de Coworking",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Pases Diarios de Coworking"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Membresías Mensuales de Coworking"
-        }
-      }
-    ]
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Coworking en Guatemala"
   }
-}
-</script>
-<script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-    "@type": "ListItem",
-    "position": 1,
-    "name": "Inicio",
-    "item": "https://todoesdigital.com/"
-  },{
-    "@type": "ListItem",
-    "position": 2,
-    "name": "Coworking en Guatemala",
-    "item": "https://todoesdigital.com/coworking-guatemala"
-  }]
-}
-</script>
+  </script>
 
   <article class="container">
     <h1 class="hero-clean-title">Coworking en Guatemala: Impulse su Productividad en Zona 10</h1>
     
     <div class="hero-grid">
-      <div class="column-left image-gallery">
-        <div class="img-wrapper" style="width: 400px !important; height: 600px !important; overflow: hidden !important; border-radius: 12px;">
+      <div class="column-left">
+        <div class="force-vertical-frame">
           <img 
             src="/coworking-guatemala.webp" 
             alt="Área de trabajo compartido y networking en Todo es Digital, Guatemala" 
-            width="400" 
-            height="600" 
-            style="width: 100% !important; height: 100% !important; object-fit: cover !important; display: block !important;"
+            class="img-fit-absolute"
           />
         </div>
       </div>
@@ -106,40 +58,15 @@ import ContactForm from '../components/ContactForm.astro';
 
     <section class="extra-benefits">
       <h2>Servicios Incluidos en su Espacio de Cowork</h2>
-      <p class="text-center">Diseñados para que su única preocupación sea hacer crecer su marca.</p>
-      
       <div class="grid-3">
-        <div class="card">
-          <h3>Tecnología y Red</h3>
-          <ul>
-            <li>Internet de Fibra Óptica redundante.</li>
-            <li>WiFi 6 de alta densidad para streaming.</li>
-            <li>Soporte técnico presencial.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Infraestructura VIP</h3>
-          <ul>
-            <li>Mobiliario ergonómico de alta gama.</li>
-            <li>Café premium y estación de hidratación.</li>
-            <li>Ambiente climatizado controlado.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Servicios de Oficina</h3>
-          <ul>
-            <li>Recepción de paquetería y visitas.</li>
-            <li>Acceso a salas de juntas equipadas.</li>
-            <li>Seguridad biométrica las 24 horas.</li>
-          </ul>
-        </div>
+        <div class="card"><h3>Tecnología y Red</h3><ul><li>Internet de Fibra Óptica.</li></ul></div>
+        <div class="card"><h3>Infraestructura VIP</h3><ul><li>Mobiliario ergonómico.</li></ul></div>
+        <div class="card"><h3>Servicios de Oficina</h3><ul><li>Recepción profesional.</li></ul></div>
       </div>
     </section>
 
     <div class="cta-section text-center">
-      <h2>¿Listo para trabajar en el mejor ambiente de Guatemala?</h2>
-      <p>Ya sea un pase por día o una oficina compartida mensual, tenemos el plan ideal para usted.</p>
-      <a href="https://wa.me/50223022200?text=Quiero%20saber%20mas%20de%20coworking" class="btn">¡Reserve su espacio de Coworking ahora!</a>
+      <a href="https://wa.me/50223022200?text=Quiero%20saber%20mas%20de%20coworking" class="btn">¡Reserve su espacio ahora!</a>
     </div>
 
     <section class="form-wrapper">
@@ -153,14 +80,7 @@ import ContactForm from '../components/ContactForm.astro';
   .container { max-width: 1150px; margin: 0 auto; padding: 0 20px 40px; }
   .text-center { text-align: center; }
   
-  .hero-clean-title { 
-    font-size: 2.4rem; 
-    color: #1a1a1a; 
-    margin: 20px 0 40px; 
-    text-align: center; 
-    line-height: 1.2; 
-    font-weight: 800;
-  }
+  .hero-clean-title { font-size: 2.4rem; color: #1a1a1a; margin: 20px 0 40px; text-align: center; font-weight: 800; }
 
   .hero-grid { 
     display: grid; 
@@ -170,75 +90,43 @@ import ContactForm from '../components/ContactForm.astro';
     margin-bottom: 60px; 
   }
 
-  .img-wrapper {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  }
-
-  .price-highlight-box {
-    background: #f0fdfa;
-    border: 2px solid #00a69c;
-    padding: 25px;
+  /* EL FIX TÉCNICO DEFINITIVO */
+  .force-vertical-frame {
+    width: 400px !important;
+    height: 600px !important;
+    position: relative !important;
+    overflow: hidden !important;
     border-radius: 12px;
-    margin: 25px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: #eee; /* Color de carga */
   }
-  .price-highlight-box h2 { margin: 0; color: #00a69c; font-size: 1.5rem; font-weight: 700; }
-  .price-highlight-box .price { font-size: 2.2rem; font-weight: 800; color: #1a1a1a; margin: 10px 0; }
-  .price-highlight-box .price span { font-size: 1.1rem; color: #666; font-weight: normal; }
 
-  .lead { font-size: 1.25rem; color: #444; line-height: 1.6; margin-bottom: 20px; }
+  .img-fit-absolute {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Recorta los lados para que sea vertical */
+    object-position: center !important;
+    display: block !important;
+  }
 
-  .benefits-mini h3 { font-size: 1.3rem; color: #1a1a1a; margin-bottom: 15px; }
+  /* Estilos de las cajas y textos */
+  .price-highlight-box { background: #f0fdfa; border: 2px solid #00a69c; padding: 25px; border-radius: 12px; margin: 25px 0; }
+  .price-highlight-box h2 { margin: 0; color: #00a69c; font-size: 1.5rem; }
+  .price-highlight-box .price { font-size: 2.2rem; font-weight: 800; margin: 10px 0; }
+  .lead { font-size: 1.25rem; color: #444; line-height: 1.6; }
   .benefits-mini ul { list-style: none; padding: 0; }
-  .benefits-mini ul li { margin-bottom: 10px; position: relative; padding-left: 25px; }
+  .benefits-mini ul li { margin-bottom: 10px; padding-left: 25px; position: relative; }
   .benefits-mini ul li::before { content: "→"; position: absolute; left: 0; color: #00a69c; font-weight: bold; }
 
-  .extra-benefits { padding: 60px 0; border-top: 1px solid #eee; }
-  .extra-benefits h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
-
-  .grid-3 { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 25px; 
-    margin-top: 30px; 
-  }
-
-  .card { 
-    background: white; 
-    padding: 30px; 
-    border-radius: 15px; 
-    border: 1px solid #f0f0f0; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-    transition: translateY 0.3s ease;
-  }
-  .card:hover { transform: translateY(-5px); }
-  .card h3 { color: #00a69c; margin-top: 0; font-size: 1.3rem; }
-  .card ul { list-style: none; padding: 0; margin: 20px 0 0 0; }
-  .card ul li { margin-bottom: 12px; font-size: 1rem; display: flex; align-items: center; color: #555; }
-  .card ul li::before { content: "✓"; color: #00a69c; font-weight: bold; margin-right: 12px; }
-
-  .btn { 
-    display: inline-block; 
-    padding: 20px 45px; 
-    background: #25d366; 
-    color: white; 
-    text-decoration: none; 
-    border-radius: 50px; 
-    font-weight: bold; 
-    font-size: 1.3rem; 
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
-  }
-  .btn:hover { transform: scale(1.05); background: #20ba5a; }
-
-  .cta-section { margin: 60px 0; padding: 50px; background: #f8fafc; border-radius: 24px; }
-  .cta-section h2 { margin-bottom: 15px; }
-
-  .form-wrapper { padding-top: 40px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+  .card { background: white; padding: 30px; border-radius: 15px; border: 1px solid #f0f0f0; }
+  .btn { display: inline-block; padding: 20px 45px; background: #25d366; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
 
   @media (max-width: 950px) {
     .hero-grid { grid-template-columns: 1fr; }
-    .img-wrapper { max-width: 400px !important; height: 600px !important; margin: 0 auto 30px; }
-    .hero-clean-title { font-size: 1.8rem; margin: 10px 0 30px; }
+    .force-vertical-frame { margin: 0 auto 30px; max-width: 100%; }
   }
 </style>
