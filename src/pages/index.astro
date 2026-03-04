@@ -33,7 +33,7 @@ const canonicalURL = "https://todoesdigital.com";
         }
       },
       "datePublished": "2024-01-01T08:00:00-06:00",
-      "dateModified": "2026-02-18T10:00:00-06:00"
+      "dateModified": "2026-03-04T00:00:00-06:00"
     }
   ]
 }
@@ -74,7 +74,16 @@ const canonicalURL = "https://todoesdigital.com";
           Su plan incluye un sistema de <strong>PBX Cloud</strong> de última generación, <strong>recepcionista</strong> profesional para su atención telefónica y <strong>manejo de correspondencia</strong>. 
           Además, obtenga acceso a <strong>salas de reuniones</strong> equipadas y beneficios exclusivos como <strong>descuento en parqueo</strong>.
         </p>
-        <a href="/oficinas-virtuales-guatemala" class="btn-internal">Ver planes de oficina virtual en Guatemala →</a>
+        <a href="/oficinas-virtuales-guatemala" class="btn-internal">Ver planes de oficina virtual →</a>
+      </div>
+
+      <div class="column">
+        <div class="price-badge">Desde <strong>Q75</strong> el día</div>
+        <h2>Coworking</h2>
+        <p>
+          Trabaje en el centro de negocios más exclusivo. Espacios compartidos en <strong>Zona Pradera</strong> con internet simétrico, café ilimitado y el mejor ambiente profesional. Ideal para nómadas digitales y consultores que buscan una sede corporativa en la <strong>zona 10</strong>.
+        </p>
+        <a href="/coworking-guatemala" class="btn-internal secondary">Ver coworking en Guatemala →</a>
       </div>
 
       <div class="column">
@@ -84,7 +93,7 @@ const canonicalURL = "https://todoesdigital.com";
           Contamos con espacios modernos y equipados en el corazón de la zona 10 para sus juntas, presentaciones o entrevistas. 
           Nuestras salas ofrecen un ambiente privado, profesional, con <strong>Wifi de alta velocidad</strong> y servicio de <strong>agua y café</strong> incluido para garantizar el éxito de sus reuniones de negocios.
         </p>
-        <a href="/alquiler-salas-reuniones-guatemala" class="btn-internal secondary">Ver salas de reuniones en Guatemala →</a>
+        <a href="/alquiler-salas-reuniones-guatemala" class="btn-internal secondary">Ver salas de reuniones →</a>
       </div>
     </div>
   </div>
@@ -92,7 +101,7 @@ const canonicalURL = "https://todoesdigital.com";
 
 <style is:inline>
   .business-growth {
-    padding: 60px 20px; /* Reducido de 100px a 60px */
+    padding: 60px 20px;
     background-color: #f9f9f9;
   }
   .container {
@@ -101,13 +110,13 @@ const canonicalURL = "https://todoesdigital.com";
   }
   .section-intro {
     text-align: center;
-    margin-bottom: 30px; /* Reducido de 60px a 30px */
+    margin-bottom: 30px;
   }
   .section-intro h2 {
-    font-size: 2.2rem; /* Ligeramente más pequeño para ahorrar espacio */
+    font-size: 2.2rem;
     color: #424243;
     max-width: 800px;
-    margin: 10px auto; /* Reducido margen */
+    margin: 10px auto;
   }
   .badge {
     background: #e0e0e0;
@@ -119,15 +128,16 @@ const canonicalURL = "https://todoesdigital.com";
     text-transform: uppercase;
   }
 
+  /* Ajustado para 3 columnas equilibradas */
   .services-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px; /* Reducido de 40px a 30px */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
 
   .column {
     background: #fff;
-    padding: 30px; /* Reducido de 45px a 30px */
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     display: flex;
@@ -145,30 +155,30 @@ const canonicalURL = "https://todoesdigital.com";
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 0.85rem;
-    margin-bottom: 15px; /* Reducido de 20px a 15px */
+    margin-bottom: 15px;
     align-self: flex-start;
   }
   .price-badge strong { font-size: 1.1rem; color: #424243; }
 
   .column h2 {
     color: #424243;
-    margin-bottom: 12px; /* Reducido de 20px a 12px */
-    font-size: 1.8rem; /* Ligeramente más pequeño */
+    margin-bottom: 12px;
+    font-size: 1.8rem;
   }
 
   .column p {
     color: #666;
-    line-height: 1.6; /* Un poco más apretado */
-    margin-bottom: 20px; /* Reducido de 30px a 20px */
+    line-height: 1.6;
+    margin-bottom: 20px;
     flex-grow: 1;
-    font-size: 0.95rem; /* Ajustado para compactar */
+    font-size: 0.95rem;
   }
 
   .btn-internal {
     text-decoration: none;
     color: white;
     background-color: #424243;
-    padding: 12px 25px; /* Reducido verticalmente */
+    padding: 12px 25px;
     border-radius: 5px;
     text-align: center;
     font-weight: 700;
@@ -185,10 +195,14 @@ const canonicalURL = "https://todoesdigital.com";
     filter: brightness(1.2);
   }
 
+  @media (max-width: 992px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+
   @media (max-width: 768px) {
     .services-grid { grid-template-columns: 1fr; }
     .section-intro h2 { font-size: 1.4rem; }
-    .business-growth { padding: 40px 20px; } /* Aún más compacto en móvil */
+    .business-growth { padding: 40px 20px; }
   }
 </style>
 
@@ -197,7 +211,7 @@ const canonicalURL = "https://todoesdigital.com";
     <div class="efficiency-header">
       <h2>Maximice su rentabilidad con infraestructura y tecnología.</h2>
       <p>
-        En el ecosistema empresarial de Guatemala, el éxito no depende de cuánto gasta, sino de qué tan inteligente es su inversión. Nuestra solución está diseñada para el empresario que busca <strong>ahorro operativo</strong> sin sacrificar la calidad del servicio que recibe.</strong>.
+        En el ecosistema empresarial de Guatemala, el éxito no depende de cuánto gasta, sino de qué tan inteligente es su inversión. Nuestra solución está diseñada para el empresario que busca <strong>ahorro operativo</strong> sin sacrificar la calidad del servicio que recibe.
       </p>
     </div>
 
@@ -276,11 +290,6 @@ const canonicalURL = "https://todoesdigital.com";
     color: white !important;
   }
 
-  .card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-
   .efficiency-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -302,19 +311,6 @@ const canonicalURL = "https://todoesdigital.com";
     content: "✓";
     color: #25d366;
     font-weight: bold;
-  }
-
-  .seo-impact-banner {
-    background: #f4f4f4;
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    border-left: 5px solid #424243;
-  }
-  .seo-impact-banner p {
-    margin: 0;
-    font-size: 1rem;
-    color: #424243;
   }
 
   @media (max-width: 850px) {
@@ -404,7 +400,6 @@ const canonicalURL = "https://todoesdigital.com";
 </MainLayout>
 
 <style is:inline>
-  /* Estilos base y variables de color */
   .hero {
     display: flex;
     align-items: center;
@@ -429,7 +424,6 @@ const canonicalURL = "https://todoesdigital.com";
     line-height: 1.6;
   }
 
-  /* Corregido: Agregadas llaves de apertura y cierre */
   .hero-image { 
     flex: 1; 
     display: flex;
@@ -438,48 +432,16 @@ const canonicalURL = "https://todoesdigital.com";
 
   .hero-image img {
     width: 100%;
-    max-width: 600px; /* Tamaño real de tu imagen */
-    height: auto;     /* Mantiene la proporción 600x400 */
+    max-width: 600px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  .column {
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 5px solid #424243;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  .column h2 {
-    color: #424243;
-    margin-bottom: 15px;
-  }
-
-  .column p {
-    color: #666;
-    line-height: 1.5;
-  }
-
   .location-section {
     padding: 80px 20px;
     background-color: #fcfcfc;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
   }
 
   .location-grid {
@@ -489,7 +451,6 @@ const canonicalURL = "https://todoesdigital.com";
     align-items: center;
   }
 
-  /* Galería de Imágenes */
   .location-gallery {
     display: flex;
     gap: 15px;
@@ -546,8 +507,6 @@ const canonicalURL = "https://todoesdigital.com";
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
 
-  /* --- RESPONSIVE OPTIMIZADO --- */
-
   @media (max-width: 992px) {
     .location-grid { grid-template-columns: 1fr; }
     .location-gallery { order: 2; }
@@ -563,7 +522,6 @@ const canonicalURL = "https://todoesdigital.com";
     }
     .hero-content h1 { font-size: 2rem; }
     .hero-image { width: 100%; }
-    .services-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 600px) {
