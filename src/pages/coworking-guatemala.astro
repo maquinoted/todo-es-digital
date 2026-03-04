@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm.astro';
 
 // Optimizamos las imágenes definiendo dimensiones para evitar CLS
 const images = [
-  { src: "/coworking-guatemala.webp", alt: "Espacio de coworking profesional en Guatemala Zona 10" },
+  { src: "/coworking-guatemala.webp", alt: "Coworking en Guatemala | Desde Q75 el día | Zona Pradera, zona 10" },
   { src: "/cowork-guatemala-zona10.webp", alt: "Oficinas compartidas en Zona Pradera" },
   { src: "/oficina-virtual-guatemala.webp", alt: "Renta de espacios de trabajo flexibles" },
   { src: "/salas-reuniones-renta-guatemala.webp", alt: "Salas de reuniones en coworking Guatemala" }
@@ -15,12 +15,14 @@ const images = [
 <script type="application/ld+json" is:inline>
   {
     "@context": "https://schema.org",
-    "@type": "CoworkingSpace",
+    "@type": "LocalBusiness",
     "name": "Todo es Digital - Coworking Guatemala",
     "image": "https://todoesdigital.com/coworking-guatemala.webp",
     "@id": "https://todoesdigital.com/coworking-guatemala",
     "url": "https://todoesdigital.com/coworking-guatemala",
     "telephone": "+50223022200",
+    "priceRange": "Q75 - Q165",
+    "description": "Trabaje en el centro de negocios más exclusivo de Guatemala. Coworking en Zona Pradera con internet simétrico, café ilimitado y parqueo seguro. ¡Tu oficina lista hoy mismo en Zona 10!",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Torre 2, Oficina 1108, Zona Pradera",
@@ -31,36 +33,14 @@ const images = [
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 14.5931,
-      "longitude": -90.4905
+      "latitude": 14.5912,
+      "longitude": -90.4851
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "08:00",
       "closes": "17:00"
-    },
-    "priceRange": "Q100 - Q165",
-    "description": "Servicio de coworking profesional en Guatemala. Estaciones de trabajo con internet simétrico, café, agua, A/C y servicios sanitarios en Zona 10.",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Planes de Coworking",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Pase Diario de Coworking"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Pase de 4 Horas de Coworking"
-          }
-        }
-      ]
     }
   }
 </script>
@@ -84,8 +64,8 @@ const images = [
 </script>
 
 <MainLayout
-  title="Coworking en Guatemala: Renta de Oficinas por Día en Zona 10"
-  description="Espacios de coworking en Zona Pradera, Torre 2. Oficinas compartidas desde Q165 al día. Incluye internet simétrico, café ilimitado y parqueo preferencial."
+  title="Coworking en Guatemala | Zona Pradera | Oficina Flexible Q75 🚀"
+  description="Trabaje en el centro de negocios más exclusivo de Guatemala. Coworking en Zona Pradera con internet simétrico, café ilimitado y parqueo seguro. ¡Tu oficina lista hoy mismo en Zona 10!"
   canonicalURL={currentCanonicalURL}
 >
 
@@ -302,15 +282,4 @@ const images = [
     display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; 
     background: var(--dark); color: var(--white); padding: 50px; border-radius: 30px; align-items: center;
   }
-  .contact-info-side h4 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; font-weight: 800; }
-  .whatsapp-link { 
-    display: inline-block; color: #25d366; text-decoration: none; font-size: 1.1rem; 
-    font-weight: 800; margin-top: 20px; border: 1.5px solid rgba(37, 211, 102, 0.3); padding: 12px 24px; border-radius: 12px;
-  }
-
-  @media (max-width: 950px) {
-    .hero-grid, .details-grid, .contact-split { grid-template-columns: 1fr; }
-    .hero-clean-title { font-size: 1.8rem; min-height: auto; }
-    .gallery-square-grid { max-width: 350px; margin: 0 auto; }
-  }
-</style>
+  .contact-info-side h4 { font-size: 1.8rem;
