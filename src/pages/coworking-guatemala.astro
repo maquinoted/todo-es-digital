@@ -63,6 +63,39 @@ const images = [
   }
 </script>
 
+<script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué servicios incluye el pase diario en Zona Pradera?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El pase diario incluye acceso a estaciones de trabajo ergonómicas, internet simétrico de alta velocidad, café premium ilimitado, agua pura y climatización en Torre 2, Oficina 1108 de Zona Pradera."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es necesario contrato para usar las oficinas compartidas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, ofrecemos una modalidad de oficina flexible sin contratos forzosos ni depósitos de garantía, ideal para nómadas digitales y consultores en Zona 10."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuentan con internet estable para reuniones virtuales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, contamos con infraestructura de fibra óptica redundante y simétrica que garantiza estabilidad absoluta para Zoom, Teams o Google Meet."
+        }
+      }
+    ]
+  }
+</script>
+
 <MainLayout
   title="Coworking en Guatemala | Zona Pradera | Oficina Flexible Q75 🚀"
   description="Trabaje en el centro de negocios más exclusivo de Guatemala. Coworking en Zona Pradera con internet simétrico, café ilimitado y parqueo seguro. ¡Tu oficina lista hoy mismo en Zona 10!"
@@ -182,6 +215,28 @@ const images = [
       </div>
     </section>
 
+    <section class="faq-section">
+      <h2 class="text-center section-title">Preguntas Frecuentes sobre Coworking en Guatemala</h2>
+      <div class="faq-grid">
+          <div class="faq-item">
+              <h3>¿Qué servicios incluye el pase diario en Zona Pradera?</h3>
+              <p>Al reservar tu <strong>pase diario de coworking en Guatemala</strong>, obtienes acceso total a nuestras estaciones de trabajo ergonómicas, conexión de <strong>internet simétrico de alta velocidad</strong>, café premium ilimitado, agua pura y climatización. Todo en un ambiente corporativo de alto nivel en la Torre 2 de Zona Pradera.</p>
+          </div>
+          <div class="faq-item">
+              <h3>¿Es necesario contrato para usar las oficinas compartidas?</h3>
+              <p>No, nuestra propuesta de <strong>oficina flexible</strong> permite trabajar sin contratos forzosos ni depósitos de garantía. Puedes optar por pases de medio día o días completos, adaptándonos a las necesidades de <strong>nómadas digitales</strong> y empresas en <strong>Zona 10</strong>.</p>
+          </div>
+          <div class="faq-item">
+              <h3>¿Cuentan con internet estable para reuniones virtuales?</h3>
+              <p>Sí, la infraestructura de red en <strong>Todo es Digital</strong> está diseñada para profesionales. Contamos con fibra óptica redundante que garantiza estabilidad absoluta para Zoom, Teams o Google Meet, eliminando las caídas comunes de las redes domésticas.</p>
+          </div>
+          <div class="faq-item">
+              <h3>¿Dónde se ubica exactamente el coworking en Zona Pradera?</h3>
+              <p>Estamos ubicados estratégicamente en la <strong>Torre 2, Oficina 1108</strong>. Zona Pradera es el complejo corporativo más seguro y moderno de la Ciudad de Guatemala, ofreciendo parqueo techado y acceso inmediato a Zona 10.</p>
+          </div>
+      </div>
+    </section>
+
     <section class="contact-split">
       <div class="contact-info-side">
         <h4>Reserve su espacio en Zona Pradera</h4>
@@ -278,8 +333,25 @@ const images = [
   .info-list li::before { content: "•"; color: var(--primary); margin-right: 12px; }
   .restricted-item { color: #991b1b !important; font-weight: 700; background: #fef2f2; padding: 10px; border-radius: 8px; border: 1px dashed #fecaca; }
 
+  .faq-section { padding: 60px 0; border-top: 1px solid #eee; }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+  .faq-item { background: var(--white); padding: 25px; border-radius: 15px; border: 1px solid #f3f4f6; }
+  .faq-item h3 { font-size: 1.1rem; color: var(--dark); margin-bottom: 12px; font-weight: 700; line-height: 1.3; }
+  .faq-item p { font-size: 0.95rem; color: var(--grey-text); line-height: 1.6; }
+
   .contact-split { 
     display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; 
     background: var(--dark); color: var(--white); padding: 50px; border-radius: 30px; align-items: center;
   }
-  .contact-info-side h4 { font-size: 1.8rem;
+  .contact-info-side h4 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; font-weight: 800; }
+  .whatsapp-link { 
+    display: inline-block; color: #25d366; text-decoration: none; font-size: 1.1rem; 
+    font-weight: 800; margin-top: 20px; border: 1.5px solid rgba(37, 211, 102, 0.3); padding: 12px 24px; border-radius: 12px;
+  }
+
+  @media (max-width: 950px) {
+    .hero-grid, .details-grid, .contact-split, .faq-grid { grid-template-columns: 1fr; }
+    .hero-clean-title { font-size: 1.8rem; min-height: auto; }
+    .gallery-square-grid { max-width: 350px; margin: 0 auto; }
+  }
+</style>
